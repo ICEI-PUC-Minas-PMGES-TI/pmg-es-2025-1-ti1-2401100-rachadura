@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/98498c40-38a5-43b9-a47e-406bb453aaf3)# Introdução
+Introdução
 
 Informações básicas do projeto.
 
