@@ -2,10 +2,10 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** Radar Urbano
+* **Repositório GitHub:** Rachadura
 * **Membros da equipe:**
-
+  * [Vinícius dos Santos Gonçalves](https://github.com/MomoSkywalker) ⚠️ EXEMPLO ⚠️
   * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
   * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
   * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
