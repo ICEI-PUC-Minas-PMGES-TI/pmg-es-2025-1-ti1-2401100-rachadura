@@ -5,9 +5,9 @@ Informações básicas do projeto.
 * **Projeto:** Radar Urbano
 * **Repositório GitHub:** Rachadura
 * **Membros da equipe:**
-  * [Vinícius dos Santos Gonçalves](https://github.com/MomoSkywalker) ⚠️ EXEMPLO ⚠️
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
+  * [Vinícius dos Santos Gonçalves](https://github.com/MomoSkywalker) 
+  * [Lucas do Carmo Braz](https://github.com/llucasBraz) 
+  * [Pedro Augusto Carvalho de Oliveira](https://github.com/Pedro-C4RVALHO)
   * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
 
 A documentação do projeto é estruturada da seguinte forma:
