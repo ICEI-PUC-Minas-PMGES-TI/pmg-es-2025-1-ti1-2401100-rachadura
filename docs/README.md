@@ -1,4 +1,4 @@
-# Introdução
+![image](https://github.com/user-attachments/assets/98498c40-38a5-43b9-a47e-406bb453aaf3)# Introdução
 
 Informações básicas do projeto.
 
@@ -8,7 +8,11 @@ Informações básicas do projeto.
   * [Vinícius dos Santos Gonçalves](https://github.com/MomoSkywalker) 
   * [Lucas do Carmo Braz](https://github.com/llucasBraz) 
   * [Pedro Augusto Carvalho de Oliveira](https://github.com/Pedro-C4RVALHO)
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Arthur Souza Fernandes](https://github.com/arthurxds)
+  * [Gabriel Costa Silva](https://github.com/GabrielCosta1311)
+  * [Victor Roberto Chagas Alves](https://github.com/vitinho17alves)
+  * [Stêvão Guadanini Diniz](https://github.com/Stevao-xd)
+  * [Lucas Maia Marques Pinheiro](https://github.com/lvcasxm)
 
 A documentação do projeto é estruturada da seguinte forma:
 
