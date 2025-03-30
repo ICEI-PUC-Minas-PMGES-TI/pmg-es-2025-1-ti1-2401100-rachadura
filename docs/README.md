@@ -159,31 +159,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | Permitir que o usuário avalie e comente uma denuncia  | Alta       |
+| RF-002 | Permitir interação do usuário com o Mapa | Alta     |
+| RF-003 | Permitir que denuncia seja compartilhada via link | Media     |
+| RF-004 | Permitir que denuncia seja categorizada | Media     |
+| RF-005 | Permitir que uma dica pertinente de como agir em uma situação de perigo seja mostrada de acordo com a categoria do problema | Media     |
+| RF-006 | Permitir que o usuário faça upload de fotos e vídeos do problema que está denunciando | Alta     |
+| RF-007 | Permitir que o usuário faça uma descrição daquilo que está denunciando | Alta     |
+| RF-008 | Pagina de Login e Registro Cadastro | Baixo     |
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+| RNF-001 | Modo Claro e Escuro (que também se extende ao mapa) | Media     |
+| RNF-002 | Design responsivo para garantir boa usabilidade em diferentes dispositivos (PC, tablet, celular)          | Alta      |
+| RNF-003 | Notificação de status da denúncia (se o problema ainda está em aberto ou se foi concluído)          | Baixa      |
+| RNF-004 | Escalabilidade de quantidade de usuário          | Baixa      |
+| RNF-005 | Fonte adequada, esteticamente agradável, de fácil leitura e com padronização de cor.          | Media      |
+| RNF-006 | Interface intuitiva e acessível, mesmo para usuários com pouca experiência digital.          | Alta      |
+| RNF-007 | Formulários fáceis de preencher, minimizando campos obrigatórios.          | Baixa      |
+| RNF-008 | Feedback visual e mensagens claras após cada ação do usuário (ex.: denúncia enviada com sucesso).          | Alta      |
 
 ## Projeto de Interface
 
