@@ -180,6 +180,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RNF-006 | Interface intuitiva e acessível, mesmo para usuários com pouca experiência digital.          | Alta      |
 | RNF-007 | Formulários fáceis de preencher, minimizando campos obrigatórios.          | Baixa      |
 | RNF-008 | Feedback visual e mensagens claras após cada ação do usuário (ex.: denúncia enviada com sucesso).          | Alta      |
+| RNF-009 | Sistema deve funcionar durante o dia inteiro          | Alta      |
+| RNF-010 | Sera feito por meio das linguagens de HTML, CSS e JavaScript          | Alta      |
+| RNF-011 | Publicado em ambiente acessível via intern (Render, AWS,          | Alta      |
 
 ## Projeto de Interface
 
