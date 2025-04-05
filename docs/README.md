@@ -70,6 +70,8 @@ Permitir o reconhecimento e a vizualicação das dénuncias em tempo real.
 
 ## Justificativa
 
+A infraestrutura urbana desempenha um papel fundamental e inalienável na qualidade de vida da população, uma vez que ela impacta diretamente no espaço que as pessoas vivem, moram e trabalham. Os problemas de infraestr
+
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
