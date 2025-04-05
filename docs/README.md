@@ -32,13 +32,18 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
-Nosso grupo identificou que não havia um mecanismo fácil e acessível de comunicar problemas de infraestrutura urbana diretamente às autoridades competentes, o que dificulta a vida dos cidadãos que enfrentam tais problemas, uma vez que muitas vezes eles nem sequer sabem como fazer isso. Sendo assim, reduzimos nosso escopo para os moradores da zona metropolitana da Grande Belo Horizonte, e focamos nos problemas relacionados às vias públicas e da infraestrutura urbana, o que inclui todo o ecossistema urbano que vemos e usamos diariamente, como calçadas, parques, praças, ônibus e assim por diante. Mas, além disso, também é possível denunciar problemas na rede elétrica, na captação fluvial e outros.
+Nosso grupo identificou que não havia um mecanismo fácil e acessível de comunicar problemas de infraestrutura urbana diretamente às autoridades competentes, o que dificulta a vida dos cidadãos que enfrentam tais problemas, uma vez que muitas vezes eles nem sequer sabem como fazer isso. Sendo assim, reduzimos nosso escopo para os moradores da zona Metropolitana da Grande Belo Horizonte, e focamos nos problemas relacionados às vias públicas e da infraestrutura urbana, o que inclui todo o ecossistema urbano que vemos e usamos diariamente, como calçadas, parques, praças, ônibus e assim por diante. Mas, além disso, também é possível denunciar problemas na rede elétrica, na captação fluvial e outros.
 
-A decisão de focar na região metropolitana surgiu da constatação de que muitas dessas cidades foram sendo construídas de maneira desordenada, sem que houvesse um planejamento urbano que acompanhasse seu crescimento populacional, o que gera uma gama de problemas que, ao longo do tempo, se acumulam e se tornam cada vez mais difíceis de serem resolvidos, principalmente porque o poder público nada ou pouco faz para resolvê-los. Existem muito poucos projetos de revitalização em andamento, sem contar a falta de loteamento, arborização, asfaltamento e assim por diante. 
+A decisão de focar na Região Metropolitana surgiu da constatação de que muitas dessas cidades foram sendo construídas de maneira desordenada, sem que houvesse um planejamento urbano que acompanhasse seu crescimento populacional, o que gera uma gama de problemas que, ao longo do tempo, se acumulam e se tornam cada vez mais difíceis de serem resolvidos, principalmente porque o poder público nada ou pouco faz para resolvê-los. Existem muito poucos projetos de revitalização em andamento, sem contar a falta de loteamento, arborização, asfaltamento e assim por diante. 
 
 Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de integração com a cidade e com as demais pessoas, e que também o permita exercer sua vox populi, porque, ao reconhecer a existência de um problema, e denunciá-lo, não é somente a pessoa que se beneficia, porque muitas outras também utilizam do mesmo espaço, e com certeza sofrem pelos mesmos motivos.
 
 ## Objetivos
+
+# Objetivos Gerais
+
+O objetivo geral deste projeto é desenvolver um software que permita os moradores da Região Metropolitana denunciar problemas de infraestrutura urbana, como falhas em vias públicas, calçadas, praças, transporte coletivo, entre outros. O software deverá ser acessível, de modo que facilite o processo de denúncia e seja intuitivo na identificação do fluxo que o usuário deve percorrer, para anexar fotos e/ou vídeos, incluir uma descrição do problema e identificar sua localização e assim por diante. Com isso, busca-se promover uma maior integração entre cidadão e cidade, incentivando a participação popular nas decisões públicas e contribuindo para a melhoria do bem-estar coletivo no uso dos espaços urbanos.
+
 
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
