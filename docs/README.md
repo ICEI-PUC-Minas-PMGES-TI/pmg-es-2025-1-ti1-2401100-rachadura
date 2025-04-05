@@ -91,23 +91,39 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
 
-* **Matriz de Alinhamento CSD & Mapa de Stakeholders**
-![Matriz de Alinhamento CSD e Mapa de Stakeholders](https://github.com/user-attachments/assets/215c3b2c-cd48-4c7c-9ff4-f8fa9ccd103f)
+### **Matriz de Alinhamento CSD & Mapa de Stakeholders:**
 
-**Entrevistas Qualitativas:**
+<img src="https://github.com/user-attachments/assets/215c3b2c-cd48-4c7c-9ff4-f8fa9ccd103f" alt="MCSD" width="350"/>
 
+### **Entrevistas Qualitativas & Highlights de Pesquisa:**
+* 1ª Entrevista:
 
+ <img src="https://github.com/user-attachments/assets/d82ac5ea-ff2d-4988-b421-45909dc73f1d" alt="Entrevista 1" width="350"/>
+ 
 
+* 2ª Entrevista:
 
+ <img src="https://github.com/user-attachments/assets/9de4860e-ba2b-47f3-b5bb-8eb2da3f7869" alt="Entrevista 2" width="350"/>
+ 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
+* 3ª Entrevista:
+
+ <img src="https://github.com/user-attachments/assets/90b1c7bc-267b-4dc4-b529-2940c2a35166" alt="Entrevista 3" width="350"/>
+ 
+
+* 4ª Entrevista:
+
+ <img src="https://github.com/user-attachments/assets/28e2730f-dfe8-4a69-a19d-596c83f1e32f" alt="Entrevista 4" width="350"/>
+ 
+
+* 5ª Entrevista:
+
+ <img src="https://github.com/user-attachments/assets/a2e42341-657c-4c74-8aae-ff9b892e71ad" alt="Entrevista 5" width="350"/>
+ 
+
+* 6ª Entrevista:
+
+ <img src="https://github.com/user-attachments/assets/5d280683-56e3-4f3a-9ea4-634cf31ceae3" alt="Entrevista 6" width="350"/>
 
 ## Etapa de Definição
 
