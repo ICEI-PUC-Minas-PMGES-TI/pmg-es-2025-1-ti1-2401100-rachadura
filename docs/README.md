@@ -91,6 +91,15 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
 
+* **Matriz de Alinhamento CSD & Mapa de Stakeholders**
+![Matriz de Alinhamento CSD e Mapa de Stakeholders](https://github.com/user-attachments/assets/215c3b2c-cd48-4c7c-9ff4-f8fa9ccd103f)
+
+**Entrevistas Qualitativas:**
+
+
+
+
+
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
 > Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
