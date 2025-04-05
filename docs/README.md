@@ -32,17 +32,11 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Nosso grupo identificou que não havia um mecanismo fácil e acessível de comunicar problemas de infraestrutura urbana diretamente às autoridades competentes, o que dificulta a vida dos cidadãos que enfrentam tais problemas, uma vez que muitas vezes eles nem sequer sabem como fazer isso. Sendo assim, reduzimos nosso escopo para os moradores da zona metropolitana da Grande Belo Horizonte, e focamos nos problemas relacionados às vias públicas e da infraestrutura urbana, o que inclui todo o ecossistema urbano que vemos e usamos diariamente, como calçadas, parques, praças, ônibus e assim por diante. Mas, além disso, também é possível denunciar problemas na rede elétrica, na captação fluvial e outros.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A decisão de focar na região metropolitana surgiu da constatação de que muitas dessas cidades foram sendo construídas de maneira desordenada, sem que houvesse um planejamento urbano que acompanhasse seu crescimento populacional, o que gera uma gama de problemas que, ao longo do tempo, se acumulam e se tornam cada vez mais difíceis de serem resolvidos, principalmente porque o poder público nada ou pouco faz para resolvê-los. Existem muito poucos projetos de revitalização em andamento, sem contar a falta de loteamento, arborização, asfaltamento e assim por diante. 
+
+Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de integração com a cidade e com as demais pessoas, e que também o permita exercer sua vox populi, porque, ao reconhecer a existência de um problema, e denunciá-lo, não é somente a pessoa que se beneficia, porque muitas outras também utilizam do mesmo espaço, e com certeza sofrem pelos mesmos motivos.
 
 ## Objetivos
 
