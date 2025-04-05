@@ -40,11 +40,11 @@ Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de int
 
 ## Objetivos
 
-# Objetivos Gerais
+### Objetivos Gerais
 
 O objetivo geral deste projeto é desenvolver um software que permita os moradores da Região Metropolitana denunciar problemas de infraestrutura urbana, como falhas em vias públicas, calçadas, praças, transporte coletivo, entre outros. O software deverá ser acessível, de modo que facilite o processo de denúncia e seja intuitivo na identificação do fluxo que o usuário deve percorrer, para anexar fotos e/ou vídeos, incluir uma descrição do problema e identificar sua localização e assim por diante. Com isso, busca-se promover uma maior integração entre cidadão e cidade, incentivando a participação popular nas decisões públicas e contribuindo para a melhoria do bem-estar coletivo no uso dos espaços urbanos.
 
-# Objetivos Específicos
+### Objetivos Específicos
 
 **1) Mapear todos as denúncias feitas num determinado local.**
 Fazer com que o usuário acesse o histórico de denúncias feitas naquela região, para que seja possível identificar quais são as áreas ou quais são os problemas mais recorrentes de lá.
