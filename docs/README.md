@@ -44,6 +44,23 @@ Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de int
 
 O objetivo geral deste projeto é desenvolver um software que permita os moradores da Região Metropolitana denunciar problemas de infraestrutura urbana, como falhas em vias públicas, calçadas, praças, transporte coletivo, entre outros. O software deverá ser acessível, de modo que facilite o processo de denúncia e seja intuitivo na identificação do fluxo que o usuário deve percorrer, para anexar fotos e/ou vídeos, incluir uma descrição do problema e identificar sua localização e assim por diante. Com isso, busca-se promover uma maior integração entre cidadão e cidade, incentivando a participação popular nas decisões públicas e contribuindo para a melhoria do bem-estar coletivo no uso dos espaços urbanos.
 
+# Objetivos Específicos
+
+**1) Mapear todos as denúncias feitas num determinado local.**
+Fazer com que o usuário acesse o histórico de denúncias feitas naquela região, para que seja possível identificar quais são as áreas ou quais são os problemas mais recorrentes de lá.
+
+**2) Criar uma interface de usuário fácil e intuitiva.**
+Tornar fácil a utilização do software, para que o cidadão não enfrente dificuldades em reconhecer um problema e rapidamente denunciá-lo, de modo que a interface seja bem clara e objetiva.
+
+**3) implementar um algortimo de tags que separa as denúncias.**
+Na hora de enviar o problema, o usuário deve adicionar uma tag ou alguma forma de identificação referente ao que ele está denunciando, para que facilite na organização e vizualização do histórico daquela região.
+
+**4) Enganjamento entre os usuários.**
+Criar uma forma de dar "like" ou "dislike" nas denúncias, bem como criar também uma seção de comentários, evitando com que denúncias repetidas sejam feitas referentes ao mesmo problema, e identificando àquelas que precisam de mais urgência para serem resolvidas.
+
+**5) Integração do software com APIs de localização.**
+Permitir o reconhecimento e a vizualicação das dénuncias em tempo real.
+
 
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
 
