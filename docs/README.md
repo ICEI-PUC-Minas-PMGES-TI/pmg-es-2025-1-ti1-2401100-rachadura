@@ -86,20 +86,7 @@ A infraestrutura urbana desempenha um papel fundamental e inalienável na qualid
 
 ## Público-Alvo
 
-O público-alvo do nosso software são todos os moradores da Região Metropolitana de Belo Horizonte, que enfrentam ou que já enfrentaram problemas de infraestrutura, e que desconhecem meios de denunciar tais problemas. Pelo fato do tópico ser bem abrangente, e sabendo que praticamente todas as pessoas já enfrentaram problemas como esses, podemos abranger tanto alguém que utiliza do transporte público, quanto alguém que costuma frequentar parques e pracinhas, quanto alguém que trabalha como Uber, quanto alguém que mora em uma região com problemas de eletricidade e assim por diante. No quesito acessibilidade, o foco são pessoas que possuam um celular com acesso á internet, mas que não necessariamente possuem muito conhecimento tecnológico, porque buscamos tornar a interface de usuário simples e dinâmica, para que seja fácil e rápido fazer uma denúncia. 
-
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo do nosso software é todos os moradores da Região Metropolitana de Belo Horizonte, que enfrentam ou que já enfrentaram problemas de infraestrutura, e que desconhecem meios de denunciar tais problemas. Pelo fato do tópico ser bem abrangente, e sabendo que praticamente todas as pessoas já enfrentaram problemas como esses, podemos abranger tanto alguém que utiliza o transporte público, quanto alguém que costuma frequentar parques e pracinhas, quanto alguém que trabalha como Uber, quanto alguém que mora em uma região com problemas de eletricidade e assim por diante. No quesito acessibilidade, o foco são pessoas que possuam um celular com acesso à internet, mas que não necessariamente possuam muito conhecimento tecnológico, porque buscamos tornar a interface de usuário simples e dinâmica, para que seja fácil e rápido fazer uma denúncia.
 
 # Product Discovery
 
