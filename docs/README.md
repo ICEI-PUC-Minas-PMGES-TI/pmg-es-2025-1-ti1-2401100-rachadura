@@ -131,16 +131,21 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+* **David Hatsunaga:**
+
+<img src="https://github.com/user-attachments/assets/5321a3ab-170b-4a9a-bfc1-a7c2b16a2ca4" alt="Persona 1" width="350"/>
+
+* **Ana Costa:**
+
+<img src="https://github.com/user-attachments/assets/692b2b92-8b9e-436a-af9a-fb02d2362e5b" alt="Persona 2" width="350"/>
+
+* **Pedro Silva:**
+
+<img src="https://github.com/user-attachments/assets/e319687a-a3ab-45d5-a133-8ee2dec501e4" alt="Persona 3" width="350"/>
+
+* **Lucas Almeida:**
+
+<img src="https://github.com/user-attachments/assets/edf6aadb-de43-47f3-89e1-ec2a73e7e118" alt="Persona 4" width="350"/>
 
 # Product Design
 
