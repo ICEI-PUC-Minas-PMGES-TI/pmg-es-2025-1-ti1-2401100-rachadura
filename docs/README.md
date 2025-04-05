@@ -48,31 +48,25 @@ O objetivo geral deste projeto é desenvolver um software que permita os morador
 
 ### Objetivos Específicos
 
-**1) Mapear todos as denúncias feitas num determinado local.**
+***1) Mapear todos as denúncias feitas num determinado local.***
+
 Fazer com que o usuário acesse o histórico de denúncias feitas naquela região, para que seja possível identificar quais são as áreas ou quais são os problemas mais recorrentes de lá.
 
-**2) Criar uma interface de usuário fácil e intuitiva.**
+***2) Criar uma interface de usuário fácil e intuitiva.***
+
 Tornar fácil a utilização do software, para que o cidadão não enfrente dificuldades em reconhecer um problema e rapidamente denunciá-lo, de modo que a interface seja bem clara e objetiva.
 
-**3) implementar um algortimo de tags que separa as denúncias.**
+***3) implementar um algortimo de tags que separa as denúncias.***
+
 Na hora de enviar o problema, o usuário deve adicionar uma tag ou alguma forma de identificação referente ao que ele está denunciando, para que facilite na organização e vizualização do histórico daquela região.
 
-**4) Enganjamento entre os usuários.**
+***4) Enganjamento entre os usuários.***
+
 Criar uma forma de dar "like" ou "dislike" nas denúncias, bem como criar também uma seção de comentários, evitando com que denúncias repetidas sejam feitas referentes ao mesmo problema, e identificando àquelas que precisam de mais urgência para serem resolvidas.
 
-**5) Integração do software com APIs de localização.**
+***5) Integração do software com APIs de localização.***
+
 Permitir o reconhecimento e a vizualicação das dénuncias em tempo real.
-
-
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
