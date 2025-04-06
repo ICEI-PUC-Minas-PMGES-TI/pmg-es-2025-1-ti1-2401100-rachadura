@@ -295,8 +295,16 @@ Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidad
 > Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
 
 # Metodologia
+Organização
+O grupo se reunia aos finais de semana, visto que muitos trabalhavam em tempo integral durante a semana, via Discord para uma chamada de voz onde eram estipuladas, em conjunto e de acordo com a agenda de cada integrante, as tarefas que cada um executaria, estipulando um prazo para que tudo fosse entregue e integrado de maneira organizada.
 
-Detalhes sobre a organização do grupo e o ferramental empregado.
+Durante as fases iniciais do projeto, o Miro foi utilizado como a principal ferramenta para a execução das tarefas estipuladas pelos professores durante a semana.
+
+Nas fases posteriores, houve um maior esforço para que, em complemento ao servidor criado no Discord (onde eram armazenadas as principais informações - como link do Miro, das atividades do Canvas e do repositório criado no GitHub), também fosse feito uso da aba "Projects" na própria plataforma do GitHub, onde poderíamos estipular com mais critério e de forma mais clara a quem cada atividade caberia - além de tornar mais fácil a interação entre os integrantes para mostrar quais atividades foram concluídas ou ainda estavam em execução.
+
+Para a realização dos wireframes, fizemos uso do próprio Miro, que fornece alguns templates que facilitam o processo de criação de croquis das principais páginas do site e o fluxo pelo qual o usuário teria que passar para realizar qualquer tarefa presente na aplicação.
+
+Focamos em manter o layout do site em "Mobile-First" (Dispositivos Móveis em Primeiro Lugar), visto que o objetivo do projeto é torná-lo o mais simples possível para uso diário, tanto para pessoas que sejam novas na plataforma e queiram ter uma experiência mais "User Friendly" (Amigável ao Usuário), quanto para pessoas que têm dificuldades com o manuseio de aparelhos telefônicos e aplicações mais modernas - que são geralmente as pessoas que mais enfrentam problemas de infraestrutura, mas que possuem pouquíssimas plataformas ou incentivos para denunciar aquilo que as aflige.
 
 ## Ferramentas
 
@@ -304,15 +312,13 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
-|                             |            |                                                    |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIaSTdWs=/?share_link_id=242424685997        |
+| Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2401100-rachadura.git      |
+| Wire Frame                  | Miro       | https://miro.com/app/board/uXjVIG0RF0w=/ |
+| Protótipo Interativo        | Figma  |  https://www.figma.com  |
+| Apresentação de Slides      | Canvas     | https://shorturl.at/qYviM |
+| Lista de Requisitos &  História de Usuários | MarkDown Table Editor | https://www.tablesgenerator.com/markdown_tables |
+| README.md Edição de Texto | StackEdit | https://stackedit.io/ |
 
 ## Gerenciamento do Projeto
 
