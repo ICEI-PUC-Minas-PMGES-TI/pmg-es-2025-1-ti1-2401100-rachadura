@@ -200,6 +200,7 @@ Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidad
 ![tela1](images/tela1.png)
 ![tela2](images/tela2.png)
 ![tela3](images/tela3.png)
+![tela4](images/tela4.png)
 ![login1](images/login1.png)
 ![login2](images/login2.png)
 ![perfil](images/perfil.png)
