@@ -198,6 +198,9 @@ Estas imagens representam esboços iniciais da nossa proposta de interface.
 Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidades e o fluxo de navegação do sistema, servindo como base para futuras etapas de design e desenvolvimento. 
 
 ![Exemplo de wireframe](images/exemplo-wireframe.png)
+![tela1](images/tela1.png)
+![tela2](images/tela2.png)
+![tela3](images/tela3.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
