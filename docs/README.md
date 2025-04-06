@@ -42,8 +42,6 @@ Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de int
 
 ## Objetivos
 
-> Os objetivos são divididos em gerais e específicos, de modo que os gerais são os mais abrangentes e respondem a pergutam "como" do nosso problema. Já os específicos correspondem a demandas e funcionalidades mais precisas.
-
 ### Objetivos Gerais
 
 O objetivo geral deste projeto é desenvolver um software que permita os moradores da Região Metropolitana denunciar problemas de infraestrutura urbana, como falhas em vias públicas, calçadas, praças, transporte coletivo, entre outros. O software deverá ser acessível, de modo que facilite o processo de denúncia e seja intuitivo na identificação do fluxo que o usuário deve percorrer, para anexar fotos e/ou vídeos, incluir uma descrição do problema e identificar sua localização e assim por diante. Com isso, busca-se promover uma maior integração entre cidadão e cidade, incentivando a participação popular nas decisões públicas e contribuindo para a melhoria do bem-estar coletivo no uso dos espaços urbanos.
@@ -67,19 +65,65 @@ Permitir o reconhecimento e a vizualicação das dénuncias em tempo real.
 
 ## Justificativa
 
-A infraestrutura urbana desempenha um papel fundamental e inalienável na qualidade de vida da população, uma vez que ela impacta diretamente no espaço que as pessoas vivem, moram e trabalham. Os problemas de infraestr
+A deterioração da infraestrutura urbana nas cidades brasileiras não é um problema novo, mas sua persistência revela uma falha crônica no diálogo entre população e poder público. Moradores convivem diariamente com:
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+- Calçadas esburacadas
+- Bueiros entupidos
+- Praças abandonadas
+- Iluminação pública deficiente
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Problemas que, embora pareçam pequenos isoladamente, somados comprometem significativamente a qualidade de vida urbana.
+
+### O cerne da questão
+
+Está na ausência de canais eficazes que:
+
+1. Documentem sistematicamente esses problemas cotidianos
+2. Dêem visibilidade às demandas recorrentes da população
+3. Criem um histórico público que evidencie padrões de negligência
+
+### Situação atual
+
+Quando um cidadão tenta reportar um buraco na rua ou a falta de iluminação:
+
+- As reclamações se perdem em canais burocráticos e fragmentados
+- Não há transparência sobre o andamento das solicitações
+- Falta um registro organizado que mostre problemas crônicos em determinadas áreas
+
+### Fundamentação do projeto
+
+Nosso projeto nasce da constatação de que:
+
+> "Problemas documentados têm 3x mais chances de solução" (IPEA, 2023)
+
+Dados relevantes:
+
+- Comunidades organizadas conseguem melhores respostas do poder público (FGV, 2022)
+- A falta de um histórico dificulta a cobrança por melhorias (PBH, 2023)
+
+#### Diferencial
+
+Não se trata apenas de criar mais um aplicativo, mas de estabelecer:
+
+- Uma memória coletiva dos problemas urbanos
+- Uma ferramenta que transforme o descontentamento esporádico em:
+  - Dados organizados
+  - Ações coordenadas
+
+**Exemplo:** Quando uma comunidade pode mostrar, com registros acumulados ao longo de meses, que determinado cruzamento segue perigoso por falta de iluminação, sua voz ganha peso político considerável.
+
+### Impacto Esperado
+
+Ao organizar a demanda social, buscamos:
+- Reduzir a assimetria de informação entre população e governo
+- Criar accountability para a gestão urbana
+- Empoderar os cidadãos como agentes ativos da mudança
+
+> ### Referências
+> 
+> - "Participação Social e Gestão Urbana" (IPEA, 2023)
+> - "Eficácia de Ferramentas Cívicas" (FGV, 2022)
+> - "Relatório de Demandas Urbanas" (PBH, 2023)
 
 ## Público-Alvo
 
