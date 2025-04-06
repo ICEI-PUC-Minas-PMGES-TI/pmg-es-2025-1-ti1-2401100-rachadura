@@ -42,8 +42,6 @@ Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de int
 
 ## Objetivos
 
-> Os objetivos são divididos em gerais e específicos, de modo que os gerais são os mais abrangentes e respondem a pergutam "como" do nosso problema. Já os específicos correspondem a demandas e funcionalidades mais precisas.
-
 ### Objetivos Gerais
 
 O objetivo geral deste projeto é desenvolver um software que permita os moradores da Região Metropolitana denunciar problemas de infraestrutura urbana, como falhas em vias públicas, calçadas, praças, transporte coletivo, entre outros. O software deverá ser acessível, de modo que facilite o processo de denúncia e seja intuitivo na identificação do fluxo que o usuário deve percorrer, para anexar fotos e/ou vídeos, incluir uma descrição do problema e identificar sua localização e assim por diante. Com isso, busca-se promover uma maior integração entre cidadão e cidade, incentivando a participação popular nas decisões públicas e contribuindo para a melhoria do bem-estar coletivo no uso dos espaços urbanos.
@@ -67,19 +65,65 @@ Permitir o reconhecimento e a vizualicação das dénuncias em tempo real.
 
 ## Justificativa
 
-A infraestrutura urbana desempenha um papel fundamental e inalienável na qualidade de vida da população, uma vez que ela impacta diretamente no espaço que as pessoas vivem, moram e trabalham. Os problemas de infraestr
+A deterioração da infraestrutura urbana nas cidades brasileiras não é um problema novo, mas sua persistência revela uma falha crônica no diálogo entre população e poder público. Moradores convivem diariamente com:
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+- Calçadas esburacadas
+- Bueiros entupidos
+- Praças abandonadas
+- Iluminação pública deficiente
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Problemas que, embora pareçam pequenos isoladamente, somados comprometem significativamente a qualidade de vida urbana.
+
+### O cerne da questão
+
+Está na ausência de canais eficazes que:
+
+1. Documentem sistematicamente esses problemas cotidianos
+2. Dêem visibilidade às demandas recorrentes da população
+3. Criem um histórico público que evidencie padrões de negligência
+
+### Situação atual
+
+Quando um cidadão tenta reportar um buraco na rua ou a falta de iluminação:
+
+- As reclamações se perdem em canais burocráticos e fragmentados
+- Não há transparência sobre o andamento das solicitações
+- Falta um registro organizado que mostre problemas crônicos em determinadas áreas
+
+### Fundamentação do projeto
+
+Nosso projeto nasce da constatação de que:
+
+> "Problemas documentados têm 3x mais chances de solução" (IPEA, 2023)
+
+Dados relevantes:
+
+- Comunidades organizadas conseguem melhores respostas do poder público (FGV, 2022)
+- A falta de um histórico dificulta a cobrança por melhorias (PBH, 2023)
+
+#### Diferencial
+
+Não se trata apenas de criar mais um aplicativo, mas de estabelecer:
+
+- Uma memória coletiva dos problemas urbanos
+- Uma ferramenta que transforme o descontentamento esporádico em:
+  - Dados organizados
+  - Ações coordenadas
+
+**Exemplo:** Quando uma comunidade pode mostrar, com registros acumulados ao longo de meses, que determinado cruzamento segue perigoso por falta de iluminação, sua voz ganha peso político considerável.
+
+### Impacto Esperado
+
+Ao organizar a demanda social, buscamos:
+- Reduzir a assimetria de informação entre população e governo
+- Criar accountability para a gestão urbana
+- Empoderar os cidadãos como agentes ativos da mudança
+
+> ### Referências
+> 
+> - "Participação Social e Gestão Urbana" (IPEA, 2023)
+> - "Eficácia de Ferramentas Cívicas" (FGV, 2022)
+> - "Relatório de Demandas Urbanas" (PBH, 2023)
 
 ## Público-Alvo
 
@@ -155,19 +199,16 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| **Eu como...**                                                   | **Preciso de...**                                                      | **Para...**                                                     |
+|------------------------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|
+| Eu como motorista de Uber                                        | Um site que me indique onde tem um problema na estrada ou via pública  | Ter uma rota mais segura e rápida                               |
+| Eu como cidadão preocupado com a segurança                       | Reportar postes de luz apagados ou com defeito                         | para que as ruas fiquem bem iluminadas à noite                  |
+| Trabalhador que utilizo meu carro para me locomover ao trabalho. | Preciso de preciso de informações sobre vias interditadas              | Para nao chegar atrasado no serviços                            |
+| Eu como entregador de delivery                                   | Um site que me informe sobre vias de transito seguras e rapidas        | Para ter uma rota segura durante o trabalho                     |
+| Eu como motorista de ambulância                                  | Informações sobre vias interditadas, alagadas ou demoronamento         | Para deslocar de forma rápida e segura com ou sem paciente      |
+| Eu como ciclista.                                                | Gostaria de mais informações de ciclovias e mais segurança nas mesmas. | Garantir a segurança de todos os ciclistas, evitando acidentes. |
+| Eu como caminhoneiro,                                            | Gostaria de mais áreas de escape pelo anel rodoviário                  | Garantir a segurança de todos no transito, evitando acidentes.  |
+| pedestre                                                         | calçadas seguras e presentes em vias de modo geral                     | minha segurança                                                 |
 
 ## Proposta de Valor
 
@@ -254,8 +295,16 @@ Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidad
 > Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
 
 # Metodologia
+Organização
+O grupo se reunia aos finais de semana, visto que muitos trabalhavam em tempo integral durante a semana, via Discord para uma chamada de voz onde eram estipuladas, em conjunto e de acordo com a agenda de cada integrante, as tarefas que cada um executaria, estipulando um prazo para que tudo fosse entregue e integrado de maneira organizada.
 
-Detalhes sobre a organização do grupo e o ferramental empregado.
+Durante as fases iniciais do projeto, o Miro foi utilizado como a principal ferramenta para a execução das tarefas estipuladas pelos professores durante a semana.
+
+Nas fases posteriores, houve um maior esforço para que, em complemento ao servidor criado no Discord (onde eram armazenadas as principais informações - como link do Miro, das atividades do Canvas e do repositório criado no GitHub), também fosse feito uso da aba "Projects" na própria plataforma do GitHub, onde poderíamos estipular com mais critério e de forma mais clara a quem cada atividade caberia - além de tornar mais fácil a interação entre os integrantes para mostrar quais atividades foram concluídas ou ainda estavam em execução.
+
+Para a realização dos wireframes, fizemos uso do próprio Miro, que fornece alguns templates que facilitam o processo de criação de croquis das principais páginas do site e o fluxo pelo qual o usuário teria que passar para realizar qualquer tarefa presente na aplicação.
+
+Focamos em manter o layout do site em "Mobile-First" (Dispositivos Móveis em Primeiro Lugar), visto que o objetivo do projeto é torná-lo o mais simples possível para uso diário, tanto para pessoas que sejam novas na plataforma e queiram ter uma experiência mais "User Friendly" (Amigável ao Usuário), quanto para pessoas que têm dificuldades com o manuseio de aparelhos telefônicos e aplicações mais modernas - que são geralmente as pessoas que mais enfrentam problemas de infraestrutura, mas que possuem pouquíssimas plataformas ou incentivos para denunciar aquilo que as aflige.
 
 ## Ferramentas
 
@@ -263,15 +312,13 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
-|                             |            |                                                    |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVIaSTdWs=/?share_link_id=242424685997        |
+| Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2401100-rachadura.git      |
+| Wire Frame                  | Miro       | https://miro.com/app/board/uXjVIG0RF0w=/ |
+| Protótipo Interativo        | Figma  |  https://www.figma.com  |
+| Apresentação de Slides      | Canvas     | https://shorturl.at/qYviM |
+| Lista de Requisitos &  História de Usuários | MarkDown Table Editor | https://www.tablesgenerator.com/markdown_tables |
+| README.md Edição de Texto | StackEdit | https://stackedit.io/ |
 
 ## Gerenciamento do Projeto
 
