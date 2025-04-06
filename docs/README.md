@@ -28,7 +28,9 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+A Região Metropolitana de Belo Horizonte, bem como muitas outras áreas urbanas do Brasil, sofre muito com problemas de infraestrutura urbana, graças ao crescimento desordenado e ao descaso do poder público, que não dá a devida atenção e não se prontifica a solucionar esses problemas que tanto aflingem a população. É comum vermos buracos nas calçadas e nas estradas, praças mal cuidadas, iluminação precária nas ruas, falta de eletricidade, problemas no transporte público e assim por diante, e, infelizmente, nos acostumamos a relevar tais problemas, de forma que não denunciamos, e, mesmo se eventualmente quisermos, nem ao menos sabemos como fazer isso de forma prática.
+
+Sendo assim, o projeto propõe a criação de um software simples e intuitivo que permita os moradores dessas regiões fazerem denúncias de infraestrutura, de modo que seja fácil o anexo de fotos, vídeos, comentários, e de forma que essas denúncias efetivamente cheguem às autoridades competentes.
 
 ## Problema
 
