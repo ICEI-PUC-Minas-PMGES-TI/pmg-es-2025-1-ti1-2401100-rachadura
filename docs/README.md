@@ -199,16 +199,16 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| **Eu como...**                                                   | **Preciso de...**                                                      | **Para...**                                                     |
-|------------------------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|
-| Eu como motorista de Uber                                        | Um site que me indique onde tem um problema na estrada ou via pública  | Ter uma rota mais segura e rápida                               |
-| Eu como cidadão preocupado com a segurança                       | Reportar postes de luz apagados ou com defeito                         | para que as ruas fiquem bem iluminadas à noite                  |
-| Trabalhador que utilizo meu carro para me locomover ao trabalho. | Preciso de preciso de informações sobre vias interditadas              | Para nao chegar atrasado no serviços                            |
-| Eu como entregador de delivery                                   | Um site que me informe sobre vias de transito seguras e rapidas        | Para ter uma rota segura durante o trabalho                     |
-| Eu como motorista de ambulância                                  | Informações sobre vias interditadas, alagadas ou demoronamento         | Para deslocar de forma rápida e segura com ou sem paciente      |
-| Eu como ciclista.                                                | Gostaria de mais informações de ciclovias e mais segurança nas mesmas. | Garantir a segurança de todos os ciclistas, evitando acidentes. |
-| Eu como caminhoneiro,                                            | Gostaria de mais áreas de escape pelo anel rodoviário                  | Garantir a segurança de todos no transito, evitando acidentes.  |
-| pedestre                                                         | calçadas seguras e presentes em vias de modo geral                     | minha segurança                                                 |
+| **Eu como...**                     | **Preciso de..**                                          | **Para**                                                 |
+|---------------------------------|----------------------------------------------------------|-------------------------------------------------------------|
+| Motorista de Uber               | Site que indique problemas na estrada ou via pública      | Ter rota mais segura e rápida                               |
+| Cidadão preocupado com segurança| Reportar postes de luz apagados ou com defeito           | Garantir ruas bem iluminadas à noite                        |
+| Trabalhador que usa carro       | Informações sobre vias interditadas                      | Evitar atrasos no trabalho                                  |
+| Entregador de delivery          | Site com informações de vias seguras e rápidas           | Ter rotas seguras durante entregas                          |
+| Motorista de ambulância         | Dados sobre vias interditadas, alagadas ou desmoronamento| Deslocamento rápido e seguro com ou sem paciente            |
+| Ciclista                       | Informações sobre ciclovias e segurança nas mesmas       | Prevenir acidentes e garantir segurança                     |
+| Caminhoneiro                   | Mais áreas de escape no anel rodoviário                  | Melhorar segurança no trânsito                              |
+| Pedestre                       | Calçadas seguras e presentes em todas as vias            | Garantir segurança ao caminhar 
 
 ## Proposta de Valor
 
