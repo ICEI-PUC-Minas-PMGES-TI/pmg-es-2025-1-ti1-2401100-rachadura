@@ -203,8 +203,6 @@ Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidad
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
-
 ![fluxodetelas](images/fluxodetelas.png)
 
 
