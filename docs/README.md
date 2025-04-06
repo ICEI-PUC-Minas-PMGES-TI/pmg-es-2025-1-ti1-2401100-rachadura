@@ -141,15 +141,22 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+##### Proposta para Persona 1 (Engenheiro Mecânico)
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
+![image](https://github.com/user-attachments/assets/80338446-8a33-4566-8f69-69f3c892031a)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+##### Proposta para Persona 2 (Motorista de Uber em tempo integral)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+![image](https://github.com/user-attachments/assets/4f51aa90-fafe-4e4c-acc9-6c4a7e980993)
+
+##### Proposta para Persona 3(Designer gráfico freelancer e ciclista ativo)
+
+![image](https://github.com/user-attachments/assets/b8097a64-3503-4277-9e23-5a86e9ce68be)
+
+##### Proposta para Persona 3(Estudante universitário e cidadão ativo)
+
+![image](https://github.com/user-attachments/assets/2a1d3aa0-d4b6-496c-a0c7-8c3ec91c2448)
+
 
 ## Requisitos
 
@@ -159,30 +166,30 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário avalie e comente uma denuncia  | Alta       |
-| RF-002 | Permitir interação do usuário com o Mapa | Alta     |
-| RF-003 | Permitir que denuncia seja compartilhada via link | Media     |
-| RF-004 | Permitir que denuncia seja categorizada | Media     |
-| RF-005 | Permitir que uma dica pertinente de como agir em uma situação de perigo seja mostrada de acordo com a categoria do problema | Media     |
-| RF-006 | Permitir que o usuário faça upload de fotos e vídeos do problema que está denunciando | Alta     |
-| RF-007 | Permitir que o usuário faça uma descrição daquilo que está denunciando | Alta     |
-| RF-008 | Pagina de Login e Registro Cadastro | Baixo     |
+| RF-001 | O sistema deve permitir que o usuário avalie e comente uma denúncia  | Alta       |
+| RF-002 | O sistema deve permitir interação do usuário com o Mapa | Alta     |
+| RF-003 | O sistema deve permitir que a denúncia seja compartilhada via link | Média     |
+| RF-004 | O sistema deve permitir que a denúncia seja categorizada | Média     |
+| RF-005 | O sistema deve permitir que uma dica pertinente de como agir em uma situação de perigo seja mostrada de acordo com a categoria do problema | Média     |
+| RF-006 | O sistema deve permitir que o usuário faça upload de fotos e vídeos do problema que está denunciando | Alta     |
+| RF-007 | O sistema deve permitir que o usuário faça uma descrição daquilo que está denunciando | Alta     |
+| RF-008 | O sistema deve ter uma página de Login, uma de Registro e uma de Cadastro | Baixo     |
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | Modo Claro e Escuro (que também se extende ao mapa) | Media     |
-| RNF-002 | Design responsivo para garantir boa usabilidade em diferentes dispositivos (PC, tablet, celular)          | Alta      |
-| RNF-003 | Notificação de status da denúncia (se o problema ainda está em aberto ou se foi concluído)          | Baixa      |
-| RNF-004 | Escalabilidade de quantidade de usuário          | Baixa      |
-| RNF-005 | Fonte adequada, esteticamente agradável, de fácil leitura e com padronização de cor.          | Media      |
-| RNF-006 | Interface intuitiva e acessível, mesmo para usuários com pouca experiência digital.          | Alta      |
-| RNF-007 | Formulários fáceis de preencher, minimizando campos obrigatórios.          | Baixa      |
-| RNF-008 | Feedback visual e mensagens claras após cada ação do usuário (ex.: denúncia enviada com sucesso).          | Alta      |
-| RNF-009 | Sistema deve funcionar durante o dia inteiro          | Alta      |
-| RNF-010 | Sera feito por meio das linguagens de HTML, CSS e JavaScript          | Alta      |
-| RNF-011 | Publicado em ambiente acessível via intern (Render, AWS,          | Alta      |
+| RNF-001 | O sistema deve ter modo Claro e Escuro (que também se extende ao mapa) | Média     |
+| RNF-002 | O sistema deve ter design responsivo para garantir boa usabilidade em diferentes dispositivos (PC, tablet, celular)          | Alta      |
+| RNF-003 | O sistema deve ter uma notificação de status da denúncia (se o problema ainda está em aberto ou se foi concluído)          | Baixa      |
+| RNF-004 | O sistema deve ter escalabilidade de quantidade de usuário          | Baixa      |
+| RNF-005 | O sistema deve ter fonte adequada, esteticamente agradável, de fácil leitura e com padronização de cor.          | Média      |
+| RNF-006 | O sistema deve ter interface intuitiva e acessível, mesmo para usuários com pouca experiência digital.          | Alta      |
+| RNF-007 | O sistema deve ter formulários fáceis de preencher, minimizando campos obrigatórios.          | Baixa      |
+| RNF-008 | O sistema deve ter feedback visual e mensagens claras após cada ação do usuário (ex.: denúncia enviada com sucesso).          | Alta      |
+| RNF-009 | O sistema deve funcionar durante o dia inteiro          | Alta      |
+| RNF-010 | O sistema deve ser feito por meio das linguagens de HTML, CSS e JavaScript          | Alta      |
+| RNF-011 |O sistema deve ser publicado em ambiente acessível via internet  | Alta      |
 
 ## Projeto de Interface
 
