@@ -42,7 +42,7 @@ Portanto, buscamos criar um canal que dê ao cidadão um maior sentimento de int
 
 ## Objetivos
 
-Os objetivos são divididos em gerais e específicos, de modo que os gerais são os mais abrangentes e respondem a pergutam "como" do nosso problema. Já os específicos correspondem a demandas e funcionalidades mais precisas.
+> Os objetivos são divididos em gerais e específicos, de modo que os gerais são os mais abrangentes e respondem a pergutam "como" do nosso problema. Já os específicos correspondem a demandas e funcionalidades mais precisas.
 
 ### Objetivos Gerais
 
