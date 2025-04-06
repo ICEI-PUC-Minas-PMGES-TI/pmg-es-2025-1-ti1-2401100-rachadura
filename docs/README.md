@@ -155,19 +155,16 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| **Eu como...**                                                   | **Preciso de...**                                                      | **Para...**                                                     |
+|------------------------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|
+| Eu como motorista de Uber                                        | Um site que me indique onde tem um problema na estrada ou via pública  | Ter uma rota mais segura e rápida                               |
+| Eu como cidadão preocupado com a segurança                       | Reportar postes de luz apagados ou com defeito                         | para que as ruas fiquem bem iluminadas à noite                  |
+| Trabalhador que utilizo meu carro para me locomover ao trabalho. | Preciso de preciso de informações sobre vias interditadas              | Para nao chegar atrasado no serviços                            |
+| Eu como entregador de delivery                                   | Um site que me informe sobre vias de transito seguras e rapidas        | Para ter uma rota segura durante o trabalho                     |
+| Eu como motorista de ambulância                                  | Informações sobre vias interditadas, alagadas ou demoronamento         | Para deslocar de forma rápida e segura com ou sem paciente      |
+| Eu como ciclista.                                                | Gostaria de mais informações de ciclovias e mais segurança nas mesmas. | Garantir a segurança de todos os ciclistas, evitando acidentes. |
+| Eu como caminhoneiro,                                            | Gostaria de mais áreas de escape pelo anel rodoviário                  | Garantir a segurança de todos no transito, evitando acidentes.  |
+| pedestre                                                         | calçadas seguras e presentes em vias de modo geral                     | minha segurança                                                 |
 
 ## Proposta de Valor
 
