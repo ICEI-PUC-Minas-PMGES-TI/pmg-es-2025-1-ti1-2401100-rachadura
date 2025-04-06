@@ -197,13 +197,8 @@ Estes são os protótipos de telas do sistema.
 Estas imagens representam esboços iniciais da nossa proposta de interface.
 Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidades e o fluxo de navegação do sistema, servindo como base para futuras etapas de design e desenvolvimento. 
 
-![tela1](images/tela1.png)
-![tela2](images/tela2.png)
-![tela3](images/tela3.png)
-![tela4](images/tela4.png)
-![login1](images/login1.png)
-![login2](images/login2.png)
-![perfil](images/perfil.png)
+![tela1a4](images/tela1a4.png)
+
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
