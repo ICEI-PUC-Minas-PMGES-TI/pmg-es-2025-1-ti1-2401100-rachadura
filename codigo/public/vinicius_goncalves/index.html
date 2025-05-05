@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Radar Urbano - Cadastro de Denúncia</title>
+</head>
+<body>
+
+  <header>
+    <h1>Radar Urbano</h1>
+    <h2>Cadastro de Denúncia</h2>
+  </header>
+
+  <form id="formDenuncia" enctype="multipart/form-data">
+
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo" name="titulo" required><br><br>
+
+    <label for="categoria">Categoria</label><br>
+    <select id="categoria" name="categoria" required>
+      <option value="">Selecione</option>
+      <option value="buraco">Buraco</option>
+      <option value="enchente">Esgoto</option>
+      <option value="sinalizacao">Sinalização</option>
+      <option value="iluminacao">Iluminação</option>
+      <option value="esgoto">Esgoto</option>
+      <option value="outros">Outros</option>
+    </select><br><br>
+
+    <label for="endereco">Endereço</label>
+    <input type="text" id="endereco" name="endereco" required><br><br>
+
+    <label for="midia">Imagens / Vídeos</label><br>
+    <input type="file" id="midia" name="midia" accept="image/*,video/*" multiple required><br><br>
+
+    <label for="descricao">Descrição</label><br>
+    <textarea id="descricao" name="descricao" required></textarea><br><br>
+
+    <button type="reset">Cancelar</button>
+    <button type="submit">Enviar</button>
+
+  </form>
+
+</body>
+</html>
