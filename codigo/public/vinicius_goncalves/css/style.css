@@ -1,60 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  header h1 {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 2em 1em;
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+header h2 {
+  margin-top: 0.3em;
+  font-size: 1.2em;
+  color: #555;
+}
+
+form {
+  width: 90%;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  font-size: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+button {
+  flex: 1;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: #2ecc71;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1000px) {
+
+  html,
+  body {
+    height: 80%;
     margin: 0;
-    font-size: 1.8em;
+    padding: 0;
   }
-  
-  header h2 {
-    margin-top: 5px;
-    font-size: 1.2em;
-    color: #555;
-  }
-  
+
   form {
-    margin-top: 20px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
   }
-  
-  label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+
+  header h1 {
+    font-size: 1.6em;
   }
-  
-  input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+  header h2 {
+    font-size: 1em;
   }
-  
-  textarea {
-    resize: vertical;
+
+  .buttons {
+    flex-direction: column;
   }
-  
+
   button {
-    margin-top: 20px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5em;
   }
-  
-  button[type="submit"] {
-    background-color: #007bff;
-    color: white;
+
+  button:first-child {
+    margin-top: 0;
   }
-  
-  button[type="reset"] {
-    background-color: #ccc;
-    margin-right: 10px;
-  }
-  
+}
