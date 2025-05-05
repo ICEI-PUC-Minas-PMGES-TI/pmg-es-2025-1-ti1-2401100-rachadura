@@ -1,0 +1,40 @@
+{
+    "feed": [
+      {
+        "id": 1,
+        "usuario": "joao_silva",
+        "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
+        "imagem_denuncia": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+        "descricao": "Buraco enorme na Rua dos Goitacazes, próximo ao número 1200. Difícil para carros e perigoso para pedestres.",
+        "localizacao": "Rua dos Goitacazes, Centro",
+        "comentarios": [
+          {
+            "id": 101,
+            "usuario": "maria_oliveira",
+            "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+            "texto": "Já avisei a prefeitura sobre isso também!",
+            "data": "2023-10-25T10:30:00Z",
+            "likes": 3,
+            "respostas": [
+              {
+                "id": 201,
+                "usuario": "joao_silva",
+                "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
+                "texto": "Obrigado pelo apoio, Maria!",
+                "data": "2023-10-25T11:15:00Z"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "usuario": "maria_oliveira",
+        "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+        "imagem_denuncia": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+        "descricao": "Semáforo quebrado há dias, causando confusão no cruzamento.",
+        "localizacao": "Avenida Afonso Pena, esquina com Rua da Bahia",
+        "comentarios": []
+      }
+    ]
+  }

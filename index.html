@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Feed de Denúncias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .post {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+    .usuario {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .usuario img {
+      border-radius: 50%;
+      width: 40px;
+      margin-right: 10px;
+    }
+    .imagem-denuncia {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .comentario {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .resposta {
+      margin-left: 20px;
+      margin-top: 5px;
+      font-size: 0.9em;
+      background: #eaeaea;
+      padding: 8px;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Feed de Denúncias</h1>
+  <div id="feed"></div>
+
+  <script>
+    const data = {
+      "feed": [
+        {
+          "id": 1,
+          "usuario": "joao_silva",
+          "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
+          "imagem_denuncia": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+          "descricao": "Buraco enorme na Rua dos Goitacazes, próximo ao número 1200. Difícil para carros e perigoso para pedestres.",
+          "localizacao": "Rua dos Goitacazes, Centro",
+          "comentarios": [
+            {
+              "id": 101,
+              "usuario": "maria_oliveira",
+              "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+              "texto": "Já avisei a prefeitura sobre isso também!",
+              "data": "2023-10-25T10:30:00Z",
+              "likes": 3,
+              "respostas": [
+                {
+                  "id": 201,
+                  "usuario": "joao_silva",
+                  "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
+                  "texto": "Obrigado pelo apoio, Maria!",
+                  "data": "2023-10-25T11:15:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "usuario": "maria_oliveira",
+          "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+          "imagem_denuncia": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
+          "descricao": "Semáforo quebrado há dias, causando confusão no cruzamento.",
+          "localizacao": "Avenida Afonso Pena, esquina com Rua da Bahia",
+          "comentarios": []
+        }
+      ]
+    };
+
+    const feedEl = document.getElementById("feed");
+
+    data.feed.forEach(post => {
+      const postDiv = document.createElement("div");
+      postDiv.className = "post";
+
+      postDiv.innerHTML = `
+        <div class="usuario">
+          <img src="${post.foto_perfil}" alt="Foto de ${post.usuario}">
+          <strong>@${post.usuario}</strong>
+        </div>
+        <img class="imagem-denuncia" src="${post.imagem_denuncia}" alt="Imagem da denúncia">
+        <p>${post.descricao}</p>
+        <p><strong>Localização:</strong> ${post.localizacao}</p>
+      `;
+
+      post.comentarios.forEach(comentario => {
+        const comentarioDiv = document.createElement("div");
+        comentarioDiv.className = "comentario";
+
+        const likesSpan = document.createElement("span");
+        likesSpan.textContent = `👍 ${comentario.likes}`;
+        likesSpan.id = `likes-${comentario.id}`;
+
+        const likeButton = document.createElement("button");
+        likeButton.textContent = "Curtir";
+        likeButton.onclick = () => {
+          comentario.likes++;
+          document.getElementById(`likes-${comentario.id}`).textContent = `👍 ${comentario.likes}`;
+        };
+
+        comentarioDiv.innerHTML = `
+          <div class="usuario">
+            <img src="${comentario.foto_perfil}" alt="Foto de ${comentario.usuario}">
+            <strong>@${comentario.usuario}</strong>
+          </div>
+          <p>${comentario.texto}</p>
+          <p><small>${new Date(comentario.data).toLocaleString()}</small></p>
+        `;
+
+        comentarioDiv.appendChild(likesSpan);
+        comentarioDiv.appendChild(likeButton);
+
+        // Respostas (se houver)
+        comentario.respostas?.forEach(resposta => {
+          const respostaDiv = document.createElement("div");
+          respostaDiv.className = "resposta";
+          respostaDiv.innerHTML = `
+            <div class="usuario">
+              <img src="${resposta.foto_perfil}" alt="Foto de ${resposta.usuario}" style="width: 30px;">
+              <strong>@${resposta.usuario}</strong>
+            </div>
+            <p>${resposta.texto}</p>
+            <p><small>${new Date(resposta.data).toLocaleString()}</small></p>
+          `;
+          comentarioDiv.appendChild(respostaDiv);
+        });
+
+        postDiv.appendChild(comentarioDiv);
+      });
+
+      feedEl.appendChild(postDiv);
+    });
+  </script>
+
+</body>
+</html>
