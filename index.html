@@ -48,8 +48,12 @@
       border-radius: 6px;
     }
     button {
+      margin-right: 8px;
       margin-top: 5px;
       cursor: pointer;
+    }
+    .likes-container {
+      margin-top: 5px;
     }
   </style>
 </head>
@@ -76,6 +80,7 @@
               "texto": "Já avisei a prefeitura sobre isso também!",
               "data": "2023-10-25T10:30:00Z",
               "likes": 3,
+              "dislikes": 0,
               "respostas": [
                 {
                   "id": 201,
@@ -120,15 +125,30 @@
         const comentarioDiv = document.createElement("div");
         comentarioDiv.className = "comentario";
 
+        // Like e Dislike
+        const likeId = `likes-${comentario.id}`;
+        const dislikeId = `dislikes-${comentario.id}`;
+
         const likesSpan = document.createElement("span");
+        likesSpan.id = likeId;
         likesSpan.textContent = `👍 ${comentario.likes}`;
-        likesSpan.id = `likes-${comentario.id}`;
+
+        const dislikesSpan = document.createElement("span");
+        dislikesSpan.id = dislikeId;
+        dislikesSpan.textContent = `👎 ${comentario.dislikes}`;
 
         const likeButton = document.createElement("button");
-        likeButton.textContent = "Curtir";
+        likeButton.textContent = "Curtir 👍";
         likeButton.onclick = () => {
           comentario.likes++;
-          document.getElementById(`likes-${comentario.id}`).textContent = `👍 ${comentario.likes}`;
+          document.getElementById(likeId).textContent = `👍 ${comentario.likes}`;
+        };
+
+        const dislikeButton = document.createElement("button");
+        dislikeButton.textContent = "Não Curtir 👎";
+        dislikeButton.onclick = () => {
+          comentario.dislikes++;
+          document.getElementById(dislikeId).textContent = `👎 ${comentario.dislikes}`;
         };
 
         comentarioDiv.innerHTML = `
@@ -140,10 +160,18 @@
           <p><small>${new Date(comentario.data).toLocaleString()}</small></p>
         `;
 
-        comentarioDiv.appendChild(likesSpan);
-        comentarioDiv.appendChild(likeButton);
+        const containerLikes = document.createElement("div");
+        containerLikes.className = "likes-container";
+        containerLikes.appendChild(likesSpan);
+        containerLikes.appendChild(document.createTextNode(" "));
+        containerLikes.appendChild(dislikesSpan);
+        containerLikes.appendChild(document.createElement("br"));
+        containerLikes.appendChild(likeButton);
+        containerLikes.appendChild(dislikeButton);
 
-        // Respostas (se houver)
+        comentarioDiv.appendChild(containerLikes);
+
+        // Respostas
         comentario.respostas?.forEach(resposta => {
           const respostaDiv = document.createElement("div");
           respostaDiv.className = "resposta";

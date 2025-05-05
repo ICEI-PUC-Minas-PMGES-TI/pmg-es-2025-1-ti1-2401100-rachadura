@@ -35,6 +35,22 @@
         "descricao": "Semáforo quebrado há dias, causando confusão no cruzamento.",
         "localizacao": "Avenida Afonso Pena, esquina com Rua da Bahia",
         "comentarios": []
+        
+      }
+      {
+        "comentarios": [
+  {
+    "id": 102,
+    "usuario": "carla_rocha",
+    "foto_perfil": "https://randomuser.me/api/portraits/women/3.jpg",
+    "texto": "Isso é muito perigoso mesmo! Deveriam resolver logo.",
+    "data": "2023-10-26T09:15:00Z",
+    "likes": 2,
+    "dislikes": 1,
+    "respostas": []
+  }
+]
+
       }
     ]
   }
