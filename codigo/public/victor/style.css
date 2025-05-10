@@ -26,5 +26,33 @@
   justify-content: space-between;
 }
 
+.filtros input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  width: calc(50% - 10px);
+  transition: border-color 0.3s ease;
+}
+
+button{
+  color: white;
+  background-color: #96c7e3;
+   padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.filtros input:focus {
+  border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .filtros input {
+    width: 100%;
+  }
+}
 
   
