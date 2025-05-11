@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interativo</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <h1>Mapa de Denúncia</h1>
+
+  <div class="map-container" id="miniMap"></div>
+
+  <!-- Modal -->
+  <div id="mapModal" class="modal">
+    <span class="close">&times;</span>
+    <div id="fullMap"></div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiGL7OYCoDXQxc2BGUK6e_tjGPdmh-gBs&callback=initMaps">
+  </script>
+</body>
+</html>
