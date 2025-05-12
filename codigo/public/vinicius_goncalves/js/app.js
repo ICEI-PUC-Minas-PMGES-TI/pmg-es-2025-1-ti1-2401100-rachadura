@@ -13,6 +13,13 @@ createApp({
         ibge: "",
         ddd: "",
         gia: ""
+      },
+      enderecoBloqueado: false,
+      camposExtras: {
+        siafi: "siafi",
+        ibge: "ibge",
+        ddd: "ddd",
+        gia: "gia"
       }
     };
   },
@@ -30,10 +37,39 @@ createApp({
           this.endereco.ddd = bean.ddd;
           this.endereco.ibge = bean.ibge;
           this.endereco.gia = bean.gia;
+          this.enderecoBloqueado = true;
+        });
+    },
+    enviarFormulario(event) {
+      event.preventDefault();
+
+      const titulo = document.getElementById("titulo").value;
+      const categoria = document.getElementById("categoria").value;
+      const descricao = document.getElementById("descricao").value;
+      const midias = Array.from(document.getElementById("midia").files).map(f => f.name);
+
+      const dados = {
+        titulo,
+        categoria,
+        descricao,
+        midias,
+        endereco: this.endereco,
+        dataRegistro: new Date().toISOString()
+      };
+
+      axios.post("http://localhost:3000/denuncias", dados)
+        .then(response => {
+          alert("Denúncia enviada com sucesso!");
+          console.log(response.data);
         })
         .catch(error => {
-          console.error("Erro ao buscar CEP:", error);
+          alert("Erro ao enviar denúncia");
+          console.error(error);
         });
     }
+  },
+  mounted() {
+    const form = document.getElementById("formDenuncia");
+    form.addEventListener("submit", this.enviarFormulario);
   }
 }).mount("#appCep");
