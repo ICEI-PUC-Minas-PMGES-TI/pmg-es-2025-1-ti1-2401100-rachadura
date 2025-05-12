@@ -1,107 +1,188 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --cor-fundo: #D3CFE3;
+    --cor-botao-base: #B3A5D8;       /* Renomeado para clareza */
+    --cor-destaque: #7A64C8;
+    --cor-texto: #000000;
+    --cor-texto-secundario: #4B4B4B;
+    --cor-cartao: #FFFFFF;
+    --cor-botao-texto-primario: #FFFFFF; /* Texto para botões com fundo de destaque */
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 650px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border: 1px solid #e0e0e0;
+body {
+    background-color: var(--cor-fundo);
+    padding: 16px;
+    padding-bottom: 90px; /* Espaço para o footer fixo + margem */
+    color: var(--cor-texto);
 }
 
-h1 {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--cor-cartao); /* Header com fundo branco */
+    border-radius: 12px;
+    margin-bottom: 20px; /* Aumentei a margem inferior */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.titulo-header { /* Título principal da aplicação no header */
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+}
+
+footer {
+    display: flex;
+    justify-content: space-around; /* Ícones mais espaçados */
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--cor-cartao);
+    /* border-radius: 12px;  Removido para footer fixo */
+    /* margin-top: 16px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ccc; /* Linha divisória sutil */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.botao {
+    background-color: var(--cor-botao-base);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 10px; /* Ajuste de borda */
+    padding: 12px 20px;
+    font-weight: 600; /* Um pouco mais de peso */
+    margin-top: 8px; /* Margem padrão para botões */
+    margin-bottom: 8px;
+    width: 100%;
+    cursor: pointer;
     text-align: center;
-    margin: 0 0 20px 0;
-    color: #333;
-    font-size: 1.8em;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
+.botao:hover {
+    opacity: 0.85;
+}
+
+.input,
+textarea.input {
+    background-color: #F7F7F7; /* Fundo levemente diferente para inputs */
+    border: 1px solid #D1D1D1; /* Borda mais sutil */
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+    font-size: 15px;
+    color: var(--cor-texto);
+}
+
+textarea.input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.cartao {
+    background-color: var(--cor-cartao);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* Aumentei a margem inferior */
+}
+
+.titulo-cartao { /* Título dentro do cartão */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--cor-destaque); /* Título do cartão com cor de destaque */
+    text-align: center;
+}
+
+.icone {
+    width: 26px; /* Ajuste de tamanho */
+    height: 26px;
+    cursor: pointer;
+    object-fit: contain; /* Para evitar distorção */
+}
+
+/* Estilos específicos para o formulário de Atualizar Denúncia */
 .media-controls {
     display: flex;
-    gap: 15px;
+    gap: 12px; /* Espaço entre os botões */
+    margin-bottom: 16px;
+    flex-wrap: wrap; /* Quebra de linha em telas menores */
+}
+
+.botao-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #EFEFEF; /* Fundo sutil para botões de mídia */
+    border: 1px solid #DCDCDC;
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+    border-radius: 8px;
+    width: auto;
+    flex-grow: 1; /* Ocupar espaço disponível */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao-icone:hover {
+    background-color: #E0E0E0;
+}
+
+.botao-icone svg {
+    width: 16px; /* Mantido o tamanho do SVG original */
+    height: 16px;
+    fill: currentColor;
 }
 
 .text-area-container {
-    width: 100%;
-}
-
-textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 1em;
-    box-sizing: border-box;
-    resize: vertical;
+    margin-bottom: 0; /* Removido pois o textarea já tem margin-bottom */
 }
 
 .bottom-controls {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 10px;
+    gap: 12px;
+    margin-top: 16px; /* Espaço acima dos botões de ação */
 }
 
-button {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-    background-color: #f8f8f8;
-    color: #333;
+/* Botão Primário (Salvar) */
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: var(--cor-botao-texto-primario);
 }
 
-button:hover {
-    background-color: #e9e9e9;
-    border-color: #bbb;
+.btn-primary:hover {
+    background-color: #6853b3; /* Tom mais escuro de --cor-destaque */
+    opacity: 1; /* Evitar dupla opacidade com :hover genérico */
 }
 
-button.btn-primary {
-    background-color: #28a745;
-    border-color: #28a745;
-    color: white;
-    font-weight: bold;
+/* Botão Secundário (Voltar) */
+.btn-secondary {
+    background-color: var(--cor-cartao);
+    color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
 }
 
-button.btn-primary:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+.btn-secondary:hover {
+    background-color: #f5f0ff; /* Leve cor de fundo no hover */
+    opacity: 1;
 }
 
-button.btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-    color: white;
-}
-
-button.btn-secondary:hover {
-    background-color: #5a6268;
-    border-color: #545b62;
-}
-
-button svg {
-    width: 1em;
-    height: 1em;
+/* Inputs de arquivo permanecem escondidos */
+#image-input, #video-input {
+    display: none;
 }
