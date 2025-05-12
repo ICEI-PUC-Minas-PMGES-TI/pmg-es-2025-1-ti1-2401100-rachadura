@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Rachadura</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiGL7OYCoDXQxc2BGUK6e_tjGPdmh-gBs&callback=initMaps"></script>
+</head>
+<body>
+  <header>
+    <h1 class="titulo">Rachadura</h1>
+  </header>
+
+  <main>
+    <div class="cartao">
+      <p class="titulo">Nova Denúncia</p>
+      <input type="text" class="input" placeholder="Descrição...">
+      <button class="botao">Salvar</button>
+    </div>
+
+    <div class="cartao">
+      <p class="titulo">Mapa de Denúncias</p>
+      <p class="descricao">Visualize locais marcados</p>
+      <div class="map-container" id="miniMap"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-text">Mapa | Favoritos | Perfil</p>
+  </footer>
+
+  <div id="mapModal" class="modal">
+    <span class="close">&times;</span>
+    <div id="fullMap"></div>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
