@@ -1,11 +1,13 @@
 :root {
     --cor-fundo: #D3CFE3;
-    --cor-botao-base: #B3A5D8;       /* Renomeado para clareza */
+    --cor-botao-base: #B3A5D8;
     --cor-destaque: #7A64C8;
     --cor-texto: #000000;
     --cor-texto-secundario: #4B4B4B;
     --cor-cartao: #FFFFFF;
-    --cor-botao-texto-primario: #FFFFFF; /* Texto para botões com fundo de destaque */
+    --cor-botao-texto-primario: #FFFFFF;
+    --cor-danger: #DC3545; /* Vermelho para exclusão */
+    --cor-danger-hover: #C82333; /* Vermelho mais escuro para hover */
 }
 
 * {
@@ -27,31 +29,31 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: var(--cor-cartao); /* Header com fundo branco */
+    background-color: var(--cor-cartao);
     border-radius: 12px;
-    margin-bottom: 20px; /* Aumentei a margem inferior */
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.titulo-header { /* Título principal da aplicação no header */
+.titulo-header {
     font-size: 22px;
     font-weight: 600;
     color: var(--cor-destaque);
+    text-align: center; /* Centralizar caso o menu desapareça */
+    flex-grow: 1; /* Para ocupar espaço e ajudar na centralização */
 }
 
 footer {
     display: flex;
-    justify-content: space-around; /* Ícones mais espaçados */
+    justify-content: space-around;
     align-items: center;
     padding: 12px 16px;
     background-color: var(--cor-cartao);
-    /* border-radius: 12px;  Removido para footer fixo */
-    /* margin-top: 16px; */
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid #ccc; /* Linha divisória sutil */
+    border-top: 1px solid #e0e0e0; /* Linha divisória sutil */
     box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
 }
 
@@ -59,15 +61,16 @@ footer {
     background-color: var(--cor-botao-base);
     color: var(--cor-texto);
     border: none;
-    border-radius: 10px; /* Ajuste de borda */
+    border-radius: 10px;
     padding: 12px 20px;
-    font-weight: 600; /* Um pouco mais de peso */
-    margin-top: 8px; /* Margem padrão para botões */
+    font-weight: 600;
+    margin-top: 8px;
     margin-bottom: 8px;
     width: 100%;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.2s ease, opacity 0.2s ease;
+    font-size: 15px;
 }
 
 .botao:hover {
@@ -76,8 +79,8 @@ footer {
 
 .input,
 textarea.input {
-    background-color: #F7F7F7; /* Fundo levemente diferente para inputs */
-    border: 1px solid #D1D1D1; /* Borda mais sutil */
+    background-color: #F7F7F7;
+    border: 1px solid #D1D1D1;
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 16px;
@@ -96,30 +99,42 @@ textarea.input {
     border-radius: 12px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     padding: 20px;
-    margin-bottom: 20px; /* Aumentei a margem inferior */
+    margin-bottom: 20px;
 }
 
-.titulo-cartao { /* Título dentro do cartão */
+.titulo-cartao {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: var(--cor-destaque); /* Título do cartão com cor de destaque */
+    color: var(--cor-destaque);
     text-align: center;
 }
 
 .icone {
-    width: 26px; /* Ajuste de tamanho */
+    width: 26px;
     height: 26px;
     cursor: pointer;
-    object-fit: contain; /* Para evitar distorção */
+    object-fit: contain;
 }
 
-/* Estilos específicos para o formulário de Atualizar Denúncia */
+/* Estilos para formulário e inputs */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.label-input {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
 .media-controls {
     display: flex;
-    gap: 12px; /* Espaço entre os botões */
-    margin-bottom: 16px;
-    flex-wrap: wrap; /* Quebra de linha em telas menores */
+    gap: 12px;
+    margin-bottom: 8px; /* Reduzido para dar espaço ao selected-files-info */
+    flex-wrap: wrap;
 }
 
 .botao-icone {
@@ -128,15 +143,16 @@ textarea.input {
     justify-content: center;
     gap: 8px;
     padding: 10px 15px;
-    background-color: #EFEFEF; /* Fundo sutil para botões de mídia */
+    background-color: #EFEFEF;
     border: 1px solid #DCDCDC;
     color: var(--cor-texto-secundario);
     font-weight: 500;
     border-radius: 8px;
     width: auto;
-    flex-grow: 1; /* Ocupar espaço disponível */
+    flex-grow: 1;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    font-size: 14px;
 }
 
 .botao-icone:hover {
@@ -144,33 +160,51 @@ textarea.input {
 }
 
 .botao-icone svg {
-    width: 16px; /* Mantido o tamanho do SVG original */
+    width: 16px;
     height: 16px;
     fill: currentColor;
 }
 
+.selected-files-info {
+    font-size: 0.85em;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    min-height: 20px; /* Para evitar colapso quando vazio */
+}
+.selected-files-info p {
+    margin: 4px 0;
+}
+
+
 .text-area-container {
-    margin-bottom: 0; /* Removido pois o textarea já tem margin-bottom */
+    /* margin-bottom: 0; Retirado, pois .form-group já tem margin-bottom */
 }
 
 .bottom-controls {
     display: flex;
     gap: 12px;
-    margin-top: 16px; /* Espaço acima dos botões de ação */
+    margin-top: 20px; /* Aumentado para mais espaço */
+    flex-wrap: wrap;
 }
 
-/* Botão Primário (Salvar) */
+.bottom-controls .botao {
+    flex: 1 1 auto; /* Permite que os botões cresçam e encolham, dividindo espaço */
+    min-width: 120px; /* Largura mínima para cada botão */
+}
+
 .btn-primary {
     background-color: var(--cor-destaque);
     color: var(--cor-botao-texto-primario);
 }
 
 .btn-primary:hover {
-    background-color: #6853b3; /* Tom mais escuro de --cor-destaque */
-    opacity: 1; /* Evitar dupla opacidade com :hover genérico */
+    background-color: #6853b3;
+    opacity: 1;
 }
 
-/* Botão Secundário (Voltar) */
 .btn-secondary {
     background-color: var(--cor-cartao);
     color: var(--cor-destaque);
@@ -178,11 +212,80 @@ textarea.input {
 }
 
 .btn-secondary:hover {
-    background-color: #f5f0ff; /* Leve cor de fundo no hover */
+    background-color: #f5f0ff;
     opacity: 1;
 }
 
-/* Inputs de arquivo permanecem escondidos */
+/* Botão de Excluir */
+.btn-danger {
+    background-color: var(--cor-danger);
+    color: var(--cor-botao-texto-primario);
+    border: 1px solid var(--cor-danger); /* Adicionando borda para consistência */
+}
+
+.btn-danger:hover {
+    background-color: var(--cor-danger-hover);
+    border-color: var(--cor-danger-hover);
+    opacity: 1;
+}
+
+
 #image-input, #video-input {
     display: none;
 }
+
+/* Estilos para a página de listagem de denúncias (denuncias.html) */
+.lista-denuncias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os cards de denúncia */
+}
+
+.denuncia-card {
+    background-color: #fdfdfd; /* Um pouco mais claro que f9f9f9 */
+    border: 1px solid #eaeaea;
+    border-left: 5px solid var(--cor-destaque);
+    border-radius: 8px;
+    padding: 15px 20px; /* Mais padding horizontal */
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.denuncia-card:hover {
+    background-color: #f5f0ff; /* Cor de hover mais sutil e relacionada ao tema */
+    box-shadow: 0 3px 7px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.denuncia-card-titulo {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+    margin-bottom: 8px;
+}
+
+.denuncia-card-descricao {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+}
+
+/* Responsividade simples para os botões de ação */
+@media (max-width: 480px) {
+    .bottom-controls {
+        flex-direction: column; /* Empilha os botões em telas pequenas */
+    }
+    .titulo-header {
+        font-size: 20px;
+    }
+    .botao-icone {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}   
