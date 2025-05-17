@@ -1,0 +1,92 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    background-color: #C9A5FF; /* Roxo médio maior */
+    color: #2d023d;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    background-color: #B984F5; 
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(179, 65, 209, 0.5);
+}
+
+h2 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #a262d3;
+    border-radius: 6px;
+    background-color: #F3E8FF;
+    color: #4b0082;
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    cursor: pointer;
+    border: 2px solid #7a30b6;
+    background-color: #923ed6;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #7a30b6;
+    transform: scale(1.05);
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #E6D6FF;
+    box-shadow: 0 0 10px rgba(179, 65, 209, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #b984f5;
+    color: #4b0082;
+}
+
+th {
+    background-color: #7a30b6;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #F3E8FF;
+}
+
+tr:hover {
+    background-color: #D4B4FF;
+}
+
+

@@ -1,0 +1,95 @@
+[
+    {
+      "nome": "Carlos Oliveira",
+      "email": "carlos.oliveira@email.com",
+      "telefone": "11987654321",
+      "cpf": "12345678901",
+      "dataNascimento": "1985-08-12",
+      "endereco": {
+        "rua": "Rua das Orquídeas",
+        "bairro": "Centro",
+        "cep": "01010-000",
+        "numero": "456"
+      }
+    },
+    {
+      "nome": "Mariana Santos",
+      "email": "mariana.santos@email.com",
+      "telefone": "21965432178",
+      "cpf": "98765432100",
+      "dataNascimento": "1993-03-25",
+      "endereco": {
+        "rua": "Avenida Brasil",
+        "bairro": "Jardins",
+        "cep": "22040-010",
+        "numero": "789"
+      }
+    },
+    {
+      "nome": "Pedro Ferreira",
+      "email": "pedro.ferreira@email.com",
+      "telefone": "31976543210",
+      "cpf": "56789012345",
+      "dataNascimento": "1979-11-30",
+      "endereco": {
+        "rua": "Travessa Azul",
+        "bairro": "São João",
+        "cep": "33030-020",
+        "numero": "101"
+      }
+    },
+    {
+      "nome": "Ana Paula Almeida",
+      "email": "ana.almeida@email.com",
+      "telefone": "11912345678",
+      "cpf": "45612378900",
+      "dataNascimento": "1990-07-14",
+      "endereco": {
+        "rua": "Rua das Palmeiras",
+        "bairro": "Vila Nova",
+        "cep": "04567-890",
+        "numero": "234"
+      }
+    },
+    {
+      "nome": "Lucas Martins",
+      "email": "lucas.martins@email.com",
+      "telefone": "21998765432",
+      "cpf": "32165498700",
+      "dataNascimento": "1988-12-05",
+      "endereco": {
+        "rua": "Avenida das Nações",
+        "bairro": "Copacabana",
+        "cep": "22070-001",
+        "numero": "345"
+      }
+    },
+    {
+      "nome": "Juliana Costa",
+      "email": "juliana.costa@email.com",
+      "telefone": "31987651234",
+      "cpf": "65498732100",
+      "dataNascimento": "1995-04-21",
+      "endereco": {
+        "rua": "Rua dos Jacarandás",
+        "bairro": "Liberdade",
+        "cep": "30110-020",
+        "numero": "567"
+      }
+    },
+    {
+      "nome": "Rafael Souza",
+      "email": "rafael.souza@email.com",
+      "telefone": "11987659999",
+      "cpf": "78945612300",
+      "dataNascimento": "1982-09-10",
+      "endereco": {
+        "rua": "Travessa das Flores",
+        "bairro": "Moema",
+        "cep": "04079-020",
+        "numero": "890"
+      }
+    }
+    
+  ]
+  
