@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Radar Urbano - Cadastro de Denúncia</title>
-  <link rel="stylesheet" href="css\style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="public\css\style.css">
 </head>
 <body>
 
@@ -12,37 +14,79 @@
     <h2>Cadastro de Denúncia</h2>
   </header>
 
-  <form id="formDenuncia" enctype="multipart/form-data">
+  <main>
+    <form id="formDenuncia" enctype="multipart/form-data">
 
-    <label for="titulo">Título</label>
-    <input type="text" id="titulo" name="titulo" required><br><br>
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" name="titulo" required>
 
-    <label for="categoria">Categoria</label><br>
-    <select id="categoria" name="categoria" required>
-      <option value="">Selecione</option>
-      <option value="buraco">Buraco</option>
-      <option value="enchente">Enchente</option>
-      <option value="sinalizacao">Sinalização</option>
-      <option value="iluminacao">Iluminação</option>
-      <option value="esgoto">Esgoto</option>
-      <option value="outros">Outros</option>
-    </select><br><br>
+      <label for="categoria">Categoria</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecione</option>
+        <option value="buraco">Buraco</option>
+        <option value="enchente">Enchente</option>
+        <option value="sinalizacao">Sinalização</option>
+        <option value="iluminacao">Iluminação</option>
+        <option value="esgoto">Esgoto</option>
+        <option value="outros">Outros</option>
+      </select>
 
-    <label for="endereco">Endereço</label>
-    <input type="text" id="endereco" name="endereco" required><br><br>
+      <div id="appCep">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label>CEP</label>
+            <input type="text" v-model="endereco.cep" @change="cepAlteradoEvento" class="form-control">
+          </div>
 
-    <label for="midia">Imagens / Vídeos</label><br>
-    <input type="file" id="midia" name="midia" accept="image/*,video/*" multiple required><br><br>
+          <div class="col-md-12 mb-3">
+            <label>Logradouro</label>
+            <input type="text" v-model="endereco.logradouro" class="form-control">
+          </div>
 
-    <label for="descricao">Descrição</label><br>
-    <textarea id="descricao" name="descricao" required></textarea><br><br>
-    
-    <div class="buttons">
-      <button type="reset">Cancelar</button>
-      <button type="submit">Enviar</button>
-    </div>
+          <div class="col-md-6 mb-3">
+            <label>Estado</label>
+            <input type="text" v-model="endereco.estado" class="form-control">
+          </div>
 
-  </form>
+          <div class="col-md-6 mb-3">
+            <label>Cidade</label>
+            <input type="text" v-model="endereco.cidade" class="form-control">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label>Bairro</label>
+            <input type="text" v-model="endereco.bairro" class="form-control">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label>Número</label>
+            <input type="text" class="form-control">
+          </div>
+
+        </div>
+      </div>
+
+      <label for="midia">Imagens / Vídeos</label>
+      <input type="file" id="midia" name="midia" accept="image/*,video/*" multiple required>
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" required></textarea>
+
+      <div class="buttons">
+        <button type="reset">Cancelar</button>
+        <button type="submit">Enviar</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Radar Urbano — Todos os direitos reservados</p>
+  </footer>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="public/js/app.js"></script>
 
 </body>
 </html>
