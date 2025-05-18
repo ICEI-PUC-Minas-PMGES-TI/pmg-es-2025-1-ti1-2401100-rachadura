@@ -12,7 +12,7 @@
     <div id="feed" class="feed"></div>
   </div>
   <script>
-    fetch('denuncias_bh.json')
+    fetch('denuncias.json')
       .then(response => response.json())
       .then(data => {
         const feed = document.getElementById('feed');
