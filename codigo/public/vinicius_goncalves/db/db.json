@@ -1,0 +1,29 @@
+{
+  "denuncias": [
+    {
+      "id": "c868",
+      "titulo": "Ola",
+      "categoria": "buraco",
+      "descricao": "Hello there",
+      "midias": [
+        "wallpaperflare.com_wallpaper (1).jpg",
+        "wallpaperflare.com_wallpaper.jpg",
+        "gyatsu.jpg",
+        "album_2024-10-12_22-57-00.gif",
+        "album_2024-10-12_22-53-18 (1).gif"
+      ],
+      "endereco": {
+        "cep": "30850650",
+        "logradouro": "Rua Mário Soares",
+        "estado": "MG",
+        "cidade": "Belo Horizonte",
+        "bairro": "Dom Bosco",
+        "siafi": "4123",
+        "ibge": "3106200",
+        "ddd": "31",
+        "gia": ""
+      },
+      "dataRegistro": "2025-05-12T20:21:10.778Z"
+    }
+  ]
+}
