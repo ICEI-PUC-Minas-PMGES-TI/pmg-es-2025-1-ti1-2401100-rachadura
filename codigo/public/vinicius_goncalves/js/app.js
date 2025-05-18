@@ -168,3 +168,8 @@ createApp({
   }
 
 }).mount("#appCep");
+
+if (!localStorage.getItem("usuarioId")) {
+  const randomId = "user_" + Math.floor(Math.random() * 100000);
+  localStorage.setItem("usuarioId", randomId);
+}
