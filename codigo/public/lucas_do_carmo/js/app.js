@@ -1,116 +1,107 @@
 let miniMap, fullMap;
 
-function initMaps() {
-  const centerCoords = { lat: -19.9208, lng: -43.9378 }; // Ponto central de Belo Horizonte
+const denuncias = [
+  {
+    descricao: 'Rachadura no muro de um prédio na Av. Afonso Pena.',
+    lat: -19.9255,
+    lng: -43.9387,
+    imagem: '../imgs/1.jpeg'
+  },
+  {
+    descricao: 'Rachadura na rua em frente à Praça da Liberdade.',
+    lat: -19.9290,
+    lng: -43.9385,
+    imagem: '../imgs/2.jpeg'
+  },
+  {
+    descricao: 'Rachadura na calçada próxima ao Parque Municipal.',
+    lat: -19.9218,
+    lng: -43.9370,
+    imagem: '../imgs/3.jpeg'
+  },
+  {
+    descricao: 'Fissura em poste na Rua da Bahia.',
+    lat: -19.9224,
+    lng: -43.9382,
+    imagem: '../imgs/4.jpeg'
+  },
+  {
+    descricao: 'Rachadura lateral em prédio comercial.',
+    lat: -19.9235,
+    lng: -43.9388,
+    imagem: '../imgs/5.jpeg'
+  },
+  {
+    descricao: 'Buraco crescente com rachaduras na Rua dos Guajajaras.',
+    lat: -19.9236,
+    lng: -43.9361,
+    imagem: '../imgs/6.jpeg'
+  },
+  {
+    descricao: 'Rachadura no muro de escola pública.',
+    lat: -19.9230,
+    lng: -43.9335,
+    imagem: '../imgs/7.jpeg'
+  }
+];
 
-  // Inicializando o mini mapa
+function initMaps() {
+  const centerCoords = { lat: -19.9288, lng: -43.9378 };
+
   miniMap = new google.maps.Map(document.getElementById("miniMap"), {
     center: centerCoords,
-    zoom: 12,  // Ajustando o zoom para um valor menor (visão mais ampla)
-    disableDefaultUI: true
+    zoom: 15,
   });
 
-  // Inicializando o mapa completo no modal
   fullMap = new google.maps.Map(document.getElementById("fullMap"), {
     center: centerCoords,
-    zoom: 13  // Zoom um pouco maior para o mapa completo
+    zoom: 15,
   });
 
-  // Definindo as denúncias fictícias
-  const denuncias = [
-    {
-      descricao: 'Rachadura no muro de um prédio na Av. Afonso Pena.',
-      lat: -19.9205,
-      lng: -43.9337
-    },
-    {
-      descricao: 'Rachadura na rua em frente à Praça da Liberdade.',
-      lat: -19.9290,
-      lng: -43.9385
-    }
-  ];
+  const modal = document.getElementById("mapModal");
+  const closeModal = document.querySelector(".close");
 
-  // Adicionando os marcadores no mapa
-  denuncias.forEach(denuncia => {
-    const marcador = new google.maps.Marker({
+  // Abrir mapa maior ao clicar no mapa pequeno
+  document.getElementById("miniMap").addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  // Fechar modal
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Criar marcadores em ambos os mapas
+  denuncias.forEach((denuncia) => {
+    const content = `
+      <div style="max-width: 200px;">
+        <p>${denuncia.descricao}</p>
+        <img src="${denuncia.imagem}" alt="Imagem da denúncia" style="width: 100%; margin-top: 5px;">
+      </div>
+    `;
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: content,
+    });
+
+    // Criar marcador no miniMap
+    const markerMini = new google.maps.Marker({
       position: { lat: denuncia.lat, lng: denuncia.lng },
       map: miniMap,
-      title: denuncia.descricao
     });
 
-    // Adicionando uma info window (janela com a descrição da denúncia) no marcador
-    const infoWindow = new google.maps.InfoWindow({
-      content: `<p>${denuncia.descricao}</p>`
+    markerMini.addListener("click", () => {
+      infoWindow.open(miniMap, markerMini);
     });
 
-    marcador.addListener('click', function() {
-      infoWindow.open(miniMap, marcador);
+    // Criar marcador no fullMap.
+    const markerFull = new google.maps.Marker({
+      position: { lat: denuncia.lat, lng: denuncia.lng },
+      map: fullMap,
+    });
+
+    markerFull.addListener("click", () => {
+      infoWindow.open(fullMap, markerFull);
     });
   });
-
-  // Centralizando os marcadores para garantir que sejam visíveis
-  const bounds = new google.maps.LatLngBounds();
-  denuncias.forEach(denuncia => {
-    bounds.extend(new google.maps.LatLng(denuncia.lat, denuncia.lng));
-  });
-  miniMap.fitBounds(bounds);  // Ajusta o mapa para mostrar todos os marcadores
 }
-
-// Modal toggle
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById('mapModal');
-  const closeBtn = document.querySelector('.close');
-
-  document.getElementById('miniMap').addEventListener('click', () => {
-    modal.style.display = 'block';
-    google.maps.event.trigger(fullMap, "resize");  // Redimensionando o mapa
-    fullMap.setCenter(miniMap.getCenter());  // Centralizando o mapa completo no mesmo ponto do mini mapa
-
-    // Adicionando os marcadores no mapa completo
-    const denuncias = [
-      {
-        descricao: 'Rachadura no muro de um prédio na Av. Afonso Pena.',
-        lat: -19.9205,
-        lng: -43.9337
-      },
-      {
-        descricao: 'Rachadura na rua em frente à Praça da Liberdade.',
-        lat: -19.9290,
-        lng: -43.9385
-      }
-    ];
-
-    denuncias.forEach(denuncia => {
-      const marcador = new google.maps.Marker({
-        position: { lat: denuncia.lat, lng: denuncia.lng },
-        map: fullMap,
-        title: denuncia.descricao
-      });
-
-      const infoWindow = new google.maps.InfoWindow({
-        content: `<p>${denuncia.descricao}</p>`
-      });
-
-      marcador.addListener('click', function() {
-        infoWindow.open(fullMap, marcador);
-      });
-    });
-
-    // Ajustando o mapa para mostrar os marcadores no mapa completo
-    const bounds = new google.maps.LatLngBounds();
-    denuncias.forEach(denuncia => {
-      bounds.extend(new google.maps.LatLng(denuncia.lat, denuncia.lng));
-    });
-    fullMap.fitBounds(bounds);  // Ajusta o mapa para mostrar todos os marcadores
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-});

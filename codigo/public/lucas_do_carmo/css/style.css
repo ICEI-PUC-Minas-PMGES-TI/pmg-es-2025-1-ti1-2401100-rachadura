@@ -91,9 +91,9 @@ footer .footer-text {
 }
 
 .map-container {
-  width: 90%;
-  max-width: 400px;
-  height: 200px;
+  width: 100%;       /* ocupa toda a largura do container pai */
+  max-width: none;   /* remove limite de largura */
+  height: 400px;     /* altura maior para o mapa */
   margin: 0 auto;
   border: 2px solid #4c4a68;
   border-radius: 8px;
