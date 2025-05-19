@@ -7,223 +7,354 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-fundo: #D3CFE3;
-            --cor-botao: #B3A5D8;
-            --cor-destaque: #7A64C8;
-            --cor-texto: #000000;
-            --cor-texto-secundario: #4B4B4B;
-            --cor-cartao: #FFFFFF;
+          --cor-fundo: #D3CFE3;
+          --cor-botao: #B3A5D8;
+          --cor-destaque: #7A64C8;
+          --cor-texto: #000000;
+          --cor-texto-secundario: #4B4B4B;
+          --cor-cartao: #FFFFFF;
         }
 
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: var(--cor-fundo);
-            padding: 16px;
-            padding-bottom: 80px;
+          background-color: var(--cor-fundo);
+          padding: 16px;
+          padding-bottom: 80px;
         }
 
         header, footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px;
         }
 
         header {
-            background-color: var(--cor-botao);
-            border-radius: 12px;
-            margin-bottom: 16px;
+          background-color: var(--cor-botao);
+          border-radius: 12px;
+          margin-bottom: 16px;
         }
 
         footer {
-            background-color: var(--cor-botao);
-            border-radius: 12px;
-            margin-top: 16px;
-            position: fixed;
-            bottom: 16px;
-            left: 16px;
-            right: 16px;
+          background-color: var(--cor-botao);
+          border-radius: 12px;
+          margin-top: 16px;
+          position: fixed;
+          bottom: 16px;
+          left: 16px;
+          right: 16px;
         }
 
         .feed-container {
-            max-width: 600px;
-            margin: 0 auto;
+          max-width: 600px;
+          margin: 0 auto;
         }
 
         .post {
-            background-color: var(--cor-cartao);
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 16px;
-            margin-bottom: 16px;
+          background-color: var(--cor-cartao);
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          padding: 16px;
+          margin-bottom: 16px;
+          position: relative;
         }
 
         .post-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
         }
 
         .post-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 12px;
-            object-fit: cover;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 12px;
+          object-fit: cover;
         }
 
         .post-user {
-            font-weight: 600;
-            color: var(--cor-texto);
+          font-weight: 600;
+          color: var(--cor-texto);
         }
 
         .post-location {
-            font-size: 12px;
-            color: var(--cor-texto-secundario);
+          font-size: 12px;
+          color: var(--cor-texto-secundario);
         }
 
         .post-image-container {
-            position: relative;
-            margin: 12px 0;
+          position: relative;
+          margin: 12px 0;
         }
 
         .post-image {
-            width: 100%;
-            border-radius: 8px;
-            max-height: 300px;
-            object-fit: cover;
-            display: block;
+          width: 100%;
+          border-radius: 8px;
+          max-height: 300px;
+          object-fit: cover;
+          display: block;
         }
 
         .post-description {
-            color: var(--cor-texto);
-            margin-bottom: 12px;
-            font-size: 14px;
+          color: var(--cor-texto);
+          margin-bottom: 12px;
+          font-size: 14px;
         }
 
         .reaction-buttons {
-            display: flex;
-            gap: 8px;
-            margin: 12px 0;
+          display: flex;
+          gap: 8px;
+          margin: 12px 0;
         }
 
         .reaction-btn {
-            background-color: var(--cor-cartao);
-            border: 2px solid var(--cor-botao);
-            border-radius: 20px;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.2s;
+          background-color: var(--cor-cartao);
+          border: 2px solid var(--cor-botao);
+          border-radius: 20px;
+          padding: 6px 12px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          cursor: pointer;
+          font-size: 14px;
+          transition: all 0.2s;
         }
 
         .reaction-btn:hover {
-            transform: scale(1.05);
+          transform: scale(1.05);
         }
 
         .reaction-btn.active {
-            background-color: var(--cor-botao);
-            font-weight: bold;
+          background-color: var(--cor-botao);
+          font-weight: bold;
         }
 
         .reaction-icon {
-            width: 16px;
-            height: 16px;
+          width: 16px;
+          height: 16px;
         }
 
         .comments-section {
-            margin-top: 16px;
-            border-top: 1px solid var(--cor-botao);
-            padding-top: 12px;
+          margin-top: 16px;
+          border-top: 1px solid var(--cor-botao);
+          padding-top: 12px;
         }
 
         .comments-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--cor-texto);
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 12px;
+          color: var(--cor-texto);
         }
 
         .comment {
-            display: flex;
-            margin: 12px 0;
+          display: flex;
+          margin: 12px 0;
+          position: relative;
         }
 
         .comment-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            margin-right: 12px;
-            object-fit: cover;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 12px;
+          object-fit: cover;
         }
 
         .comment-content {
-            flex: 1;
+          flex: 1;
         }
 
         .comment-user {
-            font-weight: 600;
-            font-size: 14px;
-            color: var(--cor-texto);
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--cor-texto);
         }
 
         .comment-text {
-            font-size: 14px;
-            color: var(--cor-texto);
-            margin: 4px 0;
+          font-size: 14px;
+          color: var(--cor-texto);
+          margin: 4px 0;
         }
 
         .comment-date {
-            font-size: 12px;
-            color: var(--cor-texto-secundario);
+          font-size: 12px;
+          color: var(--cor-texto-secundario);
+        }
+
+        .comment-actions {
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: flex;
+          gap: 8px;
+        }
+
+        .comment-action {
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: var(--cor-destaque);
+          font-size: 12px;
         }
 
         .comment-form {
-            display: flex;
-            margin-top: 12px;
-            gap: 8px;
+          display: flex;
+          margin-top: 12px;
+          gap: 8px;
         }
 
         .comment-input {
-            flex: 1;
-            background-color: var(--cor-cartao);
-            border: 2px solid var(--cor-botao);
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 14px;
+          flex: 1;
+          background-color: var(--cor-cartao);
+          border: 2px solid var(--cor-botao);
+          border-radius: 10px;
+          padding: 10px;
+          font-size: 14px;
         }
 
         .comment-submit {
-            background-color: var(--cor-botao);
-            color: var(--cor-texto);
-            border: none;
-            border-radius: 10px;
-            padding: 10px 16px;
-            font-weight: bold;
-            cursor: pointer;
+          background-color: var(--cor-botao);
+          color: var(--cor-texto);
+          border: none;
+          border-radius: 10px;
+          padding: 10px 16px;
+          font-weight: bold;
+          cursor: pointer;
         }
 
         .no-comments {
-            font-size: 14px;
-            color: var(--cor-texto-secundario);
-            text-align: center;
-            padding: 12px 0;
+          font-size: 14px;
+          color: var(--cor-texto-secundario);
+          text-align: center;
+          padding: 12px 0;
+        }
+
+        .post-actions {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          display: flex;
+          gap: 8px;
+        }
+
+        .action-btn {
+          background-color: var(--cor-cartao);
+          border: 2px solid var(--cor-botao);
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .action-btn:hover {
+          background-color: var(--cor-botao);
+        }
+
+        .action-icon {
+          width: 16px;
+          height: 16px;
+        }
+
+        .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 1000;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .modal-content {
+          background-color: var(--cor-cartao);
+          padding: 20px;
+          border-radius: 10px;
+          width: 90%;
+          max-width: 500px;
+        }
+
+        .modal-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+
+        .modal-input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 16px;
+          border: 2px solid var(--cor-botao);
+          border-radius: 8px;
+        }
+
+        .modal-buttons {
+          display: flex;
+          justify-content: flex-end;
+          gap: 8px;
+        }
+
+        .modal-btn {
+          padding: 8px 16px;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        .modal-btn-cancel {
+          background-color: var(--cor-cartao);
+          border: 2px solid var(--cor-botao);
+        }
+
+        .modal-btn-confirm {
+          background-color: var(--cor-botao);
+          border: none;
+          font-weight: bold;
+        }
+
+        .edit-comment-form {
+          display: flex;
+          gap: 8px;
+          margin-top: 8px;
+        }
+
+        .edit-comment-input {
+          flex: 1;
+          padding: 8px;
+          border: 1px solid var(--cor-botao);
+          border-radius: 6px;
+        }
+
+        .edit-comment-buttons {
+          display: flex;
+          gap: 4px;
+        }
+
+        .edit-comment-btn {
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+          cursor: pointer;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Denúncias</h1>
-        <button class="botao">Nova Denúncia</button>
+        <button class="botao" id="novaDenunciaBtn">Nova Denúncia</button>
     </header>
 
     <main>
@@ -237,56 +368,132 @@
         <button class="botao">Perfil</button>
     </footer>
 
+    <!-- Modal para nova denúncia/edição -->
+    <div class="modal" id="denunciaModal">
+        <div class="modal-content">
+            <div class="modal-title" id="modalTitle">Nova Denúncia</div>
+            <input type="text" id="denunciaUsuario" class="modal-input" placeholder="Seu nome" required>
+            <input type="text" id="denunciaLocalizacao" class="modal-input" placeholder="Localização" required>
+            <input type="text" id="denunciaDescricao" class="modal-input" placeholder="Descrição" required>
+            <input type="text" id="denunciaImagem" class="modal-input" placeholder="URL da imagem">
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="cancelarDenunciaBtn">Cancelar</button>
+                <button class="modal-btn modal-btn-confirm" id="confirmarDenunciaBtn">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação para exclusão -->
+    <div class="modal" id="confirmacaoModal">
+        <div class="modal-content">
+            <div class="modal-title">Confirmar Exclusão</div>
+            <p id="confirmacaoMensagem">Tem certeza que deseja excluir esta denúncia?</p>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="cancelarExclusaoBtn">Cancelar</button>
+                <button class="modal-btn modal-btn-confirm" id="confirmarExclusaoBtn">Excluir</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Dados do feed com imagens válidas e sistema de likes
-        const feedData = {
-            "feed": [
-                {
-                    "id": 1,
-                    "usuario": "joao_silva",
-                    "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
-                    "imagem_denuncia": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                    "descricao": "Buraco enorme na Rua dos Goitacazes, próximo ao número 1200. Difícil para carros e perigoso para pedestres.",
-                    "localizacao": "Rua dos Goitacazes, Centro",
-                    "likes": 5,
-                    "dislikes": 2,
-                    "userReaction": null,
-                    "comentarios": [
+        // Chave para armazenamento no localStorage
+        const LOCAL_STORAGE_KEY = 'denuncias_app_data';
+
+        // Função para obter dados do localStorage ou usar os dados padrão
+        function getFeedData() {
+            const savedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+            if (savedData) {
+                return JSON.parse(savedData);
+            } else {
+                // Dados iniciais com imagens de falta de infraestrutura real
+                return {
+                    "feed": [
                         {
                             "id": 1,
+                            "usuario": "joao_silva",
+                            "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
+                            "imagem_denuncia": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/12/estrada-destruida-chuva.jpg",
+                            "descricao": "Estrada completamente destruída após as chuvas, impossibilitando o trânsito de veículos e isolando a comunidade.",
+                            "localizacao": "Estrada Rural, Zona Rural",
+                            "likes": 5,
+                            "dislikes": 2,
+                            "userReaction": null,
+                            "comentarios": [
+                                {
+                                    "id": 1,
+                                    "usuario": "maria_oliveira",
+                                    "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+                                    "texto": "Já faz mais de um mês que está assim!",
+                                    "data": "2025-05-10T14:30:00"
+                                },
+                                {
+                                    "id": 2,
+                                    "usuario": "ana_souza",
+                                    "foto_perfil": "https://randomuser.me/api/portraits/women/4.jpg",
+                                    "texto": "Vou acionar a prefeitura sobre isso.",
+                                    "data": "2025-05-11T09:15:00"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
                             "usuario": "maria_oliveira",
                             "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
-                            "texto": "Já faz mais de uma semana que está assim!",
-                            "data": "2025-05-10T14:30:00"
+                            "imagem_denuncia": "https://s2-g1.glbimg.com/7Lk5t3Q3k5x3Q3Q3Q3Q3Q3Q3Q3Q=/0x0:1280x853/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/d/5/1K5Q5ZQ8SZGZ5Q5Q5Q5Q/agua-vazando.jpg",
+                            "descricao": "Vazamento de água há mais de 3 meses, desperdício de água potável e risco de alagamento na rua.",
+                            "localizacao": "Rua das Flores, Bairro Central",
+                            "likes": 8,
+                            "dislikes": 1,
+                            "userReaction": null,
+                            "comentarios": []
+                        },
+                        {
+                            "id": 3,
+                            "usuario": "carlos_lima",
+                            "foto_perfil": "https://randomuser.me/api/portraits/men/3.jpg",
+                            "imagem_denuncia": "https://www.otempo.com.br/image/contentid/policy:1.2761684:1631731231/image.jpg",
+                            "descricao": "Ponte em estado precário, com risco de desabamento. Moradores precisam atravessar a pé com medo.",
+                            "localizacao": "Ponte sobre o Rio Jacaré, Zona Leste",
+                            "likes": 12,
+                            "dislikes": 0,
+                            "userReaction": null,
+                            "comentarios": [
+                                {
+                                    "id": 3,
+                                    "usuario": "pedro_henrique",
+                                    "foto_perfil": "https://randomuser.me/api/portraits/men/5.jpg",
+                                    "texto": "Essa ponte já deveria ter sido reformada há anos!",
+                                    "data": "2025-05-12T18:45:00"
+                                }
+                            ]
                         }
                     ]
-                },
-                {
-                    "id": 2,
-                    "usuario": "maria_oliveira",
-                    "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
-                    "imagem_denuncia": "https://images.unsplash.com/photo-1580584126903-c17dab3041e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                    "descricao": "Semáforo quebrado há dias, causando confusão no cruzamento.",
-                    "localizacao": "Avenida Afonso Pena, esquina com Rua da Bahia",
-                    "likes": 3,
-                    "dislikes": 0,
-                    "userReaction": "like",
-                    "comentarios": []
-                },
-                {
-                    "id": 3,
-                    "usuario": "carlos_pereira",
-                    "foto_perfil": "https://randomuser.me/api/portraits/men/3.jpg",
-                    "imagem_denuncia": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-                    "descricao": "Vazamento de água constante, já está formando poça na calçada.",
-                    "localizacao": "Rua Padre Eustáquio, bairro Padre Eustáquio",
-                    "likes": 8,
-                    "dislikes": 1,
-                    "userReaction": null,
-                    "comentarios": []
-                }
-            ]
-        };
+                };
+            }
+        }
+
+        // Função para salvar dados no localStorage
+        function saveFeedData(data) {
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
+        }
+
+        // Variáveis globais
+        let feedData = getFeedData();
+        let currentPostId = null;
+        let currentCommentId = null;
+        let isEditing = false;
+        let isEditingComment = false;
+
+        // Elementos do modal
+        const denunciaModal = document.getElementById('denunciaModal');
+        const confirmacaoModal = document.getElementById('confirmacaoModal');
+        const novaDenunciaBtn = document.getElementById('novaDenunciaBtn');
+        const cancelarDenunciaBtn = document.getElementById('cancelarDenunciaBtn');
+        const confirmarDenunciaBtn = document.getElementById('confirmarDenunciaBtn');
+        const cancelarExclusaoBtn = document.getElementById('cancelarExclusaoBtn');
+        const confirmarExclusaoBtn = document.getElementById('confirmarExclusaoBtn');
+        const modalTitle = document.getElementById('modalTitle');
+        const confirmacaoMensagem = document.getElementById('confirmacaoMensagem');
 
         // Função para renderizar o feed
         function renderFeed() {
@@ -298,6 +505,18 @@
                 postElement.className = 'post';
                 
                 postElement.innerHTML = `
+                    <div class="post-actions">
+                        <button class="action-btn" onclick="openEditModal(${post.id})">
+                            <svg class="action-icon" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="openDeleteConfirmation(${post.id}, 'post')">
+                            <svg class="action-icon" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                            </svg>
+                        </button>
+                    </div>
                     <div class="post-header">
                         <img src="${post.foto_perfil}" alt="${post.usuario}" class="post-avatar">
                         <div>
@@ -307,7 +526,7 @@
                     </div>
                     <p class="post-description">${post.descricao}</p>
                     <div class="post-image-container">
-                        <img src="${post.imagem_denuncia}" alt="Denúncia" class="post-image">
+                        <img src="${post.imagem_denuncia}" alt="Denúncia" class="post-image" onerror="this.src='https://via.placeholder.com/600x400?text=Imagem+não+disponível'">
                     </div>
                     <div class="reaction-buttons">
                         <button class="reaction-btn ${post.userReaction === 'like' ? 'active' : ''}" 
@@ -327,7 +546,7 @@
                     </div>
                     <div class="comments-section" id="comments-${post.id}">
                         <div class="comments-title">Comentários (${post.comentarios.length})</div>
-                        ${renderComments(post.comentarios)}
+                        ${renderComments(post.comentarios, post.id)}
                         <form class="comment-form" onsubmit="addComment(event, ${post.id})">
                             <input type="text" class="comment-input" placeholder="Adicione um comentário..." required>
                             <button type="submit" class="comment-submit">Enviar</button>
@@ -340,21 +559,51 @@
         }
 
         // Função para renderizar comentários
-        function renderComments(comments) {
+        function renderComments(comments, postId) {
             if (!comments || comments.length === 0) {
                 return '<div class="no-comments">Nenhum comentário ainda. Seja o primeiro a comentar!</div>';
             }
             
-            return comments.map(comment => `
-                <div class="comment">
-                    <img src="${comment.foto_perfil}" alt="${comment.usuario}" class="comment-avatar">
-                    <div class="comment-content">
-                        <div class="comment-user">${comment.usuario}</div>
-                        <div class="comment-text">${comment.texto}</div>
-                        <div class="comment-date">${formatDate(comment.data)}</div>
+            return comments.map(comment => {
+                const isCurrentUser = comment.usuario === "usuário_atual"; // Simulação - você pode ajustar isso
+                const editDeleteButtons = isCurrentUser ? `
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="startEditComment(${postId}, ${comment.id})">Editar</button>
+                        <button class="comment-action" onclick="openDeleteConfirmation(${comment.id}, 'comment', ${postId})">Excluir</button>
                     </div>
-                </div>
-            `).join('');
+                ` : '';
+                
+                if (isEditingComment && currentCommentId === comment.id) {
+                    return `
+                        <div class="comment">
+                            <img src="${comment.foto_perfil}" alt="${comment.usuario}" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-user">${comment.usuario}</div>
+                                <form class="edit-comment-form" onsubmit="saveEditedComment(event, ${postId}, ${comment.id})">
+                                    <input type="text" class="edit-comment-input" value="${comment.texto}" required>
+                                    <div class="edit-comment-buttons">
+                                        <button type="submit" class="edit-comment-btn" style="background-color: var(--cor-botao); color: white;">Salvar</button>
+                                        <button type="button" class="edit-comment-btn" onclick="cancelEditComment()" style="background-color: var(--cor-texto-secundario); color: white;">Cancelar</button>
+                                    </div>
+                                </form>
+                                <div class="comment-date">${formatDate(comment.data)}</div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    return `
+                        <div class="comment">
+                            <img src="${comment.foto_perfil}" alt="${comment.usuario}" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-user">${comment.usuario}</div>
+                                <div class="comment-text">${comment.texto}</div>
+                                ${editDeleteButtons}
+                                <div class="comment-date">${formatDate(comment.data)}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
         }
 
         // Função para formatar data
@@ -374,13 +623,14 @@
                 
                 const newComment = {
                     id: Date.now(),
-                    usuario: "usuário_atual",
+                    usuario: "usuário_atual", // Você pode substituir por um usuário real
                     foto_perfil: "https://randomuser.me/api/portraits/men/10.jpg",
                     texto: commentText,
                     data: new Date().toISOString()
                 };
                 
                 post.comentarios.push(newComment);
+                saveFeedData(feedData);
                 renderFeed();
                 input.value = '';
             }
@@ -391,24 +641,174 @@
             const post = feedData.feed.find(p => p.id === postId);
             
             if (post.userReaction === reaction) {
-                // Remove a reação se já tiver reagido igual
                 post[reaction + 's']--;
                 post.userReaction = null;
             } 
             else if (post.userReaction) {
-                // Troca a reação se já tiver reagido diferente
                 post[post.userReaction + 's']--;
                 post[reaction + 's']++;
                 post.userReaction = reaction;
             }
             else {
-                // Adiciona a reação se não tiver reagido ainda
                 post[reaction + 's']++;
                 post.userReaction = reaction;
             }
             
+            saveFeedData(feedData);
             renderFeed();
         }
+
+        // Função para abrir modal de nova denúncia
+        function openNewDenunciaModal() {
+            isEditing = false;
+            currentPostId = null;
+            modalTitle.textContent = 'Nova Denúncia';
+            
+            document.getElementById('denunciaUsuario').value = '';
+            document.getElementById('denunciaLocalizacao').value = '';
+            document.getElementById('denunciaDescricao').value = '';
+            document.getElementById('denunciaImagem').value = '';
+            
+            denunciaModal.style.display = 'flex';
+        }
+
+        // Função para abrir modal de edição
+        function openEditModal(postId) {
+            isEditing = true;
+            currentPostId = postId;
+            modalTitle.textContent = 'Editar Denúncia';
+            
+            const post = feedData.feed.find(p => p.id === postId);
+            
+            document.getElementById('denunciaUsuario').value = post.usuario;
+            document.getElementById('denunciaLocalizacao').value = post.localizacao;
+            document.getElementById('denunciaDescricao').value = post.descricao;
+            document.getElementById('denunciaImagem').value = post.imagem_denuncia;
+            
+            denunciaModal.style.display = 'flex';
+        }
+
+        // Função para salvar denúncia (nova ou edição)
+        function saveDenuncia() {
+            const usuario = document.getElementById('denunciaUsuario').value.trim();
+            const localizacao = document.getElementById('denunciaLocalizacao').value.trim();
+            const descricao = document.getElementById('denunciaDescricao').value.trim();
+            const imagem = document.getElementById('denunciaImagem').value.trim();
+            
+            if (!usuario || !localizacao || !descricao) {
+                alert('Por favor, preencha todos os campos obrigatórios!');
+                return;
+            }
+            
+            if (isEditing) {
+                // Editar post existente
+                const post = feedData.feed.find(p => p.id === currentPostId);
+                post.usuario = usuario;
+                post.localizacao = localizacao;
+                post.descricao = descricao;
+                if (imagem) post.imagem_denuncia = imagem;
+            } else {
+                // Criar novo post
+                const newPost = {
+                    id: Date.now(),
+                    usuario: usuario,
+                    foto_perfil: `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 50)}.jpg`,
+                    imagem_denuncia: imagem || 'https://via.placeholder.com/600x400?text=Sem+imagem',
+                    descricao: descricao,
+                    localizacao: localizacao,
+                    likes: 0,
+                    dislikes: 0,
+                    userReaction: null,
+                    comentarios: []
+                };
+                feedData.feed.unshift(newPost);
+            }
+            
+            saveFeedData(feedData);
+            renderFeed();
+            denunciaModal.style.display = 'none';
+        }
+
+        // Função para abrir modal de confirmação de exclusão
+        function openDeleteConfirmation(id, type, postId = null) {
+            if (type === 'post') {
+                currentPostId = id;
+                confirmacaoMensagem.textContent = 'Tem certeza que deseja excluir esta denúncia?';
+            } else {
+                currentCommentId = id;
+                currentPostId = postId;
+                confirmacaoMensagem.textContent = 'Tem certeza que deseja excluir este comentário?';
+            }
+            
+            document.getElementById('confirmarExclusaoBtn').dataset.type = type;
+            confirmacaoModal.style.display = 'flex';
+        }
+
+        // Função para excluir denúncia ou comentário
+        function deleteItem() {
+            const type = document.getElementById('confirmarExclusaoBtn').dataset.type;
+            
+            if (type === 'post') {
+                feedData.feed = feedData.feed.filter(p => p.id !== currentPostId);
+            } else {
+                const post = feedData.feed.find(p => p.id === currentPostId);
+                post.comentarios = post.comentarios.filter(c => c.id !== currentCommentId);
+            }
+            
+            saveFeedData(feedData);
+            renderFeed();
+            confirmacaoModal.style.display = 'none';
+        }
+
+        // Função para começar a editar um comentário
+        function startEditComment(postId, commentId) {
+            isEditingComment = true;
+            currentCommentId = commentId;
+            currentPostId = postId;
+            renderFeed();
+        }
+
+        // Função para salvar um comentário editado
+        function saveEditedComment(event, postId, commentId) {
+            event.preventDefault();
+            const input = event.target.querySelector('.edit-comment-input');
+            const newText = input.value.trim();
+            
+            if (newText) {
+                const post = feedData.feed.find(p => p.id === postId);
+                const comment = post.comentarios.find(c => c.id === commentId);
+                comment.texto = newText;
+                
+                saveFeedData(feedData);
+                isEditingComment = false;
+                currentCommentId = null;
+                renderFeed();
+            }
+        }
+
+        // Função para cancelar a edição de comentário
+        function cancelEditComment() {
+            isEditingComment = false;
+            currentCommentId = null;
+            renderFeed();
+        }
+
+        // Event Listeners
+        novaDenunciaBtn.addEventListener('click', openNewDenunciaModal);
+        cancelarDenunciaBtn.addEventListener('click', () => denunciaModal.style.display = 'none');
+        confirmarDenunciaBtn.addEventListener('click', saveDenuncia);
+        cancelarExclusaoBtn.addEventListener('click', () => confirmacaoModal.style.display = 'none');
+        confirmarExclusaoBtn.addEventListener('click', deleteItem);
+
+        // Fechar modais ao clicar fora
+        window.addEventListener('click', (event) => {
+            if (event.target === denunciaModal) {
+                denunciaModal.style.display = 'none';
+            }
+            if (event.target === confirmacaoModal) {
+                confirmacaoModal.style.display = 'none';
+            }
+        });
 
         // Carrega o feed quando a página é aberta
         document.addEventListener('DOMContentLoaded', renderFeed);

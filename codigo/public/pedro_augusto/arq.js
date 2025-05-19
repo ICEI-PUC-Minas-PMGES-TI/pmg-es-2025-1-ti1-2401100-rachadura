@@ -1,19 +1,45 @@
-// Dados do feed (com interações adicionadas)
+// Dados do feed com as imagens atualizadas
 const feedData = {
   "feed": [
     {
       "id": 1,
       "usuario": "joao_silva",
       "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
-      "imagem_denuncia": "Captura de tela 2025-05-05 124922.png",
+      "imagem_denuncia": "https://www.diariozonanorte.com.br/wp-content/uploads/2023/03/buraco.jpg",
       "descricao": "Buraco enorme na Rua dos Goitacazes, próximo ao número 1200. Difícil para carros e perigoso para pedestres.",
       "localizacao": "Rua dos Goitacazes, Centro",
       "likes": 5,
       "dislikes": 2,
-      "userReaction": null, // 'like' ou 'dislike' quando o usuário reagir
-      "comentarios": []
+      "userReaction": null,
+      "comentarios": [
+        {
+          "id": 2,
+          "usuario": "maria_oliveira",
+          "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+          "texto": "Já faz mais de uma semana que está assim!",
+          "data": "2025-05-10T14:30:00"
+        },
+        {
+          "id": 3,
+          "usuario": "ana_souza",
+          "foto_perfil": "https://randomuser.me/api/portraits/women/4.jpg",
+          "texto": "Vou acionar a prefeitura sobre isso.",
+          "data": "2025-05-11T09:15:00"
+        }
+      ]
     },
-    // ... outros itens
+    {
+      "id": 2,
+      "usuario": "maria_oliveira",
+      "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+      "imagem_denuncia": "https://cdn.prod.website-files.com/620c025f07569b2d9353cfde/620d423066dd4c947b6bf8ad_Como-Localizar-Vazamento-Agua-1.jpg",
+      "descricao": "Vazamento de água constante, já está formando poça na calçada.",
+      "localizacao": "Rua Padre Eustáquio, bairro Padre Eustáquio",
+      "likes": 8,
+      "dislikes": 1,
+      "userReaction": null,
+      "comentarios": []
+    }
   ]
 };
 
@@ -26,7 +52,6 @@ function renderFeed() {
     const postElement = document.createElement('div');
     postElement.className = 'post';
     
-    // Cabeçalho do post
     postElement.innerHTML = `
       <div class="post-header">
         <img src="${post.foto_perfil}" alt="${post.usuario}" class="post-avatar">
@@ -37,7 +62,7 @@ function renderFeed() {
       </div>
       <p class="post-description">${post.descricao}</p>
       <div class="post-image-container">
-        ${renderPostImage(post.imagem_denuncia)}
+        <img src="${post.imagem_denuncia}" alt="Denúncia" class="post-image" onerror="this.src='https://via.placeholder.com/600x400?text=Imagem+não+disponível'">
       </div>
       <div class="reaction-buttons">
         <button class="reaction-btn ${post.userReaction === 'like' ? 'active' : ''}" 
@@ -56,8 +81,8 @@ function renderFeed() {
         </button>
       </div>
       <div class="comments-section" id="comments-${post.id}">
-        <div class="comments-title">Comentários (${post.comentarios ? post.comentarios.length : 0})</div>
-        ${renderComments(post.comentarios || [])}
+        <div class="comments-title">Comentários (${post.comentarios.length})</div>
+        ${renderComments(post.comentarios)}
         <form class="comment-form" onsubmit="addComment(event, ${post.id})">
           <input type="text" class="comment-input" placeholder="Adicione um comentário..." required>
           <button type="submit" class="comment-submit">Enviar</button>
@@ -69,16 +94,50 @@ function renderFeed() {
   });
 }
 
-// Função para renderizar a imagem da denúncia
-function renderPostImage(imagePath) {
-  if (imagePath && (imagePath.startsWith('http') || imagePath.startsWith('/'))) {
-    return `<img src="${imagePath}" alt="Denúncia" class="post-image">`;
-  } else {
-    return `
-      <div class="image-placeholder">
-        <span>Imagem não disponível</span>
+// Função para renderizar comentários
+function renderComments(comments) {
+  if (!comments || comments.length === 0) {
+    return '<div class="no-comments">Nenhum comentário ainda. Seja o primeiro a comentar!</div>';
+  }
+  
+  return comments.map(comment => `
+    <div class="comment">
+      <img src="${comment.foto_perfil}" alt="${comment.usuario}" class="comment-avatar">
+      <div class="comment-content">
+        <div class="comment-user">${comment.usuario}</div>
+        <div class="comment-text">${comment.texto}</div>
+        <div class="comment-date">${formatDate(comment.data)}</div>
       </div>
-    `;
+    </div>
+  `).join('');
+}
+
+// Função para formatar data
+function formatDate(isoString) {
+  const date = new Date(isoString);
+  return date.toLocaleDateString('pt-BR') + ' às ' + date.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
+}
+
+// Função para adicionar comentário
+function addComment(event, postId) {
+  event.preventDefault();
+  const input = event.target.querySelector('.comment-input');
+  const commentText = input.value.trim();
+  
+  if (commentText) {
+    const post = feedData.feed.find(p => p.id === postId);
+    
+    const newComment = {
+      id: Date.now(),
+      usuario: "usuário_atual",
+      foto_perfil: "https://randomuser.me/api/portraits/men/10.jpg",
+      texto: commentText,
+      data: new Date().toISOString()
+    };
+    
+    post.comentarios.push(newComment);
+    renderFeed();
+    input.value = '';
   }
 }
 
@@ -86,18 +145,15 @@ function renderPostImage(imagePath) {
 function handleReaction(postId, reaction) {
   const post = feedData.feed.find(p => p.id === postId);
   
-  // Se já tiver reagido, remove a reação
   if (post.userReaction === reaction) {
     post[reaction + 's']--;
     post.userReaction = null;
   } 
-  // Se tiver reagido diferente, troca a reação
   else if (post.userReaction) {
     post[post.userReaction + 's']--;
     post[reaction + 's']++;
     post.userReaction = reaction;
   }
-  // Se não tiver reagido ainda, adiciona a reação
   else {
     post[reaction + 's']++;
     post.userReaction = reaction;
@@ -106,4 +162,5 @@ function handleReaction(postId, reaction) {
   renderFeed();
 }
 
-// ... (mantenha as outras funções como renderComments, addComment, etc.)
+// Carrega o feed quando a página é aberta
+document.addEventListener('DOMContentLoaded', renderFeed);

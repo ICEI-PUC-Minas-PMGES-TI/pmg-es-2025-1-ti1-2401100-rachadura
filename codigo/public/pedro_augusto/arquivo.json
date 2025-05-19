@@ -5,8 +5,11 @@
       "usuario": "joao_silva",
       "foto_perfil": "https://randomuser.me/api/portraits/men/1.jpg",
       "imagem_denuncia": "Captura de tela 2025-05-05 124922.png",
-      "descricao": "Buraco enorme na Rua dos Goitacazes...",
+      "descricao": "Buraco enorme na Rua dos Goitacazes, próximo ao número 1200. Difícil para carros e perigoso para pedestres.",
       "localizacao": "Rua dos Goitacazes, Centro",
+      "likes": 5,
+      "dislikes": 2,
+      "userReaction": null,
       "comentarios": [
         {
           "id": 2,
@@ -23,7 +26,30 @@
           "data": "2025-05-11T09:15:00"
         }
       ]
+    },
+    {
+      "id": 2,
+      "usuario": "maria_oliveira",
+      "foto_perfil": "https://randomuser.me/api/portraits/women/2.jpg",
+      "imagem_denuncia": "https://cdn.prod.website-files.com/620c025f07569b2d9353cfde/620d423066dd4c947b6bf8ad_Como-Localizar-Vazamento-Agua-1.jpg",
+      "descricao": "Vazamento de água constante, já está formando poça na calçada.",
+      "localizacao": "Rua Padre Eustáquio, bairro Padre Eustáquio",
+      "likes": 8,
+      "dislikes": 1,
+      "userReaction": null,
+      "comentarios": []
+    },
+    {
+      "id": 3,
+      "usuario": "carlos_pereira",
+      "foto_perfil": "https://randomuser.me/api/portraits/men/3.jpg",
+      "imagem_denuncia": "https://www.diariozonanorte.com.br/wp-content/uploads/2023/03/buraco.jpg",
+      "descricao": "Semáforo quebrado há dias, causando confusão no cruzamento.",
+      "localizacao": "Avenida Afonso Pena, esquina com Rua da Bahia",
+      "likes": 3,
+      "dislikes": 0,
+      "userReaction": "like",
+      "comentarios": []
     }
-  
   ]
 }
