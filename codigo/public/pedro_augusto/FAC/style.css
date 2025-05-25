@@ -195,5 +195,19 @@ footer {
     font-style: italic;
     color: var(--cor-texto-secundario);
     font-size: 1.1em;
+    /* ... (Seu CSS existente) ... */
+
+/* Estilos específicos para o botão "Ver Todas" */
+.full-width-button {
+    width: 100%; /* Para o botão ocupar toda a largura */
+    text-align: center;
+    margin-top: 20px; /* Espaço acima do botão */
+    display: block; /* Garante que o display inicial seja 'none' e o JavaScript possa alterar */
+}
+
+/* Título da seção FAQ */
+.faq-section-title {
+    margin-bottom: 16px; /* Espaço abaixo do título da seção */
+}
 }
 }
