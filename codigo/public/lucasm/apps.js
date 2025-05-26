@@ -10,4 +10,7 @@ IMask(telefoneInput, {
   mask: '(00) 00000-0000'
 });
 
+IMask(cepInput, {
+  mask: '00000-000'
+});
 
