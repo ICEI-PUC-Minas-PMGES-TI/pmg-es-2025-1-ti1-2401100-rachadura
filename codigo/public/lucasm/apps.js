@@ -14,3 +14,21 @@ IMask(cepInput, {
   mask: '00000-000'
 });
 
+document.getElementById('cadastro-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const dados = {
+    nome: document.getElementById('nome').value,
+    email: document.getElementById('email').value,
+    telefone: telefoneInput.value,
+    cpf: cpfInput.value,
+    nascimento: document.getElementById('data-nascimento').value,
+    rua: document.getElementById('rua').value,
+    bairro: document.getElementById('bairro').value,
+    cep: cepInput.value,
+    numero: document.getElementById('numero').value,
+    complemento: document.getElementById('complemento').value
+  };
+
+  localStorage.setItem('usuario', JSON.stringify(dados));
+});
