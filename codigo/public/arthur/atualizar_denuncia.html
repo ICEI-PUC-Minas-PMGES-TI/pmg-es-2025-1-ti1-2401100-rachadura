@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes da Denúncia</title> <link rel="stylesheet" href="style.css">
-    </head>
+    <title>Detalhes da Denúncia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <header>
         <img src="perfil-icon.png" alt="Perfil" class="icone">
-        <h1 class="titulo-header" id="header-title">Detalhes da Denúncia</h1> <img src="menu-icon.png" alt="Menu" class="icone">
+        <h1 class="titulo-header" id="header-title">Detalhes da Denúncia</h1>
+        <img src="menu-icon.png" alt="Menu" class="icone">
     </header>
 
     <main>
         <div class="cartao">
-            <p class="titulo-cartao" id="cartao-title">Carregando...</p> <div class="form-group">
+            <p class="titulo-cartao" id="cartao-title">Carregando...</p>
+            <div class="form-group">
                 <label for="denuncia-titulo-input" class="label-input">Título da Denúncia:</label>
                 <input type="text" id="denuncia-titulo-input" class="input" placeholder="Ex: Buraco na Rua Principal">
             </div>
@@ -36,18 +39,37 @@
                 <input type="file" id="video-input" accept="video/*" style="display: none;">
             </div>
             <div id="selected-files-info" class="selected-files-info">
-                 </div>
-
+                </div>
 
             <div class="text-area-container form-group">
                 <label for="update-description" class="label-input">Descrição da Denúncia:</label>
                 <textarea id="update-description" class="input" placeholder="Descreva o problema urbano..."></textarea>
             </div>
 
+            <div class="timeline-section form-group">
+                <label class="label-input">Linha do Tempo da Denúncia:</label>
+
+                <div class="add-timeline-event-controls">
+                    <div class="form-group">
+                        <label for="timeline-new-status" class="label-input-small">Novo Status:</label>
+                        <input type="text" id="timeline-new-status" class="input input-small" placeholder="Ex: Em Análise, Resolvido">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline-new-notes" class="label-input-small">Notas (opcional):</label>
+                        <textarea id="timeline-new-notes" class="input input-small" placeholder="Detalhes adicionais sobre este status..."></textarea>
+                    </div>
+                    <button id="btn-add-timeline-event" class="botao botao-add-event">Adicionar ao Histórico</button>
+                </div>
+                <div id="denuncia-timeline-container" class="denuncia-timeline-container">
+                    <p>Carregando histórico...</p>
+                </div>
+            </div>
+
             <div class="bottom-controls">
                 <button id="btn-back" class="botao btn-secondary">Voltar</button>
                 <button id="btn-save" class="botao btn-primary">Salvar Denúncia</button>
-                <button id="btn-delete" class="botao btn-danger" style="display: none;">Excluir Denúncia</button> </div>
+                <button id="btn-delete" class="botao btn-danger" style="display: none;">Excluir Denúncia</button>
+            </div>
         </div>
     </main>
 
@@ -58,5 +80,5 @@
     </footer>
 
     <script src="script.js" defer></script>
-    </body>
+</body>
 </html>

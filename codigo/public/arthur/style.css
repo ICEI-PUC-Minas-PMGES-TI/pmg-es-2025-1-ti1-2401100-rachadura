@@ -289,3 +289,171 @@ textarea.input {
         padding: 8px 12px;
     }
 }   
+/* Adicione no final do seu arquivo style.css */
+
+/* Estilos para a Timeline */
+.timeline-section {
+    margin-top: 20px; /* Espaçamento acima da seção da timeline */
+    margin-bottom: 20px; /* Espaçamento abaixo da seção da timeline */
+}
+
+.denuncia-timeline-container {
+    background-color: #f9f9f9; /* Um fundo leve para destacar a área da timeline */
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 300px; /* Altura máxima com scroll caso a timeline seja longa */
+    overflow-y: auto;   /* Adiciona scroll vertical se necessário */
+}
+
+.denuncia-timeline-container p { /* Estilo para mensagens como "Carregando..." ou "Nenhum histórico..." */
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+}
+
+.timeline-list {
+    list-style-type: none; /* Remove marcadores de lista padrão */
+    padding-left: 0;
+}
+
+.timeline-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0; /* Linha separadora entre itens */
+    position: relative; /* Para futuro uso com pseudo-elementos se quiser algo mais gráfico */
+}
+
+.timeline-item:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+.timeline-item-status {
+    font-weight: 600;
+    color: var(--cor-destaque); /* Usa a cor de destaque para o status */
+    font-size: 1em;
+    margin-bottom: 4px;
+}
+
+.timeline-item-timestamp {
+    font-size: 0.85em;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 4px;
+}
+
+.timeline-item-notes {
+    font-size: 0.9em;
+    color: #555555;
+    padding-left: 10px; /* Uma pequena indentação para as notas */
+    border-left: 2px solid #dddddd; /* Uma linha à esquerda das notas */
+    margin-top: 5px;
+}
+
+/* Ajuste para o label da timeline, se necessário, para manter consistência */
+.timeline-section .label-input {
+    margin-bottom: 8px; /* Ajuste conforme o estilo dos outros labels */
+}
+/* Adicione no final do seu arquivo style.css ou em uma seção apropriada */
+
+/* Estilos para os controles de adicionar evento na timeline */
+.add-timeline-event-controls {
+    background-color: #f0eefc; /* Um tom levemente diferente para agrupar os controles */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Espaço antes da lista da timeline */
+    border: 1px solid #e0d8f7;
+}
+
+.add-timeline-event-controls .form-group {
+    margin-bottom: 10px; /* Menor margem interna para os campos */
+}
+
+.label-input-small { /* Um estilo de label um pouco menor se necessário */
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 13px; /* Ligeiramente menor */
+    color: var(--cor-texto-secundario);
+}
+
+.input-small { /* Para inputs e textareas dentro dos controles da timeline */
+    font-size: 14px; /* Ligeiramente menor */
+    padding: 8px 10px;
+    margin-bottom: 8px; /* Ajuste a margem inferior conforme necessário */
+}
+
+.botao-add-event {
+    background-color: #8a74d0; /* Uma cor um pouco diferente do botão primário, mas ainda no tema */
+    color: var(--cor-botao-texto-primario);
+    padding: 8px 15px;
+    font-size: 14px;
+    width: auto; /* Para não ocupar a largura toda */
+    display: inline-block; /* Para alinhar com outros elementos se necessário e respeitar width auto */
+    margin-top: 5px; /* Pequena margem acima do botão */
+}
+
+.botao-add-event:hover {
+    background-color: var(--cor-destaque); /* Pode usar a cor de destaque no hover */
+    opacity: 1;
+}
+
+/* Ajuste para o label principal da timeline, se necessário */
+.timeline-section > .label-input { /* Seleciona o label direto de .timeline-section */
+    margin-bottom: 10px; /* Espaço entre o título "Linha do Tempo da Denúncia" e os controles de add */
+}
+
+/* Continuação dos seus estilos anteriores... */
+:root {
+    --cor-fundo: #D3CFE3;
+    /* ... (resto das suas variáveis CSS) ... */
+}
+
+/* ... (resto do seu CSS) ... */
+
+.denuncia-timeline-container {
+    background-color: #f9f9f9;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.denuncia-timeline-container p {
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+}
+
+.timeline-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.timeline-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-item-status {
+    font-weight: 600;
+    color: var(--cor-destaque);
+    font-size: 1em;
+    margin-bottom: 4px;
+}
+
+.timeline-item-timestamp {
+    font-size: 0.85em;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 4px;
+}
+
+.timeline-item-notes {
+    font-size: 0.9em;
+    color: #555555;
+    padding-left: 10px;
+    border-left: 2px solid #dddddd;
+    margin-top: 5px;
+}
