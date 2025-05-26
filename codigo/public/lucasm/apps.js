@@ -6,4 +6,8 @@ IMask(cpfInput, {
   mask: '000.000.000-00'
 });
 
+IMask(telefoneInput, {
+  mask: '(00) 00000-0000'
+});
+
 
