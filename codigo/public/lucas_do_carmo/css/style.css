@@ -1,9 +1,10 @@
 :root {
   --cor-fundo: #D3CFE3;
-  --cor-botao: #B3A5D8;
+  --cor-botao: #7A64C8; /* Usar cor mais forte para botão */
+  --cor-botao-hover: #5a4db8;
   --cor-destaque: #7A64C8;
-  --cor-texto: #000000;
-  --cor-texto-secundario: #4B4B4B;
+  --cor-texto: #1a1a1a; /* um preto menos pesado */
+  --cor-texto-secundario: #555555;
   --cor-cartao: #FFFFFF;
 }
 
@@ -17,6 +18,7 @@
 body {
   background-color: var(--cor-fundo);
   padding: 16px;
+  color: var(--cor-texto);
 }
 
 header, footer {
@@ -24,6 +26,7 @@ header, footer {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  color: var(--cor-texto);
 }
 
 header {
@@ -51,7 +54,7 @@ footer .footer-text {
 
 .botao {
   background-color: var(--cor-botao);
-  color: var(--cor-texto);
+  color: var(--cor-cartao);
   border: none;
   border-radius: 12px;
   padding: 12px 20px;
@@ -59,6 +62,11 @@ footer .footer-text {
   margin: 10px 0;
   width: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor-botao-hover);
 }
 
 .input {
@@ -68,6 +76,12 @@ footer .footer-text {
   padding: 10px;
   margin-bottom: 12px;
   width: 100%;
+  color: var(--cor-texto);
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: var(--cor-texto-secundario);
 }
 
 .cartao {
@@ -91,9 +105,9 @@ footer .footer-text {
 }
 
 .map-container {
-  width: 90%;
-  max-width: 400px;
-  height: 200px;
+  width: 100%;
+  max-width: none;
+  height: 400px;
   margin: 0 auto;
   border: 2px solid #4c4a68;
   border-radius: 8px;

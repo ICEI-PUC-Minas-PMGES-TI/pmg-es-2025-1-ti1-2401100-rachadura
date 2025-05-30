@@ -1,0 +1,213 @@
+:root {
+  --cor-fundo: #D3CFE3;
+  --cor-botao: #B3A5D8;
+  --cor-destaque: #7A64C8;
+  --cor-texto: #000000;
+  --cor-texto-secundario: #4B4B4B;
+  --cor-cartao: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Usando sua fonte */
+}
+
+body {
+  background-color: var(--cor-fundo);
+  padding: 16px;
+  padding-bottom: 80px; /* Espaço para o footer fixo */
+  color: var(--cor-texto); /* Cor de texto padrão */
+}
+
+header {
+  display: flex;
+  justify-content: center; /* Centraliza o título */
+  align-items: center;
+  padding: 16px;
+  background-color: var(--cor-botao);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  color: var(--cor-texto); /* Cor do texto do cabeçalho */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; /* Ajuste o tamanho da fonte se necessário */
+    color: var(--cor-texto);
+}
+
+footer {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo do footer */
+  align-items: center;
+  padding: 16px;
+  background-color: var(--cor-botao);
+  border-radius: 12px;
+  position: fixed; /* Footer fixo */
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  color: var(--cor-texto); /* Cor do texto do rodapé */
+  font-size: 14px;
+}
+
+/* Estilos gerais para o container principal */
+.cartao-container {
+    max-width: 800px; /* Largura máxima para o conteúdo principal */
+    margin: 20px auto; /* Centraliza na página */
+    padding: 16px; /* Adiciona padding interno */
+    /* Removido o background-color e box-shadow aqui, pois 'cartao' já faz isso */
+}
+
+/* Reutilizando as classes do seu estilo */
+.botao {
+  background-color: var(--cor-botao);
+  color: var(--cor-texto);
+  border: none;
+  border-radius: 10px; /* Ajustado para 10px para combinar com o input */
+  padding: 10px 16px; /* Ajustado padding para combinar com o input */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Adicionada transição */
+}
+
+.botao:hover {
+    background-color: var(--cor-destaque); /* Hover para o botão */
+    color: white; /* Muda a cor do texto no hover para contraste */
+}
+
+.input {
+  background-color: var(--cor-cartao);
+  border: 2px solid var(--cor-botao);
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%; /* Ocupa toda a largura disponível */
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+.cartao {
+  background-color: var(--cor-cartao);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.titulo { /* Para títulos dentro de cartões ou seções */
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--cor-texto);
+}
+
+.descricao { /* Para textos secundários ou parágrafos */
+  font-size: 14px;
+  color: var(--cor-texto-secundario);
+}
+
+/* Estilos específicos do FAQ, adaptados para suas variáveis */
+.search-container {
+    display: flex;
+    gap: 8px; /* Espaçamento entre input e botão */
+    margin-bottom: 24px; /* Mais espaço abaixo da barra de pesquisa */
+}
+
+.search-container input {
+    flex-grow: 1;
+    /* Usa a classe .input, então a maioria dos estilos já está lá */
+}
+
+.search-container button {
+    /* Usa a classe .botao, então a maioria dos estilos já está lá */
+    white-space: nowrap; /* Evita que o texto "Pesquisar" quebre */
+}
+
+.faq-item {
+    /* Já usa a classe 'cartao' para bordas, sombra e background */
+    margin-bottom: 16px; /* Espaço entre os itens do FAQ */
+}
+
+.faq-question {
+    background-color: transparent; /* Remove background para usar o do cartão */
+    padding: 0; /* Remove padding extra para usar o do cartão */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-botao); /* Linha divisória */
+    padding-bottom: 12px; /* Espaço abaixo da linha */
+    margin-bottom: 12px; /* Espaço entre pergunta e resposta oculta */
+}
+
+.faq-item.active .faq-question {
+    border-bottom: none; /* Remove a linha quando aberto para a resposta */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 18px; /* Tamanho da fonte da pergunta */
+    color: var(--cor-texto);
+    font-weight: 600; /* Mais destaque para a pergunta */
+    flex-grow: 1; /* Permite que o texto ocupe o espaço */
+    padding-right: 10px; /* Espaço antes do ícone */
+}
+
+.toggle-icon {
+    font-size: 28px; /* Ícone maior */
+    font-weight: bold;
+    color: var(--cor-destaque); /* Cor de destaque para o ícone */
+    transition: transform 0.3s ease;
+    min-width: 28px; /* Garante que o ícone não se comprima */
+    text-align: center;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Transição para padding também */
+    color: var(--cor-texto-secundario); /* Cor do texto da resposta */
+    font-size: 15px; /* Tamanho da fonte da resposta */
+    padding: 0 0 0 0; /* Começa sem padding quando fechado */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Um valor alto para garantir que a resposta caiba */
+    padding-top: 8px; /* Padding no topo quando aberto */
+    padding-bottom: 8px; /* Padding na base quando aberto */
+}
+
+.faq-answer p {
+    margin: 0;
+    /* ... (Seu CSS existente) ... */
+
+.no-results {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: var(--cor-texto-secundario);
+    font-size: 1.1em;
+    /* ... (Seu CSS existente) ... */
+
+/* Estilos específicos para o botão "Ver Todas" */
+.full-width-button {
+    width: 100%; /* Para o botão ocupar toda a largura */
+    text-align: center;
+    margin-top: 20px; /* Espaço acima do botão */
+    display: block; /* Garante que o display inicial seja 'none' e o JavaScript possa alterar */
+}
+
+/* Título da seção FAQ */
+.faq-section-title {
+    margin-bottom: 16px; /* Espaço abaixo do título da seção */
+}
+}
+}

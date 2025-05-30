@@ -1,116 +1,216 @@
 let miniMap, fullMap;
+let miniMarkers = [], fullMarkers = [];
+let denuncias = JSON.parse(localStorage.getItem('denuncias')) || [];
 
-function initMaps() {
-  const centerCoords = { lat: -19.9208, lng: -43.9378 }; // Ponto central de Belo Horizonte
+let marcadorUsuario = null;
 
-  // Inicializando o mini mapa
-  miniMap = new google.maps.Map(document.getElementById("miniMap"), {
-    center: centerCoords,
-    zoom: 12,  // Ajustando o zoom para um valor menor (visão mais ampla)
-    disableDefaultUI: true
-  });
-
-  // Inicializando o mapa completo no modal
-  fullMap = new google.maps.Map(document.getElementById("fullMap"), {
-    center: centerCoords,
-    zoom: 13  // Zoom um pouco maior para o mapa completo
-  });
-
-  // Definindo as denúncias fictícias
-  const denuncias = [
-    {
-      descricao: 'Rachadura no muro de um prédio na Av. Afonso Pena.',
-      lat: -19.9205,
-      lng: -43.9337
-    },
-    {
-      descricao: 'Rachadura na rua em frente à Praça da Liberdade.',
-      lat: -19.9290,
-      lng: -43.9385
-    }
-  ];
-
-  // Adicionando os marcadores no mapa
-  denuncias.forEach(denuncia => {
-    const marcador = new google.maps.Marker({
-      position: { lat: denuncia.lat, lng: denuncia.lng },
-      map: miniMap,
-      title: denuncia.descricao
-    });
-
-    // Adicionando uma info window (janela com a descrição da denúncia) no marcador
-    const infoWindow = new google.maps.InfoWindow({
-      content: `<p>${denuncia.descricao}</p>`
-    });
-
-    marcador.addListener('click', function() {
-      infoWindow.open(miniMap, marcador);
-    });
-  });
-
-  // Centralizando os marcadores para garantir que sejam visíveis
-  const bounds = new google.maps.LatLngBounds();
-  denuncias.forEach(denuncia => {
-    bounds.extend(new google.maps.LatLng(denuncia.lat, denuncia.lng));
-  });
-  miniMap.fitBounds(bounds);  // Ajusta o mapa para mostrar todos os marcadores
+function salvarDenunciasNoStorage() {
+  localStorage.setItem('denuncias', JSON.stringify(denuncias));
 }
 
-// Modal toggle
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById('mapModal');
-  const closeBtn = document.querySelector('.close');
+function limparFormulario() {
+  document.getElementById("inputDescricao").value = "";
+  document.getElementById("inputCategoria").value = "carro_quebrado";
+  document.getElementById("inputCEP").value = "";
+  document.getElementById("inputNumero").value = "";
+  document.getElementById("inputImagem").value = "";
+}
 
-  document.getElementById('miniMap').addEventListener('click', () => {
-    modal.style.display = 'block';
-    google.maps.event.trigger(fullMap, "resize");  // Redimensionando o mapa
-    fullMap.setCenter(miniMap.getCenter());  // Centralizando o mapa completo no mesmo ponto do mini mapa
+function renderizarMarcadores() {
+  miniMarkers.forEach(m => m.setMap(null));
+  fullMarkers.forEach(m => m.setMap(null));
+  miniMarkers = [];
+  fullMarkers = [];
 
-    // Adicionando os marcadores no mapa completo
-    const denuncias = [
-      {
-        descricao: 'Rachadura no muro de um prédio na Av. Afonso Pena.',
-        lat: -19.9205,
-        lng: -43.9337
-      },
-      {
-        descricao: 'Rachadura na rua em frente à Praça da Liberdade.',
-        lat: -19.9290,
-        lng: -43.9385
+  const filtro = document.getElementById("filtroCategoria").value;
+
+  denuncias.forEach((denuncia) => {
+    const visivel = filtro === "todas" || denuncia.categoria === filtro;
+
+    const content = `
+      <div style="max-width: 200px;">
+        <p><b>Descrição:</b> ${denuncia.descricao}</p>
+        <p><b>CEP:</b> ${denuncia.cep} - <b>Número:</b> ${denuncia.numero}</p>
+        <img src="${denuncia.imagem}" alt="Imagem da denúncia" style="width: 100%; margin-top: 5px;">
+      </div>
+    `;
+
+    const infoWindow = new google.maps.InfoWindow({ content });
+
+    const markerMini = new google.maps.Marker({
+      position: { lat: denuncia.lat, lng: denuncia.lng },
+      map: visivel ? miniMap : null,
+    });
+    markerMini.categoria = denuncia.categoria;
+    markerMini.addListener("click", () => infoWindow.open(miniMap, markerMini));
+    miniMarkers.push(markerMini);
+
+    const markerFull = new google.maps.Marker({
+      position: { lat: denuncia.lat, lng: denuncia.lng },
+      map: visivel ? fullMap : null,
+    });
+    markerFull.categoria = denuncia.categoria;
+    markerFull.addListener("click", () => infoWindow.open(fullMap, markerFull));
+    fullMarkers.push(markerFull);
+  });
+}
+
+function adicionarDenuncia(descricao, categoria, imagemBase64, latLng, cep, numero) {
+  const nova = {
+    descricao,
+    categoria,
+    imagem: imagemBase64 || "../imgs/default.jpg",
+    lat: latLng.lat,
+    lng: latLng.lng,
+    cep,
+    numero
+  };
+  denuncias.push(nova);
+  salvarDenunciasNoStorage();
+  renderizarMarcadores();
+}
+
+async function buscarEnderecoViaCEP(cep) {
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Erro na requisição ViaCEP");
+    const data = await response.json();
+    if (data.erro) throw new Error("CEP não encontrado");
+    return data;
+  } catch (err) {
+    alert("Erro ao buscar endereço pelo CEP: " + err.message);
+    return null;
+  }
+}
+
+function geocodeEndereco(geocoder, endereco) {
+  return new Promise((resolve, reject) => {
+    geocoder.geocode({ address: endereco }, (results, status) => {
+      if (status === "OK" && results[0]) {
+        const location = results[0].geometry.location;
+        resolve({ lat: location.lat(), lng: location.lng() });
+      } else {
+        reject("Não foi possível encontrar localização para o endereço");
       }
-    ];
-
-    denuncias.forEach(denuncia => {
-      const marcador = new google.maps.Marker({
-        position: { lat: denuncia.lat, lng: denuncia.lng },
-        map: fullMap,
-        title: denuncia.descricao
-      });
-
-      const infoWindow = new google.maps.InfoWindow({
-        content: `<p>${denuncia.descricao}</p>`
-      });
-
-      marcador.addListener('click', function() {
-        infoWindow.open(fullMap, marcador);
-      });
     });
+  });
+}
 
-    // Ajustando o mapa para mostrar os marcadores no mapa completo
-    const bounds = new google.maps.LatLngBounds();
-    denuncias.forEach(denuncia => {
-      bounds.extend(new google.maps.LatLng(denuncia.lat, denuncia.lng));
-    });
-    fullMap.fitBounds(bounds);  // Ajusta o mapa para mostrar todos os marcadores
+function acompanharLocalizacaoUsuario() {
+  if (!navigator.geolocation) {
+    alert("Geolocalização não suportada pelo seu navegador.");
+    return;
+  }
+
+  navigator.geolocation.watchPosition((pos) => {
+    const coords = {
+      lat: pos.coords.latitude,
+      lng: pos.coords.longitude,
+    };
+
+    // Atualizar marcador da posição do usuário
+    if (!marcadorUsuario) {
+      marcadorUsuario = new google.maps.Marker({
+        position: coords,
+        map: miniMap,
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          fillColor: "#4285F4",
+          fillOpacity: 1,
+          strokeColor: "#fff",
+          strokeWeight: 2,
+        },
+        title: "Sua localização",
+      });
+      miniMap.setCenter(coords);
+    } else {
+      marcadorUsuario.setPosition(coords);
+    }
+
+  }, (error) => {
+    console.warn("Erro ao obter localização:", error.message);
+  }, {
+    enableHighAccuracy: true,
+    maximumAge: 10000,
+    timeout: 10000
+  });
+}
+
+function initMaps() {
+  const defaultCoords = { lat: -19.9288, lng: -43.9378 };
+
+  miniMap = new google.maps.Map(document.getElementById("miniMap"), {
+    center: defaultCoords,
+    zoom: 15,
   });
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
+  fullMap = new google.maps.Map(document.getElementById("fullMap"), {
+    center: defaultCoords,
+    zoom: 15,
   });
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
+  const modal = document.getElementById("mapModal");
+  const closeModal = document.querySelector(".close");
+
+  document.getElementById("miniMap").addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  document.getElementById("filtroCategoria").addEventListener("change", renderizarMarcadores);
+
+  document.getElementById("botaoSalvar").addEventListener("click", async () => {
+    const desc = document.getElementById("inputDescricao").value.trim();
+    const cat = document.getElementById("inputCategoria").value;
+    const cep = document.getElementById("inputCEP").value.trim();
+    const numero = document.getElementById("inputNumero").value.trim();
+    const file = document.getElementById("inputImagem").files[0];
+
+    if (!desc || !cat || !cep || !numero) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    const geocoder = new google.maps.Geocoder();
+
+    // 1. Buscar endereço via CEP
+    const enderecoViaCEP = await buscarEnderecoViaCEP(cep.replace(/\D/g, ''));
+    if (!enderecoViaCEP) return;
+
+    // 2. Montar endereço completo para geocoding
+    const enderecoCompleto = `${enderecoViaCEP.logradouro}, ${numero}, ${enderecoViaCEP.localidade} - ${enderecoViaCEP.uf}, Brasil`;
+
+    try {
+      // 3. Obter lat/lng via geocoding
+      const latLng = await geocodeEndereco(geocoder, enderecoCompleto);
+
+      // 4. Agora salvar denúncia com latLng correto
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          adicionarDenuncia(desc, cat, reader.result, latLng, cep, numero);
+          limparFormulario();
+          alert("Denúncia adicionada com sucesso!");
+        };
+        reader.readAsDataURL(file);
+      } else {
+        adicionarDenuncia(desc, cat, null, latLng, cep, numero);
+        limparFormulario();
+        alert("Denúncia adicionada com sucesso!");
+      }
+    } catch (err) {
+      alert(err);
     }
   });
-});
+
+  // Primeiro render dos marcadores armazenados
+  renderizarMarcadores();
+
+  // Pedir permissão e acompanhar localização em tempo real
+  acompanharLocalizacaoUsuario();
+}
