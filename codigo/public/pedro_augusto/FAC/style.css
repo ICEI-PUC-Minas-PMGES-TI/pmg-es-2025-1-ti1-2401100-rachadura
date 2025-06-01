@@ -1,224 +1,391 @@
-/* Variáveis CSS para fácil customização */
+/* style.css */
+
+/* --- Variáveis CSS para Cores e Dimensões --- */
 :root {
-    --cor-fundo: #D3CFE3;
-    --cor-botao: #B3A5D8;
-    --cor-destaque: #7A64C8;
-    --cor-texto: #000000;
-    --cor-texto-secundario: #4B4B4B;
-    --cor-cartao: #FFFFFF;
+    /* Cores */
+    --color-primary-bg: #D3CFE3;        /* Fundo geral da página */
+    --color-secondary-bg: #B3A5D8;      /* Fundo de cabeçalho, rodapé, botões */
+    --color-accent: #7A64C8;            /* Cor de destaque principal (interatividade) */
+    --color-text-dark: #000000;         /* Texto principal escuro */
+    --color-text-light: #FFFFFF;        /* Texto em elementos escuros (ex: hover de botão) */
+    --color-text-muted: #4B4B4B;        /* Texto secundário, descrições */
+    --color-card-bg: #FFFFFF;           /* Fundo de cartões */
+    --color-border-light: rgba(0, 0, 0, 0.1); /* Borda suave */
+    --color-shadow-light: rgba(0, 0, 0, 0.08); /* Sombra leve */
+    --color-error: #CC0000;             /* Cor para mensagens de erro */
+    --color-success: #28a745;           /* Exemplo: cor para mensagens de sucesso */
+
+    /* Espaçamentos e Dimensões */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Bordas e Sombras */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --shadow-soft: 0 2px 8px var(--color-shadow-light);
+    --shadow-elevate: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Reset básico e definição da fonte Poppins */
-* {
+/* --- Reset Universal e Tipografia Base --- */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
 
-/* Estilos globais do corpo da página */
 body {
-    background-color: var(--cor-fundo);
-    padding: 16px;
-    padding-bottom: 80px; /* Espaço para o footer fixo */
-    color: var(--cor-texto); /* Cor de texto padrão */
-}
-
-/* Estilos do cabeçalho */
-header {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
+    padding: var(--spacing-md);
+    padding-bottom: 70px; /* Espaço para o rodapé fixo */
+    line-height: 1.6;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
     display: flex;
-    justify-content: center; /* Centraliza o título */
-    align-items: center;
-    padding: 16px;
-    background-color: var(--cor-botao);
-    border-radius: 12px;
-    margin-bottom: 16px;
-    color: var(--cor-texto); /* Cor do texto do cabeçalho */
+    flex-direction: column;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px; /* Tamanho da fonte do título do cabeçalho */
-    color: var(--cor-texto);
-}
-
-/* Estilos do rodapé */
-footer {
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo do footer */
-    align-items: center;
-    padding: 16px;
-    background-color: var(--cor-botao);
-    border-radius: 12px;
-    position: fixed; /* Footer fixo na parte inferior da viewport */
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    color: var(--cor-texto); /* Cor do texto do rodapé */
-    font-size: 14px;
-}
-
-/* Estilos do container principal de conteúdo (cartões) */
-.cartao-container {
-    max-width: 800px; /* Largura máxima para o conteúdo principal */
-    margin: 20px auto; /* Centraliza o container horizontalmente */
-    padding: 16px; /* Padding interno para o container */
-}
-
-/* Estilos para botões genéricos */
-.botao {
-    background-color: var(--cor-botao);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 10px;
-    padding: 10px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
-}
-
-.botao:hover {
-    background-color: var(--cor-destaque);
-    color: white; /* Cor do texto no hover para melhor contraste */
-}
-
-/* Estilos para campos de input genéricos */
-.input {
-    background-color: var(--cor-cartao);
-    border: 2px solid var(--cor-botao);
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%; /* Ocupa toda a largura disponível */
-    font-size: 1rem;
-    color: var(--cor-texto);
-}
-
-/* Estilos para elementos que se comportam como "cartões" */
-.cartao {
-    background-color: var(--cor-cartao);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-    padding: 16px;
-    margin-bottom: 16px;
-}
-
-/* Estilos para títulos de seção ou sub-títulos */
-.titulo {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: var(--cor-texto);
-}
-
-/* Estilos para textos de descrição ou parágrafos secundários */
-.descricao {
-    font-size: 14px;
-    color: var(--cor-texto-secundario);
-}
-
-/* Estilos específicos para a barra de pesquisa do FAQ */
-.search-container {
-    display: flex;
-    gap: 8px; /* Espaçamento entre o input e o botão */
-    margin-bottom: 24px; /* Margem inferior para separar da próxima seção */
-}
-
-.search-container input {
-    flex-grow: 1; /* Permite que o input preencha o espaço restante */
-}
-
-.search-container button {
-    white-space: nowrap; /* Evita que o texto do botão quebre em múltiplas linhas */
-}
-
-/* Estilos para cada item do FAQ (pergunta e resposta) */
-.faq-item {
-    margin-bottom: 16px; /* Espaço entre os itens do FAQ */
-}
-
-/* Estilos da pergunta do FAQ (cabeçalho clicável) */
-.faq-question {
-    background-color: transparent;
+/* Oculta elementos visualmente, mas os mantém acessíveis para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* --- Layout Principal --- */
+.app-header, .app-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary-bg);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    color: var(--color-text-dark);
+    text-align: center;
+}
+
+.app-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.app-header h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.main-container {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+    max-width: 800px;
+    width: 100%; /* Garante que ocupe a largura disponível */
+    margin: var(--spacing-md) auto;
+    padding: 0; /* O padding virá dos elementos filhos */
+}
+
+.app-footer {
+    position: fixed;
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 13px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* Sombra superior */
+}
+
+/* --- Componentes Genéricos --- */
+
+/* Estilo base para elementos que parecem "cartões" */
+.card-style {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-lg); /* Padding generoso */
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+}
+
+/* Campo de input padrão */
+.input-field {
+    background-color: var(--color-card-bg);
+    border: 2px solid var(--color-secondary-bg);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    width: 100%;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(122, 100, 200, 0.2);
+}
+
+/* Botão de ação padrão */
+.action-button {
+    background-color: var(--color-secondary-bg);
+    color: var(--color-text-dark);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.action-button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevate);
+}
+
+.action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Botão de largura total */
+.action-button.full-width {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+}
+
+/* Títulos de seção */
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Mensagens de feedback (erro, sem resultados) */
+.info-message {
+    text-align: center;
+    padding: var(--spacing-lg);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: 1.1em;
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-md);
+    margin-top: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.error-message {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+/* --- Seções Específicas --- */
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap; /* Para responsividade em telas menores */
+}
+
+.search-bar .input-field {
+    flex-grow: 1;
+    min-width: 200px; /* Garante que o input não fique muito pequeno */
+}
+
+.search-bar .action-button {
+    flex-shrink: 0; /* Impede o botão de encolher */
+    white-space: nowrap;
+}
+
+/* Acordeão do FAQ */
+.faq-accordion {
+    margin-top: var(--spacing-md);
+}
+
+.faq-item {
+    background-color: var(--color-card-bg); /* O item individual também é um cartão */
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden; /* Crucial para a transição de max-height */
+    border: 1px solid var(--color-border-light);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Sombra mais sutil para itens individuais */
+}
+
+.faq-question-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--cor-botao); /* Linha divisória */
-    padding-bottom: 12px;
-    margin-bottom: 12px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border-light);
+    transition: background-color 0.2s ease;
 }
 
-/* Estilos da pergunta do FAQ quando o item está ativo (expandido) */
-.faq-item.active .faq-question {
-    border-bottom: none; /* Remove a linha quando a resposta está visível */
-    padding-bottom: 0;
+.faq-question-header:hover {
+    background-color: rgba(179, 165, 216, 0.1);
+}
+
+.faq-item.is-active .faq-question-header {
+    border-bottom: none; /* Remove a borda quando expandido */
+    padding-bottom: var(--spacing-sm); /* Mantém um pouco de padding */
+}
+
+.faq-question-header h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    flex-grow: 1;
+    padding-right: var(--spacing-sm);
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.faq-item.is-active .toggle-icon {
+    transform: rotate(45deg); /* Gira o '+' para 'X' */
+}
+
+.faq-answer-content {
+    max-height: 0; /* Estado inicial: oculto */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição suave */
+    color: var(--color-text-muted);
+    font-size: 15px;
+    padding: 0 var(--spacing-md); /* Padding horizontal, vertical é 0 quando fechado */
+}
+
+.faq-item.is-active .faq-answer-content {
+    max-height: 1500px; /* Valor alto para garantir que não corte textos longos */
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-md); /* Mais padding inferior para a resposta */
+}
+
+/* Adicionado para espaçamento entre os parágrafos dentro da resposta */
+.faq-answer-content p {
+    margin-bottom: var(--spacing-xs); /* Espaço entre os parágrafos */
+    /* Remove a margem do último parágrafo para não criar espaço extra no final */
+    margin-top: 0; /* Garante que a margem superior seja 0 */
+}
+
+.faq-answer-content p:last-child {
     margin-bottom: 0;
 }
 
-.faq-question h3 {
-    margin: 0;
-    font-size: 18px;
-    color: var(--cor-texto);
-    font-weight: 600;
-    flex-grow: 1;
-    padding-right: 10px;
-}
 
-/* Estilos do ícone de toggle (+/-) */
-.toggle-icon {
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--cor-destaque);
-    transition: transform 0.3s ease; /* Transição para o giro do ícone */
-    min-width: 28px; /* Garante tamanho mínimo para o ícone */
-    text-align: center;
-}
-
-/* Rotação do ícone quando o item está ativo */
-.faq-item.active .toggle-icon {
-    transform: rotate(45deg); /* Gira o '+' para parecer um 'x' ou para indicar fechamento */
-}
-
-/* Estilos da resposta do FAQ (conteúdo que se expande/colapsa) */
-.faq-answer {
-    max-height: 0; /* Começa oculto */
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Transição para altura e padding */
-    color: var(--cor-texto-secundario);
-    font-size: 15px;
-    padding: 0; /* Sem padding quando fechado */
-}
-
-/* Estilos da resposta do FAQ quando o item está ativo (expandido) */
-.faq-item.active .faq-answer {
-    max-height: 1000px; /* Valor alto para acomodar respostas longas e permitir transição */
-    padding-top: 8px; /* Padding no topo quando aberto */
-    padding-bottom: 8px; /* Padding na base quando aberto */
-}
-
-.faq-answer p {
-    margin: 0; /* Remove margem padrão de parágrafos dentro da resposta */
-}
-
-/* Estilos para mensagem de "nenhum resultado encontrado" */
-.no-results {
-    text-align: center;
-    padding: 20px;
-    font-style: italic;
-    color: var(--cor-texto-secundario);
+/* --- Loader CSS --- */
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    margin: var(--spacing-xl) 0;
+    gap: var(--spacing-sm);
+    color: var(--color-text-muted);
     font-size: 1.1em;
+    font-weight: 500;
 }
 
-/* Estilos específicos para o botão "Ver Todas as Perguntas" */
-.full-width-button {
-    width: 100%; /* Ocupa toda a largura do container */
-    text-align: center;
-    margin-top: 20px; /* Margem superior para separar de outros elementos */
-    display: block; /* Garante que o botão seja um bloco para ocupar a largura total */
+.spinner {
+    border: 5px solid var(--color-secondary-bg);
+    border-top: 5px solid var(--color-accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.8s linear infinite;
 }
 
-/* Estilos para o título da seção de FAQ */
-.faq-section-title {
-    margin-bottom: 16px; /* Margem inferior para separar da lista de FAQs */
+.loader-wrapper.hidden {
+    display: none;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Responsividade --- */
+@media (max-width: 600px) {
+    body {
+        padding: var(--spacing-sm);
+        padding-bottom: 60px; /* Ajusta espaço para rodapé em telas menores */
+    }
+
+    .app-header h1 {
+        font-size: 22px;
+    }
+
+    .app-footer {
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+        bottom: var(--spacing-sm);
+        font-size: 12px;
+        padding: var(--spacing-sm);
+    }
+
+    .main-container {
+        margin: var(--spacing-sm) auto;
+    }
+
+    .card-style {
+        padding: var(--spacing-md);
+    }
+
+    .action-button {
+        padding: 9px 16px;
+        font-size: 0.95rem;
+    }
+
+    .input-field {
+        padding: 9px 10px;
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .search-bar {
+        flex-direction: column; /* Empilha input e botão */
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .search-bar .action-button {
+        width: 100%;
+    }
+
+    .faq-question-header h3 {
+        font-size: 16px;
+    }
+
+    .toggle-icon {
+        font-size: 26px;
+        min-width: 26px;
+    }
+
+    .faq-answer-content {
+        font-size: 14px;
+    }
+}                                                       
