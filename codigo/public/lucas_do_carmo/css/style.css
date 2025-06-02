@@ -1,9 +1,9 @@
 :root {
   --cor-fundo: #D3CFE3;
-  --cor-botao: #7A64C8; /* Usar cor mais forte para botão */
+  --cor-botao: #7A64C8;
   --cor-botao-hover: #5a4db8;
   --cor-destaque: #7A64C8;
-  --cor-texto: #1a1a1a; /* um preto menos pesado */
+  --cor-texto: #1a1a1a;
   --cor-texto-secundario: #555555;
   --cor-cartao: #FFFFFF;
 }

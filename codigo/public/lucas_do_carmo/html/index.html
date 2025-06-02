@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Template Rachadura</title>
+  <title>Mapa de Denúncias</title>
   <link rel="stylesheet" href="../css/style.css" />
   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiGL7OYCoDXQxc2BGUK6e_tjGPdmh-gBs&callback=initMaps"></script>
 </head>
@@ -13,26 +13,6 @@
   </header>
 
   <main>
-    <div class="cartao">
-      <p class="titulo">Nova Denúncia</p>
-      <input type="text" id="inputDescricao" class="input" placeholder="Descrição..." />
-      
-      <select id="inputCategoria" class="input">
-        <option value="">Selecione a categoria</option>
-        <option value="carro_quebrado">Carro Quebrado</option>
-        <option value="arvore_caida">Árvore Caída</option>
-        <option value="cano_estourado">Cano Estourado</option>
-        <option value="buraco">Buraco</option>
-      </select>
-
-      <input type="text" id="inputCEP" class="input" placeholder="CEP (somente números)" maxlength="8" />
-      <input type="text" id="inputNumero" class="input" placeholder="Número do endereço" />
-
-      <input type="file" id="inputImagem" class="input" accept="image/*" />
-
-      <button id="botaoSalvar" class="botao">Salvar</button>
-    </div>
-
     <div class="cartao">
       <p class="titulo">Mapa de Denúncias</p>
       <select id="filtroCategoria" class="input">

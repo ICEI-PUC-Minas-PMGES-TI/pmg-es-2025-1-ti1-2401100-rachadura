@@ -1,111 +1,108 @@
 :root {
-    --cor-fundo: #D3CFE3;
-    --cor-botao: #7A64C8;
-    --cor-botao-hover: #5a4db8;
-    --cor-destaque: #7A64C8;
-    --cor-texto: #1a1a1a;
-    --cor-texto-secundario: #555555;
-    --cor-cartao: #FFFFFF;
-
-    --roxo-medio: #C9A5FF;
-    --roxo-escuro: #7a30b6;
-    --roxo-hover: #923ed6;
-    --roxo-claro: #F3E8FF;
-    --roxo-mais-claro: #E6D6FF;
-    --roxo-clarinho: #D4B4FF;
-    --sombra-roxa: rgba(179, 65, 209, 0.5);
+  --cor-fundo: #D3CFE3;
+  --cor-botao: #B3A5D8;
+  --cor-destaque: #7A64C8;
+  --cor-texto: #000000;
+  --cor-texto-secundario: #4B4B4B;
+  --cor-cartao: #FFFFFF;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    padding: 20px;
-    background-color: var(--roxo-medio);
-    color: var(--cor-texto);
-    text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  text-align: center;
 }
 
 .container {
-    max-width: 500px;
-    margin: auto;
-    padding: 40px;
-    background-color: var(--cor-destaque);
-    border-radius: 12px;
-    box-shadow: 0 0 20px var(--sombra-roxa);
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+  background-color: var(--cor-botao);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: var(--cor-cartao);
+  color: var(--cor-texto);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 input {
-    padding: 10px;
-    width: 90%;
-    border: 1px solid var(--roxo-escuro);
-    border-radius: 6px;
-    background-color: var(--roxo-claro);
-    color: var(--roxo-escuro);
-    text-align: center;
-    font-family: inherit;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid var(--cor-destaque);
+  border-radius: 6px;
+  background-color: var(--cor-cartao);
+  color: var(--cor-texto);
+  text-align: center;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 2px;
 }
 
 button {
-    padding: 12px 24px;
-    cursor: pointer;
-    border: 2px solid var(--roxo-escuro);
-    background-color: var(--roxo-hover);
-    color: var(--cor-cartao);
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    font-family: inherit;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: 2px solid var(--cor-destaque);
+  background-color: var(--cor-destaque);
+  color: var(--cor-cartao);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  font-family: inherit;
 }
 
 button:hover {
-    background-color: var(--roxo-escuro);
-    transform: scale(1.05);
+  background-color: #5a4db8; /* tom mais escuro do destaque */
+  transform: scale(1.05);
 }
 
 .table-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    overflow-x: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  overflow-x: auto;
 }
 
 table {
-    width: 80%;
-    border-collapse: collapse;
-    background-color: var(--roxo-mais-claro);
-    box-shadow: 0 0 10px rgba(179, 65, 209, 0.3);
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: var(--cor-cartao);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
 }
 
 th, td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid var(--cor-destaque);
-    color: var(--roxo-escuro);
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--cor-botao);
+  color: var(--cor-texto);
 }
 
 th {
-    background-color: var(--roxo-escuro);
-    color: var(--cor-cartao);
+  background-color: var(--cor-destaque);
+  color: var(--cor-cartao);
 }
 
 tr:nth-child(even) {
-    background-color: var(--roxo-claro);
+  background-color: var(--cor-fundo);
 }
 
 tr:hover {
-    background-color: var(--roxo-clarinho);
+  background-color: var(--cor-botao);
 }

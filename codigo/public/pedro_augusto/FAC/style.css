@@ -1,213 +1,391 @@
+/* style.css */
+
+/* --- Variáveis CSS para Cores e Dimensões --- */
 :root {
-  --cor-fundo: #D3CFE3;
-  --cor-botao: #B3A5D8;
-  --cor-destaque: #7A64C8;
-  --cor-texto: #000000;
-  --cor-texto-secundario: #4B4B4B;
-  --cor-cartao: #FFFFFF;
+    /* Cores */
+    --color-primary-bg: #D3CFE3;        /* Fundo geral da página */
+    --color-secondary-bg: #B3A5D8;      /* Fundo de cabeçalho, rodapé, botões */
+    --color-accent: #7A64C8;            /* Cor de destaque principal (interatividade) */
+    --color-text-dark: #000000;         /* Texto principal escuro */
+    --color-text-light: #FFFFFF;        /* Texto em elementos escuros (ex: hover de botão) */
+    --color-text-muted: #4B4B4B;        /* Texto secundário, descrições */
+    --color-card-bg: #FFFFFF;           /* Fundo de cartões */
+    --color-border-light: rgba(0, 0, 0, 0.1); /* Borda suave */
+    --color-shadow-light: rgba(0, 0, 0, 0.08); /* Sombra leve */
+    --color-error: #CC0000;             /* Cor para mensagens de erro */
+    --color-success: #28a745;           /* Exemplo: cor para mensagens de sucesso */
+
+    /* Espaçamentos e Dimensões */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Bordas e Sombras */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --shadow-soft: 0 2px 8px var(--color-shadow-light);
+    --shadow-elevate: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif; /* Usando sua fonte */
+/* --- Reset Universal e Tipografia Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: var(--cor-fundo);
-  padding: 16px;
-  padding-bottom: 80px; /* Espaço para o footer fixo */
-  color: var(--cor-texto); /* Cor de texto padrão */
-}
-
-header {
-  display: flex;
-  justify-content: center; /* Centraliza o título */
-  align-items: center;
-  padding: 16px;
-  background-color: var(--cor-botao);
-  border-radius: 12px;
-  margin-bottom: 16px;
-  color: var(--cor-texto); /* Cor do texto do cabeçalho */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px; /* Ajuste o tamanho da fonte se necessário */
-    color: var(--cor-texto);
-}
-
-footer {
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo do footer */
-  align-items: center;
-  padding: 16px;
-  background-color: var(--cor-botao);
-  border-radius: 12px;
-  position: fixed; /* Footer fixo */
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  color: var(--cor-texto); /* Cor do texto do rodapé */
-  font-size: 14px;
-}
-
-/* Estilos gerais para o container principal */
-.cartao-container {
-    max-width: 800px; /* Largura máxima para o conteúdo principal */
-    margin: 20px auto; /* Centraliza na página */
-    padding: 16px; /* Adiciona padding interno */
-    /* Removido o background-color e box-shadow aqui, pois 'cartao' já faz isso */
-}
-
-/* Reutilizando as classes do seu estilo */
-.botao {
-  background-color: var(--cor-botao);
-  color: var(--cor-texto);
-  border: none;
-  border-radius: 10px; /* Ajustado para 10px para combinar com o input */
-  padding: 10px 16px; /* Ajustado padding para combinar com o input */
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Adicionada transição */
-}
-
-.botao:hover {
-    background-color: var(--cor-destaque); /* Hover para o botão */
-    color: white; /* Muda a cor do texto no hover para contraste */
-}
-
-.input {
-  background-color: var(--cor-cartao);
-  border: 2px solid var(--cor-botao);
-  border-radius: 10px;
-  padding: 10px;
-  width: 100%; /* Ocupa toda a largura disponível */
-  font-size: 1rem;
-  color: var(--cor-texto);
-}
-
-.cartao {
-  background-color: var(--cor-cartao);
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-.titulo { /* Para títulos dentro de cartões ou seções */
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--cor-texto);
-}
-
-.descricao { /* Para textos secundários ou parágrafos */
-  font-size: 14px;
-  color: var(--cor-texto-secundario);
-}
-
-/* Estilos específicos do FAQ, adaptados para suas variáveis */
-.search-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
+    padding: var(--spacing-md);
+    padding-bottom: 70px; /* Espaço para o rodapé fixo */
+    line-height: 1.6;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
     display: flex;
-    gap: 8px; /* Espaçamento entre input e botão */
-    margin-bottom: 24px; /* Mais espaço abaixo da barra de pesquisa */
+    flex-direction: column;
 }
 
-.search-container input {
+/* Oculta elementos visualmente, mas os mantém acessíveis para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* --- Layout Principal --- */
+.app-header, .app-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary-bg);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+    color: var(--color-text-dark);
+    text-align: center;
+}
+
+.app-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.app-header h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.main-container {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+    max-width: 800px;
+    width: 100%; /* Garante que ocupe a largura disponível */
+    margin: var(--spacing-md) auto;
+    padding: 0; /* O padding virá dos elementos filhos */
+}
+
+.app-footer {
+    position: fixed;
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 13px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* Sombra superior */
+}
+
+/* --- Componentes Genéricos --- */
+
+/* Estilo base para elementos que parecem "cartões" */
+.card-style {
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-lg); /* Padding generoso */
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--color-border-light);
+}
+
+/* Campo de input padrão */
+.input-field {
+    background-color: var(--color-card-bg);
+    border: 2px solid var(--color-secondary-bg);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    width: 100%;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(122, 100, 200, 0.2);
+}
+
+/* Botão de ação padrão */
+.action-button {
+    background-color: var(--color-secondary-bg);
+    color: var(--color-text-dark);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.action-button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevate);
+}
+
+.action-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Botão de largura total */
+.action-button.full-width {
+    width: 100%;
+    margin-top: var(--spacing-lg);
+}
+
+/* Títulos de seção */
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Mensagens de feedback (erro, sem resultados) */
+.info-message {
+    text-align: center;
+    padding: var(--spacing-lg);
+    font-style: italic;
+    color: var(--color-text-muted);
+    font-size: 1.1em;
+    background-color: var(--color-card-bg);
+    border-radius: var(--border-radius-md);
+    margin-top: var(--spacing-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.error-message {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+/* --- Seções Específicas --- */
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap; /* Para responsividade em telas menores */
+}
+
+.search-bar .input-field {
     flex-grow: 1;
-    /* Usa a classe .input, então a maioria dos estilos já está lá */
+    min-width: 200px; /* Garante que o input não fique muito pequeno */
 }
 
-.search-container button {
-    /* Usa a classe .botao, então a maioria dos estilos já está lá */
-    white-space: nowrap; /* Evita que o texto "Pesquisar" quebre */
+.search-bar .action-button {
+    flex-shrink: 0; /* Impede o botão de encolher */
+    white-space: nowrap;
+}
+
+/* Acordeão do FAQ */
+.faq-accordion {
+    margin-top: var(--spacing-md);
 }
 
 .faq-item {
-    /* Já usa a classe 'cartao' para bordas, sombra e background */
-    margin-bottom: 16px; /* Espaço entre os itens do FAQ */
+    background-color: var(--color-card-bg); /* O item individual também é um cartão */
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden; /* Crucial para a transição de max-height */
+    border: 1px solid var(--color-border-light);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Sombra mais sutil para itens individuais */
 }
 
-.faq-question {
-    background-color: transparent; /* Remove background para usar o do cartão */
-    padding: 0; /* Remove padding extra para usar o do cartão */
-    cursor: pointer;
+.faq-question-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--cor-botao); /* Linha divisória */
-    padding-bottom: 12px; /* Espaço abaixo da linha */
-    margin-bottom: 12px; /* Espaço entre pergunta e resposta oculta */
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border-light);
+    transition: background-color 0.2s ease;
 }
 
-.faq-item.active .faq-question {
-    border-bottom: none; /* Remove a linha quando aberto para a resposta */
-    padding-bottom: 0;
-    margin-bottom: 0;
+.faq-question-header:hover {
+    background-color: rgba(179, 165, 216, 0.1);
 }
 
-.faq-question h3 {
+.faq-item.is-active .faq-question-header {
+    border-bottom: none; /* Remove a borda quando expandido */
+    padding-bottom: var(--spacing-sm); /* Mantém um pouco de padding */
+}
+
+.faq-question-header h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    flex-grow: 1;
+    padding-right: var(--spacing-sm);
     margin: 0;
-    font-size: 18px; /* Tamanho da fonte da pergunta */
-    color: var(--cor-texto);
-    font-weight: 600; /* Mais destaque para a pergunta */
-    flex-grow: 1; /* Permite que o texto ocupe o espaço */
-    padding-right: 10px; /* Espaço antes do ícone */
 }
 
 .toggle-icon {
-    font-size: 28px; /* Ícone maior */
+    font-size: 30px;
     font-weight: bold;
-    color: var(--cor-destaque); /* Cor de destaque para o ícone */
+    color: var(--color-accent);
     transition: transform 0.3s ease;
-    min-width: 28px; /* Garante que o ícone não se comprima */
+    min-width: 30px;
     text-align: center;
+    user-select: none;
 }
 
-.faq-item.active .toggle-icon {
-    transform: rotate(45deg);
+.faq-item.is-active .toggle-icon {
+    transform: rotate(45deg); /* Gira o '+' para 'X' */
 }
 
-.faq-answer {
-    max-height: 0;
+.faq-answer-content {
+    max-height: 0; /* Estado inicial: oculto */
     overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Transição para padding também */
-    color: var(--cor-texto-secundario); /* Cor do texto da resposta */
-    font-size: 15px; /* Tamanho da fonte da resposta */
-    padding: 0 0 0 0; /* Começa sem padding quando fechado */
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição suave */
+    color: var(--color-text-muted);
+    font-size: 15px;
+    padding: 0 var(--spacing-md); /* Padding horizontal, vertical é 0 quando fechado */
 }
 
-.faq-item.active .faq-answer {
-    max-height: 200px; /* Um valor alto para garantir que a resposta caiba */
-    padding-top: 8px; /* Padding no topo quando aberto */
-    padding-bottom: 8px; /* Padding na base quando aberto */
+.faq-item.is-active .faq-answer-content {
+    max-height: 1500px; /* Valor alto para garantir que não corte textos longos */
+    padding-top: var(--spacing-xs);
+    padding-bottom: var(--spacing-md); /* Mais padding inferior para a resposta */
 }
 
-.faq-answer p {
-    margin: 0;
-    /* ... (Seu CSS existente) ... */
+/* Adicionado para espaçamento entre os parágrafos dentro da resposta */
+.faq-answer-content p {
+    margin-bottom: var(--spacing-xs); /* Espaço entre os parágrafos */
+    /* Remove a margem do último parágrafo para não criar espaço extra no final */
+    margin-top: 0; /* Garante que a margem superior seja 0 */
+}
 
-.no-results {
-    text-align: center;
-    padding: 20px;
-    font-style: italic;
-    color: var(--cor-texto-secundario);
+.faq-answer-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* --- Loader CSS --- */
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    margin: var(--spacing-xl) 0;
+    gap: var(--spacing-sm);
+    color: var(--color-text-muted);
     font-size: 1.1em;
-    /* ... (Seu CSS existente) ... */
-
-/* Estilos específicos para o botão "Ver Todas" */
-.full-width-button {
-    width: 100%; /* Para o botão ocupar toda a largura */
-    text-align: center;
-    margin-top: 20px; /* Espaço acima do botão */
-    display: block; /* Garante que o display inicial seja 'none' e o JavaScript possa alterar */
+    font-weight: 500;
 }
 
-/* Título da seção FAQ */
-.faq-section-title {
-    margin-bottom: 16px; /* Espaço abaixo do título da seção */
+.spinner {
+    border: 5px solid var(--color-secondary-bg);
+    border-top: 5px solid var(--color-accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.8s linear infinite;
 }
+
+.loader-wrapper.hidden {
+    display: none;
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
+
+/* --- Responsividade --- */
+@media (max-width: 600px) {
+    body {
+        padding: var(--spacing-sm);
+        padding-bottom: 60px; /* Ajusta espaço para rodapé em telas menores */
+    }
+
+    .app-header h1 {
+        font-size: 22px;
+    }
+
+    .app-footer {
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+        bottom: var(--spacing-sm);
+        font-size: 12px;
+        padding: var(--spacing-sm);
+    }
+
+    .main-container {
+        margin: var(--spacing-sm) auto;
+    }
+
+    .card-style {
+        padding: var(--spacing-md);
+    }
+
+    .action-button {
+        padding: 9px 16px;
+        font-size: 0.95rem;
+    }
+
+    .input-field {
+        padding: 9px 10px;
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .search-bar {
+        flex-direction: column; /* Empilha input e botão */
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .search-bar .action-button {
+        width: 100%;
+    }
+
+    .faq-question-header h3 {
+        font-size: 16px;
+    }
+
+    .toggle-icon {
+        font-size: 26px;
+        min-width: 26px;
+    }
+
+    .faq-answer-content {
+        font-size: 14px;
+    }
+}                                                       

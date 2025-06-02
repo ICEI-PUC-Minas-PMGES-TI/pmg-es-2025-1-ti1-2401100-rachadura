@@ -3,8 +3,8 @@ document.getElementById("filtrarBtn").addEventListener("click", () => {
   const dataInicial = document.getElementById("data-inicial").value;
   const resultadoDiv = document.getElementById("resultadoDenuncias");
 
-  if (!categoriaSelecionada || !dataInicial) {
-    resultadoDiv.innerHTML = "<p>Por favor, selecione uma categoria e uma data.</p>";
+  if (!categoriaSelecionada) {
+    resultadoDiv.innerHTML = "<p>Por favor, selecione uma categoria.</p>";
     return;
   }
 
@@ -16,9 +16,11 @@ document.getElementById("filtrarBtn").addEventListener("click", () => {
       return response.json();
     })
     .then(denuncias => {
-      const resultados = denuncias.filter(d =>
-        d.categoria === categoriaSelecionada && d.data >= dataInicial
-      );
+      const resultados = denuncias.filter(d => {
+        const mesmaCategoria = d.categoria === categoriaSelecionada;
+        const dataValida = !dataInicial || d.data >= dataInicial;
+        return mesmaCategoria && dataValida;
+      });
 
       if (resultados.length === 0) {
         resultadoDiv.innerHTML = "<p>Nenhuma denúncia encontrada.</p>";
@@ -28,7 +30,7 @@ document.getElementById("filtrarBtn").addEventListener("click", () => {
             <p><strong>Categoria:</strong> ${d.categoria}</p>
             <p><strong>Data:</strong> ${d.data}</p>
             <p><strong>Descrição:</strong> ${d.descricao}</p>
-           <p><strong>Status:</strong> <span class="status ${d.status}">${d.status}</span></p>
+            <p><strong>Status:</strong> <span class="status ${d.status}">${d.status}</span></p>
             <hr>
           </div>
         `).join("");

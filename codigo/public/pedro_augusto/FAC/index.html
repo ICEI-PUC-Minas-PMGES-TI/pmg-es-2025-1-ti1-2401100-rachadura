@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Dinâmico</title>
+    <title>Central de Ajuda - FAQ</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Perguntas Frequentes (FAQ)</h1>
+    <header class="app-header">
+        <h1>Perguntas Frequentes</h1>
     </header>
 
-    <main class="cartao-container">
-        <div class="search-container">
-            <input type="text" id="searchInput" class="input" placeholder="Pesquise sua pergunta...">
-            <button id="searchButton" class="botao">Pesquisar</button>
-        </div>
-        
-        <div class="faq-section-title">
-            <h2 class="titulo">Perguntas Mais Frequentes</h2>
-        </div>
+    <main class="main-container">
+        <section class="faq-section card-style">
+            <div class="search-bar">
+                <label for="faq-search-input" class="sr-only">Pesquise por uma pergunta:</label>
+                <input type="text" id="faq-search-input" class="input-field" placeholder="Busque por palavras-chave...">
+                <button id="faq-search-button" class="action-button" aria-label="Realizar busca por perguntas">Buscar</button>
+            </div>
+            
+            <h2 class="section-title" id="faq-display-title">Perguntas Frequentes</h2>
 
-        <div id="faq-container" class="faq-container">
+            <div id="faq-loader" class="loader-wrapper hidden">
+                <div class="spinner"></div>
+                <p class="loader-message">Carregando conteúdo...</p>
             </div>
 
-        <button id="loadMoreButton" class="botao full-width-button" style="display: none;">Ver Todas as Perguntas</button>
+            <div id="faq-list-container" class="faq-accordion" aria-live="polite">
+                </div>
+
+            </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Seu Site. Todos os direitos reservados.</p>
+    <footer class="app-footer">
+        <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="faq.js"></script> </body>
+    <script src="faq.js"></script>
+</body>
 </html>

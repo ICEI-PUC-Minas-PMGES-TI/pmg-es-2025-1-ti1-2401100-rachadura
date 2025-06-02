@@ -8,7 +8,7 @@ const feedData = {
       "imagem_denuncia": "https://www.diariozonanorte.com.br/wp-content/uploads/2023/03/buraco.jpg",
       "descricao": "Buraco enorme na Rua dos Goitacazes, próximo ao número 1200. Difícil para carros e perigoso para pedestres.",
       "localizacao": "Rua dos Goitacazes, Centro",
-      "likes": 5,
+      "likes": 3,
       "dislikes": 2,
       "userReaction": null,
       "comentarios": [
