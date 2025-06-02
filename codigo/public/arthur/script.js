@@ -36,16 +36,21 @@ const denunciasGenericasPadrao = [
         id: generateUniqueId(),
         titulo: "Vazamento de Água na Rua das Flores",
         descricao: "Há um vazamento de água limpa constante na calçada da Rua das Flores, altura do número 250. O desperdício é grande e já forma poças, dificultando a passagem de pedestres. Problema persiste há 3 dias.",
-        imagem: null, video: null,
+        // MODIFICADO: Exemplo de link de imagem placeholder
+        imagem: "https://picsum.photos/seed/vazamentoflores/400/300", 
+        video: null,
         timeline: [
-            { status: "Denúncia Criada", timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(), notas: "Denúncia registrada automaticamente no sistema." }
+            { status: "Denúncia Criada", timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(), notas: "Denúncia registrada automaticamente no sistema." },
+            { status: "Em Análise", timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), notas: "Equipe ciente, aguardando técnico." }
         ]
     },
     {
         id: generateUniqueId(),
         titulo: "Semáforo com Defeito no Cruzamento Principal",
         descricao: "O semáforo do cruzamento da Av. Brasil com a Rua México está intermitente (piscando amarelo) há várias horas, causando confusão e risco de acidentes, especialmente em horários de pico.",
-        imagem: null, video: null,
+        imagem: null, 
+        // MODIFICADO: Exemplo de link de vídeo placeholder
+        video: "https://placehold.co/600x400.mp4?text=VideoSemaforoDefeito",
         timeline: [
             { status: "Denúncia Criada", timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), notas: "Denúncia registrada automaticamente no sistema." }
         ]
@@ -54,7 +59,8 @@ const denunciasGenericasPadrao = [
         id: generateUniqueId(),
         titulo: "Terreno com Matagal e Entulho",
         descricao: "Um terreno na Rua das Acácias, ao lado do posto de saúde, está com mato muito alto e acúmulo de entulho, o que pode ser foco de mosquitos da dengue e outros vetores. Moradores pedem limpeza.",
-        imagem: null, video: null,
+        imagem: null, 
+        video: null,
         timeline: [
             { status: "Denúncia Criada", timestamp: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(), notas: "Denúncia registrada automaticamente no sistema." }
         ]
@@ -62,7 +68,6 @@ const denunciasGenericasPadrao = [
 ];
 
 if (nomePaginaAtual === 'denuncias.html' || nomePaginaAtual === '' || nomePaginaAtual === 'index.html') {
-    // ... (código da página de listagem permanece o mesmo)
     console.log("Executando script para a página de listagem de denúncias.");
     const listaDenunciasContainer = document.getElementById('lista-denuncias-container');
     const btnNovaDenuncia = document.getElementById('btn-nova-denuncia');
@@ -90,9 +95,14 @@ if (nomePaginaAtual === 'denuncias.html' || nomePaginaAtual === '' || nomePagina
             const card = document.createElement('div');
             card.classList.add('denuncia-card');
             card.setAttribute('data-id', denuncia.id);
+            // Limitar descrição no card
+            let descBreve = denuncia.descricao ? denuncia.descricao : 'Sem descrição detalhada.';
+            if (descBreve.length > 100) {
+                descBreve = descBreve.substring(0, 100) + '...';
+            }
             card.innerHTML = `
                 <h3 class="denuncia-card-titulo">${denuncia.titulo || 'Denúncia Sem Título'}</h3>
-                <p class="denuncia-card-descricao">${denuncia.descricao ? (denuncia.descricao.length > 100 ? denuncia.descricao.substring(0, 100) + '...' : denuncia.descricao) : 'Sem descrição detalhada.'}</p>
+                <p class="denuncia-card-descricao">${descBreve}</p>
             `;
             card.addEventListener('click', () => {
                 window.location.href = `atualizar_denuncia.html?id=${denuncia.id}`;
@@ -126,8 +136,8 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
     const selectedFilesInfoEl = document.getElementById('selected-files-info');
     const denunciaTimelineContainerEl = document.getElementById('denuncia-timeline-container');
 
-    // ADICIONADO: Elementos para adicionar novo evento à timeline
-    const timelineNewStatusInput = document.getElementById('timeline-new-status');
+    // MODIFICADO: Referência para o select de status
+    const timelineNewStatusSelect = document.getElementById('timeline-new-status-select');
     const timelineNewNotesInput = document.getElementById('timeline-new-notes');
     const btnAddTimelineEvent = document.getElementById('btn-add-timeline-event');
 
@@ -135,8 +145,8 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
     let denunciaParaEdicao = {
         titulo: '',
         descricao: '',
-        imagem: null,
-        video: null,
+        imagem: null, // Armazenará a URL da imagem
+        video: null,  // Armazenará a URL do vídeo
         timeline: []
     };
 
@@ -144,14 +154,15 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
     currentDenunciaId = params.get('id');
 
     const updateSelectedFilesUI = () => {
-        // ... (código permanece o mesmo)
         if (!selectedFilesInfoEl) return;
         let infoHTML = '';
         if (denunciaParaEdicao.imagem) {
-            infoHTML += `<p>Imagem: ${denunciaParaEdicao.imagem} <button class="btn-remove-media" data-type="image">Remover</button></p>`;
+            // MODIFICADO: Mostrar link clicável para imagem
+            infoHTML += `<p>Imagem: <a href="${denunciaParaEdicao.imagem}" target="_blank">${denunciaParaEdicao.imagem}</a> <button class="btn-remove-media" data-type="image">Remover</button></p>`;
         }
         if (denunciaParaEdicao.video) {
-            infoHTML += `<p>Vídeo: ${denunciaParaEdicao.video} <button class="btn-remove-media" data-type="video">Remover</button></p>`;
+            // MODIFICADO: Mostrar link clicável para vídeo
+            infoHTML += `<p>Vídeo: <a href="${denunciaParaEdicao.video}" target="_blank">${denunciaParaEdicao.video}</a> <button class="btn-remove-media" data-type="video">Remover</button></p>`;
         }
         selectedFilesInfoEl.innerHTML = infoHTML || '<p>Nenhuma mídia adicionada.</p>';
 
@@ -160,10 +171,10 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
                 const type = e.target.dataset.type;
                 if (type === 'image') {
                     denunciaParaEdicao.imagem = null;
-                    if (imageInput) imageInput.value = '';
+                    if (imageInput) imageInput.value = ''; // Limpa o file input
                 } else if (type === 'video') {
                     denunciaParaEdicao.video = null;
-                    if (videoInput) videoInput.value = '';
+                    if (videoInput) videoInput.value = ''; // Limpa o file input
                 }
                 updateSelectedFilesUI();
             });
@@ -204,7 +215,6 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
             const encontrada = denuncias.find(d => d.id === currentDenunciaId);
             if (encontrada) {
                 denunciaParaEdicao = { ...encontrada };
-                // Garante que timeline seja sempre um array
                 denunciaParaEdicao.timeline = Array.isArray(denunciaParaEdicao.timeline) ? denunciaParaEdicao.timeline : [];
 
                 if (headerTitleEl) headerTitleEl.textContent = "Editar Denúncia";
@@ -221,54 +231,55 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
             if (headerTitleEl) headerTitleEl.textContent = "Nova Denúncia";
             if (cartaoTitleEl) cartaoTitleEl.textContent = "Criar Nova Denúncia";
             if (btnDelete) btnDelete.style.display = 'none';
-            denunciaParaEdicao.timeline = []; // Inicia timeline vazia para nova denúncia
+            denunciaParaEdicao.timeline = [];
         }
-        updateSelectedFilesUI();
+        updateSelectedFilesUI(); // Atualiza UI de mídias (agora com links)
         renderizarTimeline(denunciaParaEdicao.timeline);
     };
 
-    // ADICIONADO: Event listener para o botão "Adicionar ao Histórico"
     if (btnAddTimelineEvent) {
         btnAddTimelineEvent.addEventListener('click', () => {
-            const novoStatus = timelineNewStatusInput.value.trim();
+            // MODIFICADO: Ler valor do select
+            const novoStatus = timelineNewStatusSelect.value;
             const novasNotas = timelineNewNotesInput.value.trim();
 
-            if (!novoStatus) {
-                alert("Por favor, informe o novo status para adicionar ao histórico.");
-                timelineNewStatusInput.focus();
+            if (!novoStatus) { // Verifica se uma opção válida foi selecionada
+                alert("Por favor, selecione um status para adicionar ao histórico.");
+                timelineNewStatusSelect.focus();
                 return;
             }
 
             const novoEventoTimeline = {
                 status: novoStatus,
                 timestamp: new Date().toISOString(),
-                notas: novasNotas || "" // Garante que notas seja uma string
+                notas: novasNotas || ""
             };
 
-            // Adiciona o novo evento ao array da timeline em memória
-            if (!Array.isArray(denunciaParaEdicao.timeline)) { // Segurança extra
+            if (!Array.isArray(denunciaParaEdicao.timeline)) {
                 denunciaParaEdicao.timeline = [];
             }
             denunciaParaEdicao.timeline.push(novoEventoTimeline);
-
-            // Re-renderiza a timeline para mostrar o novo evento
             renderizarTimeline(denunciaParaEdicao.timeline);
 
-            // Limpa os campos de input
-            timelineNewStatusInput.value = '';
+            // MODIFICADO: Limpar campos (resetar select)
+            timelineNewStatusSelect.selectedIndex = 0; 
             timelineNewNotesInput.value = '';
             console.log("Novo evento adicionado à timeline (em memória):", novoEventoTimeline);
         });
     }
-
 
     if (btnAddImage && imageInput) {
         btnAddImage.addEventListener('click', () => imageInput.click());
         imageInput.addEventListener('change', (event) => {
             const file = event.target.files[0];
             if (file) {
-                denunciaParaEdicao.imagem = file.name;
+                // MODIFICADO: Gerar link placeholder para imagem
+                const seed = file.name.replace(/[^a-zA-Z0-9]/g, "") + Date.now(); // Remove caracteres especiais e adiciona timestamp para unicidade
+                denunciaParaEdicao.imagem = `https://picsum.photos/seed/${seed}/400/300`;
+                console.log(`Link da imagem gerado (placeholder): ${denunciaParaEdicao.imagem}`);
                 updateSelectedFilesUI();
+                // Não é ideal limpar o event.target.value aqui se quiser reusar o mesmo arquivo sem re-selecionar,
+                // mas para o fluxo de "sempre novo arquivo", está ok.
             }
         });
     }
@@ -278,7 +289,9 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
         videoInput.addEventListener('change', (event) => {
             const file = event.target.files[0];
             if (file) {
-                denunciaParaEdicao.video = file.name;
+                // MODIFICADO: Gerar link placeholder para vídeo
+                denunciaParaEdicao.video = `https://placehold.co/600x400.mp4?text=Video:%20${encodeURIComponent(file.name)}`;
+                console.log(`Link do vídeo gerado (placeholder): ${denunciaParaEdicao.video}`);
                 updateSelectedFilesUI();
             }
         });
@@ -301,9 +314,8 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
             }
 
             let denuncias = getDenunciasFromStorage();
-            // 'denunciaParaEdicao.timeline' já foi atualizada em memória pelo btnAddTimelineEvent
             const dadosDenunciaAtualizada = {
-                ...denunciaParaEdicao, // Inclui a timeline potencialmente atualizada
+                ...denunciaParaEdicao, // Inclui imagem/video como URLs e timeline atualizada
                 titulo: titulo,
                 descricao: descricao,
             };
@@ -315,11 +327,9 @@ if (nomePaginaAtual === 'atualizar_denuncia.html') {
                 }
             } else {
                 dadosDenunciaAtualizada.id = generateUniqueId();
-                // Se for uma nova denúncia e nenhum evento foi adicionado manualmente,
-                // adiciona o evento "Denúncia Criada"
                 if (dadosDenunciaAtualizada.timeline.length === 0) {
                     dadosDenunciaAtualizada.timeline.push({
-                        status: "Denúncia Criada",
+                        status: "Denúncia Criada", // Status inicial para novas denúncias
                         timestamp: new Date().toISOString(),
                         notas: "Denúncia registrada pelo usuário."
                     });

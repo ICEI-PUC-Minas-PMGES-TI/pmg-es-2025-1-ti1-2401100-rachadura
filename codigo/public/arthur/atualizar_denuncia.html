@@ -51,8 +51,17 @@
 
                 <div class="add-timeline-event-controls">
                     <div class="form-group">
-                        <label for="timeline-new-status" class="label-input-small">Novo Status:</label>
-                        <input type="text" id="timeline-new-status" class="input input-small" placeholder="Ex: Em Análise, Resolvido">
+                        <label for="timeline-new-status-select" class="label-input-small">Novo Status:</label>
+                        <select id="timeline-new-status-select" class="input input-small">
+                            <option value="">-- Selecione um status --</option>
+                            <option value="Em Análise">Em Análise</option>
+                            <option value="Encaminhada ao Setor Responsável">Encaminhada ao Setor Responsável</option>
+                            <option value="Ação em Andamento">Ação em Andamento</option>
+                            <option value="Aguardando Informações do Cidadão">Aguardando Informações do Cidadão</option>
+                            <option value="Resolvida Parcialmente">Resolvida Parcialmente</option>
+                            <option value="Resolvida">Resolvida</option>
+                            <option value="Não Procedente / Indeferida">Não Procedente / Indeferida</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="timeline-new-notes" class="label-input-small">Notas (opcional):</label>
@@ -60,6 +69,7 @@
                     </div>
                     <button id="btn-add-timeline-event" class="botao botao-add-event">Adicionar ao Histórico</button>
                 </div>
+                
                 <div id="denuncia-timeline-container" class="denuncia-timeline-container">
                     <p>Carregando histórico...</p>
                 </div>
