@@ -25,7 +25,7 @@ createApp({
         alert("O CEP deve conter exatamente 8 números.");
         return;
       }
-      axios.get(`https://viacep.com.br/ws/${cepLimpo}/json/`)
+      axios.get(`https://viacep.com.br/ws/${this.endereco.cep}/json/`)
         .then(response => {
           const bean = response.data;
           if (bean.erro) {
@@ -73,13 +73,13 @@ createApp({
         formData.append("midia", file);
       }
 
-      formData.append("titulo", document.getElementById("titulo").value);
+      formData.append("titulo", document.getElementById("denuncia-titulo-input").value);
       formData.append("categoria", document.getElementById("categoria").value);
       formData.append("numero", document.getElementById("numero").value);
-      formData.append("descricao", document.getElementById("descricao").value);
+      formData.append("descricao", document.getElementById("update-description").value);
       formData.append("endereco", JSON.stringify(this.endereco));
 
-      axios.post("http://localhost:3000/upload", formData)
+      axios.post("http://localhost:3000/denuncias", formData)
         .then(res => {
           alert("Denúncia enviada com sucesso!");
           console.log(res.data);

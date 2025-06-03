@@ -7,7 +7,8 @@
     --cor-cartao: #FFFFFF;
     --cor-botao-texto-primario: #FFFFFF;
     --cor-danger: #DC3545; /* Vermelho para exclusão */
-    --cor-danger-hover: #C82333; /* Vermelho mais escuro para hover */
+    --cor-danger-hover1: #C82333; /* Vermelho mais escuro para hover */
+    --cor-danger-hover2: #ff67738f; /* Vermelho mais claro para o fundo do cartao do hover */
 }
 
 * {
@@ -39,8 +40,8 @@ header {
     font-size: 22px;
     font-weight: 600;
     color: var(--cor-destaque);
-    text-align: center;
-    flex-grow: 1;
+    text-align: center; /* Centralizar caso o menu desapareça */
+    flex-grow: 1; /* Para ocupar espaço e ajudar na centralização */
 }
 
 footer {
@@ -53,7 +54,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0; /* Linha divisória sutil */
     box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
 }
 
@@ -78,8 +79,7 @@ footer {
 }
 
 .input,
-textarea.input,
-select.input { /* Adicionado select.input para consistência */
+textarea.input {
     background-color: #F7F7F7;
     border: 1px solid #D1D1D1;
     border-radius: 8px;
@@ -88,7 +88,6 @@ select.input { /* Adicionado select.input para consistência */
     width: 100%;
     font-size: 15px;
     color: var(--cor-texto);
-    font-family: 'Poppins', sans-serif; /* Garante a mesma fonte */
 }
 
 textarea.input {
@@ -119,9 +118,22 @@ textarea.input {
     object-fit: contain;
 }
 
+/* Estilos para formulário e inputs */
 .form-group {
     margin-bottom: 16px;
 }
+
+select, option {
+    background-color: #F7F7F7;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+    font-size: 15px;
+    color: var(--cor-texto);
+}
+
 
 .label-input {
     display: block;
@@ -134,7 +146,7 @@ textarea.input {
 .media-controls {
     display: flex;
     gap: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Reduzido para dar espaço ao selected-files-info */
     flex-wrap: wrap;
 }
 
@@ -173,35 +185,23 @@ textarea.input {
     padding: 8px;
     background-color: #f9f9f9;
     border-radius: 4px;
-    min-height: 20px;
-    word-break: break-all; /* Para quebrar URLs longas */
+    min-height: 20px; /* Para evitar colapso quando vazio */
 }
 .selected-files-info p {
     margin: 4px 0;
 }
-.selected-files-info a { /* Estilo para os links de mídia */
-    color: var(--cor-destaque);
-    text-decoration: underline;
-}
-.selected-files-info a:hover {
-    color: #6853b3;
-}
 
-
-.text-area-container {
-    /* Estilos específicos se necessário, mas .form-group já tem margin */
-}
 
 .bottom-controls {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 20px; /* Aumentado para mais espaço */
     flex-wrap: wrap;
 }
 
 .bottom-controls .botao {
-    flex: 1 1 auto;
-    min-width: 120px;
+    flex: 1 1 auto; /* Permite que os botões cresçam e encolham, dividindo espaço */
+    min-width: 120px; /* Largura mínima para cada botão */
 }
 
 .btn-primary {
@@ -216,19 +216,22 @@ textarea.input {
 
 .btn-secondary {
     background-color: var(--cor-cartao);
-    color: var(--cor-destaque);
-    border: 1px solid var(--cor-destaque);
+    color: var(--cor-danger);
+    border: 1px solid var(--cor-danger);
 }
 
 .btn-secondary:hover {
-    background-color: #f5f0ff;
+    background-color: var(--cor-danger-hover2);
+    color: var(--cor-danger-hover1);
+    border: 1px solid var(--cor-danger-hover1);
     opacity: 1;
 }
 
+/* Botão de Excluir */
 .btn-danger {
     background-color: var(--cor-danger);
     color: var(--cor-botao-texto-primario);
-    border: 1px solid var(--cor-danger);
+    border: 1px solid var(--cor-danger); /* Adicionando borda para consistência */
 }
 
 .btn-danger:hover {
@@ -236,6 +239,7 @@ textarea.input {
     border-color: var(--cor-danger-hover);
     opacity: 1;
 }
+
 
 #image-input, #video-input {
     display: none;
@@ -245,22 +249,22 @@ textarea.input {
 .lista-denuncias-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px; /* Espaçamento entre os cards de denúncia */
 }
 
 .denuncia-card {
-    background-color: #fdfdfd;
+    background-color: #fdfdfd; /* Um pouco mais claro que f9f9f9 */
     border: 1px solid #eaeaea;
     border-left: 5px solid var(--cor-destaque);
     border-radius: 8px;
-    padding: 15px 20px;
+    padding: 15px 20px; /* Mais padding horizontal */
     cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .denuncia-card:hover {
-    background-color: #f5f0ff;
+    background-color: #f5f0ff; /* Cor de hover mais sutil e relacionada ao tema */
     box-shadow: 0 3px 7px rgba(0,0,0,0.08);
     transform: translateY(-2px);
 }
@@ -279,125 +283,145 @@ textarea.input {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
     -webkit-box-orient: vertical;
 }
 
-/* Estilos para a Timeline */
-.timeline-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.tabela-container {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  overflow-x: auto;
+  max-width: 100%;
 }
 
-/* Ajuste para o label principal da timeline */
-.timeline-section > .label-input {
-    margin-bottom: 10px; /* Espaço entre o título "Linha do Tempo" e os controles de adicionar */
+.tabela-container table {
+  min-width: 600px;
 }
 
-.denuncia-timeline-container {
-    background-color: #f9f9f9;
-    border: 1px solid #eeeeee;
-    border-radius: 8px;
-    padding: 15px;
-    max-height: 300px;
-    overflow-y: auto;
+.titulo-tabela {
+  font-size: 1.6rem;
+  color: var(--cor-destaque);
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.denuncia-timeline-container p {
-    color: var(--cor-texto-secundario);
-    font-style: italic;
+.tabela-denuncias {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.timeline-list {
-    list-style-type: none;
-    padding-left: 0;
+.tabela-denuncias thead tr:first-child th:first-child {
+  border-top-left-radius: 12px;
 }
 
-.timeline-item {
-    padding: 10px 0;
-    border-bottom: 1px dashed #e0e0e0;
-    position: relative;
+.tabela-denuncias thead tr:first-child th:last-child {
+  border-top-right-radius: 12px;
 }
 
-.timeline-item:last-child {
-    border-bottom: none;
+.tabela-denuncias tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
 }
 
-.timeline-item-status {
-    font-weight: 600;
-    color: var(--cor-destaque);
-    font-size: 1em;
-    margin-bottom: 4px;
+.tabela-denuncias tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
 }
 
-.timeline-item-timestamp {
-    font-size: 0.85em;
-    color: var(--cor-texto-secundario);
-    margin-bottom: 4px;
+.tabela-denuncias th,
+.tabela-denuncias td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-.timeline-item-notes {
-    font-size: 0.9em;
-    color: #555555;
-    padding-left: 10px;
-    border-left: 2px solid #dddddd;
-    margin-top: 5px;
+.tabela-denuncias thead {
+  background-color: var(--cor-destaque);
+  font-weight: bold;
+  color: white;
 }
 
-/* Estilos para os controles de adicionar evento na timeline */
-.add-timeline-event-controls {
-    background-color: #f0eefc;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #e0d8f7;
+.aviso {
+  text-align: center;
+  margin-top: 2rem;
+  color: #888;
 }
 
-.add-timeline-event-controls .form-group {
-    margin-bottom: 10px;
+/* Preview das Imagesn*/
+.imagens-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 1.5em;
 }
 
-.label-input-small {
-    display: block;
-    margin-bottom: 4px;
-    font-weight: 500;
-    font-size: 13px;
-    color: var(--cor-texto-secundario);
+.imagens-preview img.preview {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* As classes .input e .input-small podem ser unificadas ou .input-small removida se .input já servir.
-   Por ora, mantendo .input-small caso queira diferenciar o padding/fonte, mas select.input já usa padding do .input */
-select#timeline-new-status-select.input-small { /* Específico para o select da timeline */
-    padding: 10px 12px; /* Ajuste de padding para select se diferenciar do input text */
-    font-size: 14px;
-}
-textarea#timeline-new-notes.input-small { /* Específico para o textarea de notas da timeline */
-     font-size: 14px;
-     padding: 8px 10px;
-     min-height: 60px; /* Menor altura para notas rápidas */
+.imagens-preview img.preview:hover {
+  transform: scale(1.05);
 }
 
 
-.botao-add-event {
-    background-color: #8a74d0;
-    color: var(--cor-botao-texto-primario);
-    padding: 8px 15px;
-    font-size: 14px;
-    width: auto;
-    display: inline-block;
-    margin-top: 5px;
+/*Formatação dos textos das notícias*/
+
+.noticia-card {
+  background-color: var(--cor-cartao);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 18px 22px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
 }
 
-.botao-add-event:hover {
-    background-color: var(--cor-destaque);
-    opacity: 1;
+.noticia-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background-color: #f5f0ff;
+}
+
+.noticia-card h2 {
+  font-size: 18px;
+  color: var(--cor-destaque);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.noticia-card .categoria {
+  font-size: 13px;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 8px;
+}
+
+.noticia-card .resumo {
+  font-size: 14px;
+  color: var(--cor-texto);
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 
 /* Responsividade simples para os botões de ação */
 @media (max-width: 480px) {
     .bottom-controls {
-        flex-direction: column;
+        flex-direction: column; /* Empilha os botões em telas pequenas */
     }
     .titulo-header {
         font-size: 20px;
@@ -406,4 +430,7 @@ textarea#timeline-new-notes.input-small { /* Específico para o textarea de nota
         font-size: 13px;
         padding: 8px 12px;
     }
-}
+    .imagens-preview img.preview {
+    max-width: 100%;
+    }
+}   

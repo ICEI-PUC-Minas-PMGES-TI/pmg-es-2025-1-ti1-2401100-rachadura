@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portal de Notícias</title>
+</head>
+<body>
+  <h1>Últimas Notícias</h1>
+
+  <select id="categoria" onchange="buscarVideosPorCategoria()">
+    <option value="">Selecione uma categoria</option>
+    <option value="enchente">Enchente</option>
+    <option value="apagão">Falta de energia</option>
+    <option value="desabamento">Desabamento</option>
+  </select>
+
+  <div id="player"></div>
+
+  <div id="botoes-videos"></div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="noticias.js"></script>
+</body>
+</html>
