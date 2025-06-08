@@ -1,3 +1,70 @@
 {
-  "denuncias": []
+  "denuncias": [
+    {
+      "id": "0bd2",
+      "usuarioId": "user_63023",
+      "titulo": "Denunia Teste 1",
+      "categoria": "enchente",
+      "descricao": "Lorem ipsum dolor sit amet",
+      "midias": [
+        "download.png"
+      ],
+      "endereco": {
+        "cep": "30830360",
+        "logradouro": "Rua Maria Syllene Andreazzi",
+        "estado": "MG",
+        "cidade": "Belo Horizonte",
+        "bairro": "Glória",
+        "siafi": "4123",
+        "ibge": "3106200",
+        "ddd": "31",
+        "gia": ""
+      },
+      "dataRegistro": "2025-05-18T23:28:35.413Z"
+    },
+    {
+      "id": "95e7",
+      "usuarioId": "user_63023",
+      "titulo": "Ola",
+      "categoria": "buraco",
+      "descricao": "ola",
+      "midias": [
+        "Beatles Lego.avif"
+      ],
+      "endereco": {
+        "cep": "30850650",
+        "logradouro": "Rua Mário Soares",
+        "estado": "MG",
+        "cidade": "Belo Horizonte",
+        "bairro": "Dom Bosco",
+        "siafi": "4123",
+        "ibge": "3106200",
+        "ddd": "31",
+        "gia": ""
+      },
+      "dataRegistro": "2025-06-01T20:15:55.980Z"
+    },
+    {
+      "id": "72b2",
+      "usuarioId": "user_63023",
+      "titulo": "exemplo",
+      "categoria": "buraco",
+      "descricao": "exemplo",
+      "midias": [
+        "banana.png"
+      ],
+      "endereco": {
+        "cep": "30850650",
+        "logradouro": "Rua Mário Soares",
+        "estado": "MG",
+        "cidade": "Belo Horizonte",
+        "bairro": "Dom Bosco",
+        "siafi": "4123",
+        "ibge": "3106200",
+        "ddd": "31",
+        "gia": ""
+      },
+      "dataRegistro": "2025-06-08T14:12:55.212Z"
+    }
+  ]
 }
