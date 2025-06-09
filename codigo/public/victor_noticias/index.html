@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <title>Portal de Notícias</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Últimas Notícias</h1>
+  <header>
+    <h1>Últimas Notícias</h1>
+  </header>
 
-  <select id="categoria" onchange="buscarVideosPorCategoria()">
-    <option value="">Selecione uma categoria</option>
-    <option value="enchente">Enchente</option>
-    <option value="apagão">Falta de energia</option>
-    <option value="desabamento">Desabamento</option>
-  </select>
-
-  <div id="player"></div>
-
-  <div id="botoes-videos"></div>
+  <div id="player-container">
+    <div id="player"></div>
+  </div>
 
   <script src="https://www.youtube.com/iframe_api"></script>
   <script src="noticias.js"></script>
