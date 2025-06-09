@@ -17,13 +17,9 @@ Antes de iniciar, certifique-se de ter instalado:
 
 ## 📦 Etapas para rodar o projeto
 
-### 1. Clone ou extraia o projeto
+### 1. Extraia o projeto
 
-```bash
-git clone <repositório>
-```
-
-Ou baixe o `.zip` e extraia.
+Baixe o `.zip` e extraia.
 
 ---
 
