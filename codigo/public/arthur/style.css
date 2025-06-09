@@ -407,3 +407,43 @@ textarea#timeline-new-notes.input-small { /* Específico para o textarea de nota
         padding: 8px 12px;
     }
 }
+/* ======== Adicionar este trecho ao final do seu CSS ======== */
+
+.media-preview-container {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.media-preview-container p {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--cor-texto-secundario);
+}
+
+.media-preview {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px; /* Limita a altura máxima da pré-visualização */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.btn-remove-media {
+    background-color: #fbe0e2;
+    color: var(--cor-danger);
+    border: 1px solid var(--cor-danger);
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-remove-media:hover {
+    background-color: var(--cor-danger);
+    color: white;
+}
