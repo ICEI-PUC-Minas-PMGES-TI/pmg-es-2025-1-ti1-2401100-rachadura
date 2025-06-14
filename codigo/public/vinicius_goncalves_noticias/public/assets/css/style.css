@@ -104,7 +104,7 @@ textarea.input {
 }
 
 .titulo-cartao {
-    font-size: 18px;
+    font-size: 35px;
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--cor-destaque);
@@ -264,7 +264,7 @@ select, option {
 }
 
 .denuncia-card:hover {
-    background-color: #f5f0ff; /* Cor de hover mais sutil e relacionada ao tema */
+    background-color: #f5f0ff; 
     box-shadow: 0 3px 7px rgba(0,0,0,0.08);
     transform: translateY(-2px);
 }
@@ -416,6 +416,54 @@ select, option {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+/* Formatação do Filtro */
+
+.filtro-categoria-card {
+  background: #b4abdb;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  max-width: 430px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: static;   /* REMOVE top e position absolute/relative */
+  z-index: auto;      /* Normaliza sobreposição */
+  transition: box-shadow 0.2s;
+}
+
+.filtro-categoria-card label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+}
+
+.filtro-categoria-card .form-select {
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#texto-categorias {
+    color: #f5f0ff;
+
+}
+
+@media (max-width: 600px) {
+  .filtro-categoria-card {
+    max-width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.8rem;
+  }
+}
+
 
 
 /* Responsividade simples para os botões de ação */

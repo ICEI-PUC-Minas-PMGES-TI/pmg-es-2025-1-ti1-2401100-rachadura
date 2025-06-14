@@ -1,7 +1,16 @@
 {
   "noticias": [
     {
-      "id": 1748820121999,
+      "id": 1749428305178,
+      "categoria": "iluminação pública",
+      "titulo": "5G vai ser implantado em iluminação pública de larga escala na cidade de Salvador",
+      "resumo": "O município baiano receberá 400 luminárias com a rede móvel de quinta geração no segundo semestre de 2025.",
+      "conteudo": "A cidade de Salvador (BA) vai ser a primeira capital do Brasil a contar com um projeto de larga escala com a conectividade 5G, na iluminação pública. O município baiano receberá 400 luminárias com a … [+1283 chars]",
+      "data": "2025-06-06",
+      "link": "https://www.tudocelular.com/curiosidade/noticias/n235966/5g-implantado-iluminacao-publica-salvador.html"
+    },
+    {
+      "id": 1749428304535,
       "categoria": "iluminação pública",
       "titulo": "M2M inicia nova fase com expansão de mercados e nova marca",
       "resumo": "M2M inicia nova fase com expansão de mercados, novos produtos, novo posicionamento e foco ainda maior em inovação para cidades inteligentes.",
@@ -10,7 +19,7 @@
       "link": "https://www.terra.com.br/noticias/m2m-inicia-nova-fase-com-expansao-de-mercados-e-nova-marca,2432e4661412a96a91ddf338a2e69b9flc99agom.html"
     },
     {
-      "id": 1748820122087,
+      "id": 1749428305003,
       "categoria": "iluminação pública",
       "titulo": "Iluminando Atena: como luz e sombra criavam a atmosfera religiosa no Partenon",
       "resumo": "O Partenon, palavra que pode ser traduzida do grego antigo como “morada da virgem”, é talvez um dos templos mais conhecidos e visitados do mundo. Dedicado à deusa Atena, ele fica no coração de Atenas, no alto da Acrópole (cidade alta), uma colina rochosa com …",
@@ -19,25 +28,7 @@
       "link": "https://www.tecmundo.com.br/ciencia/404476-iluminando-atena-como-luz-e-sombra-criavam-a-atmosfera-religiosa-no-partenon.htm"
     },
     {
-      "id": 1748820121897,
-      "categoria": "iluminação pública",
-      "titulo": "Bairro Rubem Berta terá espaços públicos revitalizados com novo plano urbanístico",
-      "resumo": "A iniciativa prevê a revitalização de três áreas públicas, com foco na valorização cultural, convivência comunitária e lazer infantil",
-      "conteudo": "O bairro Rubem Berta, na zona norte de Porto Alegre, será contemplado com um novo Plano Urbanístico Integrado (PUI), fruto de um termo de cooperação assinado nesta quarta-feira (30) entre o prefeito … [+1225 chars]",
-      "data": "2025-05-01",
-      "link": "https://www.terra.com.br/noticias/bairro-rubem-berta-tera-espacos-publicos-revitalizados-com-novo-plano-urbanistico,6053295e91df063e31d21497d746c232ri2jzkj2.html"
-    },
-    {
-      "id": 1748820122054,
-      "categoria": "buraco na rua",
-      "titulo": "Jonathan Shanklin, o cientista que descobriu o buraco na camada de ozônio",
-      "resumo": "Shanklin conversou com a BBC News Mundo, o serviço em espanhol da BBC, sobre a história de perseverança por trás da descoberta histórica, os segredos do sucesso do Protocolo de Montreal e o que devemos aprender com esse acordo para combater as mudanças climát…",
-      "conteudo": "Legenda da foto, Shanklin disse à BBC News Mundo que estava triste com o fato de as lições de sua descoberta não estarem sendo aplicadas a outros desafios, como a mudança climática\r\nArticle informati… [+16944 chars]",
-      "data": "2025-05-02",
-      "link": "https://www.bbc.com/portuguese/articles/cjwv582p7y9o"
-    },
-    {
-      "id": 1748820122803,
+      "id": 1749428305786,
       "categoria": "buraco na rua",
       "titulo": "Como será e quando fica pronta a alça de acesso para liberar trânsito após cratera na Marginal Tietê",
       "resumo": "Buraco reabriu na madrugada do dia 11 e tem causado transtornos aos motoristas. Ponto é o mesmo que cedeu no mês passado",
@@ -46,7 +37,7 @@
       "link": "https://www.terra.com.br/noticias/brasil/cidades/como-sera-e-quando-fica-pronta-a-alca-de-acesso-para-liberar-transito-apos-cratera-na-marginal-tiete,3041b9620a6f4fc221f1c276fbe563913xvz0ibw.html"
     },
     {
-      "id": 1748820122327,
+      "id": 1749428305292,
       "categoria": "buraco na rua",
       "titulo": "Moradores denunciam abandono de obra iniciada em janeiro na Lomba do Pinheiro, em Porto Alegre",
       "resumo": "A situação causa revolta entre os moradores, que afirmam que o atendimento é negligente nas periferias, ao contrário do que ocorre em bairros mais centrais ou de maior poder aquisitivo",
@@ -55,7 +46,25 @@
       "link": "https://www.terra.com.br/noticias/moradores-denunciam-abandono-de-obra-iniciada-em-janeiro-na-lomba-do-pinheiro-em-porto-alegre,56cddfa0f09fe122059ce6698e562936t1oflhox.html"
     },
     {
-      "id": 1748820122348,
+      "id": 1749428305324,
+      "categoria": "buraco na rua",
+      "titulo": "Sem título",
+      "resumo": "Sabesp diz que chuvas causaram dano em sistema de esgoto, resultando em nova cratera",
+      "conteudo": "As obras para fechar a cratera na marginal Tietê, na altura da ponte Atílio Fontana, na Vila Anastácio, zona oeste de São Paulo, devem durar 30 dias, com a interdição inicial de três faixas da pista … [+2421 chars]",
+      "data": "2025-05-12",
+      "link": "https://www1.folha.uol.com.br/cotidiano/2025/05/obras-para-fechar-buraco-em-pista-da-marginal-tiete-devem-durar-30-dias.shtml"
+    },
+    {
+      "id": 1749428305675,
+      "categoria": "esgoto a céu aberto",
+      "titulo": "Baía de Guanabara deixou de receber cinco bilhões de litros de esgoto por mês",
+      "resumo": "Avanço faz parte de programa de saneamento que instalou tubos coletores em bairros da Zona Norte e do Centro da cidade do Rio",
+      "conteudo": "Namorados: Assine Digital Completo por 5,99Vista geral do Morro do Corcovado e da Baía da Guanabara, durante amanhecer no Rio de Janeiro (RJ) - 05/08/2016 (Yasuyoshi Chiba/AFP)\r\nContinua após publici… [+2560 chars]",
+      "data": "2025-06-04",
+      "link": "https://veja.abril.com.br/brasil/baia-de-guanabara-deixou-de-receber-cinco-bilhoes-de-litros-de-esgoto-por-mes/"
+    },
+    {
+      "id": 1749428306123,
       "categoria": "esgoto a céu aberto",
       "titulo": "Saneamento transformou Niterói: praias limpas, esgoto tratado e salto em qualidade de vida",
       "resumo": "Pioneira na concessão dos serviços, cidade colhe os frutos de um modelo que modernizou a infraestrutura, melhorou a saúde pública e impulsionou a economia",
@@ -64,34 +73,16 @@
       "link": "https://veja.abril.com.br/agenda-verde/saneamento-transformou-niteroi-praias-limpas-esgoto-tratado-e-salto-em-qualidade-de-vida/"
     },
     {
-      "id": 1748820122288,
+      "id": 1749428305352,
       "categoria": "esgoto a céu aberto",
-      "titulo": "Na Justiça, Glória Pires age após problema em acordo com a prefeitura",
-      "resumo": "A coluna descobriu, com exclusividade, novidades sobre um antigo caso envolvendo a atriz Glória Pires, a Águas do Imperador e a Prefeitura de Petrópolis.",
-      "conteudo": "A coluna Fábia Oliveira descobriu que Glória Pires acionou a Justiça para fazer valer um acordo em um antigo caso. Na ação, a atriz enfrenta a concessionária Águas do Imperador e a Prefeitura de Petr… [+1664 chars]",
-      "data": "2025-05-07",
-      "link": "https://www.metropoles.com/colunas/fabia-oliveira/na-justica-gloria-pires-age-apos-problema-em-acordo-com-a-prefeitura"
+      "titulo": "Sem título",
+      "resumo": "Governo do Pará tem anunciado que projetos de saneamento beneficiam 500 mil pessoas, mas informa que o esgotamento foi ampliado para apenas 40 mil; secretário defende obra em etapas",
+      "conteudo": "\"Lá no centro, estão refazendo obra feita para mostrar na COP30, mas a nossa hora aqui nunca chega.\" É assim que Luciano Pereira, 55, morador de Tapanã, bairro de Belém no entorno do igarapé Mata Fom… [+8905 chars]",
+      "data": "2025-06-02",
+      "link": "https://www1.folha.uol.com.br/mercado/2025/06/obras-de-coleta-de-esgoto-da-cop30-alcancam-apenas-3-da-populacao-de-belem.shtml"
     },
     {
-      "id": 1748820122190,
-      "categoria": "esgoto a céu aberto",
-      "titulo": "Arte sob os pés: como os bueiros do Japão viraram cultura pop",
-      "resumo": "Tampas tornaram-se símbolos de turismo, arte e identidade regional",
-      "conteudo": "No Japão, até os detalhes mais banais da vida urbana são tratados com esmero e respeito. E isso se estende a um dos elementos mais improváveis: as tampas de bueiro.\r\nSe, em quase todo o mundo, elas s… [+5797 chars]",
-      "data": "2025-05-27",
-      "link": "https://ultimosegundo.ig.com.br/mundo/2025-05-27/arte-sob-os-pes--como-os-bueiros-do-japao-viraram-cultura-pop.html"
-    },
-    {
-      "id": 1748820122877,
-      "categoria": "barulho urbano",
-      "titulo": "Avanço sobre áreas verdes: onça se refugia em prédio",
-      "resumo": "Cidade do sul do Espírito Santo se assusta com a presença do animal perambulando pelas ruas",
-      "conteudo": "Relâmpago: Digital Completo a partir R$ 5,99VÍTIMA Onça foi levada pela polícia ambiental: bicho estava saudável (Instagram/Reprodução)\r\nContinua após publicidade\r\nPequena cidade, rodeada por montanh… [+1891 chars]",
-      "data": "2025-05-02",
-      "link": "https://veja.abril.com.br/agenda-verde/avanco-sobre-areas-verdes-onca-se-refugia-em-predio/"
-    },
-    {
-      "id": 1748820123271,
+      "id": 1749428306052,
       "categoria": "barulho urbano",
       "titulo": "Proposta aprovada isenta pessoas com deficiência de multa por barulho",
       "resumo": "Condomínios deverão respeitar condições de moradores com deficiência e não aplicar multa por perturbação do sossego.",
@@ -100,7 +91,7 @@
       "link": "https://www.congressoemfoco.com.br/noticia/108731/proposta-aprovada-isenta-pessoas-com-deficiencia-de-multa-por-barulho"
     },
     {
-      "id": 1748820122542,
+      "id": 1749428305803,
       "categoria": "barulho urbano",
       "titulo": "Sem título",
       "resumo": "Iniciativa mudou padrões de tráfego, serviço de transporte público e até mesmo pontualidade dos ônibus escolares",
@@ -109,16 +100,34 @@
       "link": "https://www1.folha.uol.com.br/mundo/2025/05/saiba-como-pedagio-urbano-mudou-cidade-de-nova-york.shtml"
     },
     {
-      "id": 1748820123195,
-      "categoria": "sinalização de trânsito",
-      "titulo": "Como a revolução das bicicletas elétricas está mudando o transporte urbano no Brasil",
-      "resumo": "Este veículo que anda com assistência de um motor elétrico conquista ruas, ciclovias e até trilhas\nO post Como a revolução das bicicletas elétricas está mudando o transporte urbano no Brasil apareceu primeiro em Olhar Digital.",
-      "conteudo": "Nas paisagens urbanas brasileiras, uma transformação silenciosa ganha espaço: a ascensão da bicicleta elétrica, ou e-bike. A mudança surge como uma resposta aos desafios da mobilidade moderna, como o… [+6393 chars]",
-      "data": "2025-05-01",
-      "link": "https://olhardigital.com.br/2025/05/01/carros-e-tecnologia/revolucao-das-bicicletas-eletricas-esta-mudando-o-transporte-urbano-no-brasil/"
+      "id": 1749428305755,
+      "categoria": "barulho urbano",
+      "titulo": "Sem título",
+      "resumo": "Sob concessão desde 2021, Vale do Anhangabaú vive entre eventos pagos, ações gratuitas e críticas sobre exclusão e gentrificação",
+      "conteudo": "Espaços públicos, interesses privados: o dilema do Vale do Anhangabaú\r\nSob concessão desde 2021, coração do centro paulistano vive entre eventos pagos, ações gratuitas e críticas sobre exclusão e gen… [+10516 chars]",
+      "data": "2025-06-07",
+      "link": "https://musicnonstop.uol.com.br/o-dilema-do-vale-do-anhangabau/"
     },
     {
-      "id": 1748820123289,
+      "id": 1749428306654,
+      "categoria": "sinalização de trânsito",
+      "titulo": "Patinete elétrico, monociclos e hoverboards precisam de habilitação?",
+      "resumo": "Patinete elétrico, monociclo e hoverboard precisam de habilitação? Entenda o que diz a lei brasileira sobre esses veículos autopropelidos e veja se você pode usá-los sem CNH\nO post Patinete elétrico, monociclos e hoverboards precisam de habilitação? apareceu …",
+      "conteudo": "A mobilidade urbana está em constante transformação. Com o avanço da tecnologia e a necessidade de meios de transporte mais sustentáveis, ágeis e acessíveis, novos dispositivos têm ganhado espaço nas… [+6286 chars]",
+      "data": "2025-06-06",
+      "link": "https://olhardigital.com.br/2025/06/06/carros-e-tecnologia/patinete-eletrico-monociclos-e-hoverboards-precisam-de-habilitacao/"
+    },
+    {
+      "id": 1749428306396,
+      "categoria": "sinalização de trânsito",
+      "titulo": "TJSP: Lei que permite circulação de motoentregadores em faixas de ônibus é inconstitucional",
+      "resumo": "Para o Órgão Especial, a norma interfere no planejamento e na execução de políticas públicas de mobilidade urbana",
+      "conteudo": "O Órgão Especial do Tribunal de Justiça de São Paulo (TJSP) declarou a inconstitucionalidade da Lei Municipal nº 14.683/24, de São José do Rio Preto, que permite a circulação de motoentregadores de a… [+996 chars]",
+      "data": "2025-06-04",
+      "link": "https://valor.globo.com/legislacao/noticia/2025/06/04/tjsp-lei-que-permite-circulacao-de-motoentregadores-em-faixas-de-onibus-e-inconstitucional.ghtml"
+    },
+    {
+      "id": 1749428306395,
       "categoria": "sinalização de trânsito",
       "titulo": "Túnel do Grilo condicionado segunda e terça-feira",
       "resumo": "Os condicionamentos devem-se à instalação de estruturas metálicas e respetivos dispositivos de sinalização nos acessos do Túnel do Grilo, no âmbito da empreitada de reabilitação e modernização.",
@@ -127,34 +136,7 @@
       "link": "https://observador.pt/2025/05/30/circulacao-no-tunel-do-grilo-condicionada-na-segunda-e-terca-feira/"
     },
     {
-      "id": 1748820123306,
-      "categoria": "sinalização de trânsito",
-      "titulo": "Atenção motoristas: BR-290 em Porto Alegre ficará em meia pista neste sábado",
-      "resumo": "O Departamento Municipal de Água e Esgotos (Dmae) fará neste sábado, 3, a manutenção de uma ...",
-      "conteudo": "O Departamento Municipal de Água e Esgotos (Dmae) fará neste sábado, 3, a manutenção de uma adutora localizada sob a Ponte do Saco da Alemoa em Porto Alegre, entre os quilômetros 100 e 100,8 da BR-29… [+631 chars]",
-      "data": "2025-05-02",
-      "link": "https://www.terra.com.br/noticias/atencao-motoristas-br-290-em-porto-alegre-ficara-em-meia-pista-neste-sabado,f73b80d467de998cd67e14cc3e39329fjv4ww76p.html"
-    },
-    {
-      "id": 1748820123231,
-      "categoria": "enchente",
-      "titulo": "MEIs afetados pela enchente podem participar de programa de auxílio",
-      "resumo": "A partir de quarta-feira (7), MEIs que foram afetados pela enchente de 2024 podem se inscrever ...",
-      "conteudo": "A partir de quarta-feira (7), MEIs que foram afetados pela enchente de 2024 podem se inscrever no programa MEI RS Calamidades 2, programa do Governo do Estado do RS que destinará mais de R$30 milhões… [+923 chars]",
-      "data": "2025-05-09",
-      "link": "https://www.terra.com.br/noticias/meis-afetados-pela-enchente-podem-participar-de-programa-de-auxilio,3e7f535f2fee44e77f8c92bbcccf4f85hislsomr.html"
-    },
-    {
-      "id": 1748820123185,
-      "categoria": "enchente",
-      "titulo": "Como as mudanças climáticas podem ampliar o alcance da leptospirose: 'Todos ficam vulneráveis'",
-      "resumo": "Doença é considerada \"marca registrada\" de desastres e atingiu patamares surpreendentes após enchente histórica no Rio Grande do Sul",
-      "conteudo": "O Rio Grande do Sul registra, tradicionalmente, uma média anual de 500 casos de leptospirose. Endêmica de regiões rurais do Estado, a doença chega a ser chamada de \"febre dos arrozais\" devido à alta … [+8311 chars]",
-      "data": "2025-05-06",
-      "link": "https://www.terra.com.br/vida-e-estilo/saude/como-as-mudancas-climaticas-podem-ampliar-o-alcance-da-leptospirose-todos-ficam-vulneraveis,2264d01874bead3711be4e5a39b46b8bs9pjffvk.html"
-    },
-    {
-      "id": 1748820123381,
+      "id": 1749428309041,
       "categoria": "enchente",
       "titulo": "Jovem gaúcho emociona nos EUA com discurso sobre tragédia no RS",
       "resumo": "Formando em universidade americana relembra enchente histórica no Rio Grande do Sul e viraliza nas redes sociais",
@@ -163,16 +145,25 @@
       "link": "https://www.terra.com.br/noticias/jovem-gaucho-emociona-nos-eua-com-discurso-sobre-tragedia-no-rs,0d8e72d0ecbe060aed2b74aa9ce2d26fu0xek9kn.html"
     },
     {
-      "id": 1748820123049,
-      "categoria": "alagamento",
-      "titulo": "\"Além das Águas\": Exposição revive enchente que paralisou o Aeroporto de Porto Alegre",
-      "resumo": "Mostra gratuita no Terminal relembra momentos de superação e reconstrução vividos pelos funcionários da Fraport Brasil",
-      "conteudo": "O Aeroporto Salgado Filho, em Porto Alegre, recebe a partir desta sexta-feira (2/05) a exposição \"Além das Águas: Memórias &amp; Reconstrução\". A mostra destaca os desafios enfrentados pela equipe da… [+1269 chars]",
-      "data": "2025-05-04",
-      "link": "https://www.terra.com.br/noticias/alem-das-aguas-exposicao-revive-enchente-que-paralisou-o-aeroporto-de-porto-alegre,ba607ce3698b712c72310c6082b8e55cl6k906uq.html"
+      "id": 1749428309499,
+      "categoria": "enchente",
+      "titulo": "MEIs afetados pela enchente podem participar de programa de auxílio",
+      "resumo": "A partir de quarta-feira (7), MEIs que foram afetados pela enchente de 2024 podem se inscrever ...",
+      "conteudo": "A partir de quarta-feira (7), MEIs que foram afetados pela enchente de 2024 podem se inscrever no programa MEI RS Calamidades 2, programa do Governo do Estado do RS que destinará mais de R$30 milhões… [+923 chars]",
+      "data": "2025-05-09",
+      "link": "https://www.terra.com.br/noticias/meis-afetados-pela-enchente-podem-participar-de-programa-de-auxilio,3e7f535f2fee44e77f8c92bbcccf4f85hislsomr.html"
     },
     {
-      "id": 1748820123391,
+      "id": 1749428309447,
+      "categoria": "enchente",
+      "titulo": "\"Enchente do século\" atinge Austrália e deixa 50 mil isolados",
+      "resumo": "País entra em seu terceiro dia de inundações e contabiliza cinco mortos. É a maior precipitação ...",
+      "conteudo": "País entra em seu terceiro dia de inundações e contabiliza cinco mortos. É a maior precipitação registrada na região de New South Wales em 100 anos.O número de mortos nas enchentes recordes que ating… [+4234 chars]",
+      "data": "2025-05-23",
+      "link": "https://www.terra.com.br/noticias/enchente-do-seculo-atinge-australia-e-deixa-50-mil-isolados,ac7ef6eae2eac4c02f4bc67fcf6619582scuigpp.html"
+    },
+    {
+      "id": 1749428310057,
       "categoria": "alagamento",
       "titulo": "Quem é a Profetisa dos Serafitas? Conheça a personagem misteriosa de The Last of Us Temporada 2",
       "resumo": "Cada vez mais próxima do final de sua segunda temporada, a série de The Last of Us apresentou diversos personagens inéditos desde sua estreia. Enquanto muitos deles interagiram diretamente com Ellie, uma figura importante apareceu somente de forma tangencial …",
@@ -181,13 +172,22 @@
       "link": "https://www.tecmundo.com.br/minha-serie/601267-quem-e-a-profetisa-dos-serafitas-conheca-a-personagem-misteriosa-de-the-last-of-us-temporada-2.htm"
     },
     {
-      "id": 1748820122783,
+      "id": 1749428309889,
       "categoria": "alagamento",
-      "titulo": "Vídeo: Enchente em Petra, uma das Sete Maravilhas, deixa ao menos 2 turistas mortos",
-      "resumo": "Mãe e filho de nacionalidade belga faziam parte de um grupo de 18 visitantes no sítio arqueológico",
-      "conteudo": "Relâmpago: Digital Completo a partir R$ 5,99O Tesouro, visto de al-Siq, logo antes da passagem dentro da antiga cidade nabateia de Petra, que começa na Represa e termina na ruína mais elaborada de Pe… [+1803 chars]",
-      "data": "2025-05-05",
-      "link": "https://veja.abril.com.br/mundo/video-enchente-em-petra-uma-das-sete-maravilhas-deixa-ao-menos-2-turistas-mortos/"
+      "titulo": "Globo gravou episódio de série em meio à enchente há 46 anos",
+      "resumo": "Trama da Globo acompanhou a rotina de dois caminhoneiros para retratar realidade política e econômica do Brasil",
+      "conteudo": "Em 22 de maio de 1979, há 46 anos, a Globo estreava Carga Pesada como sua nova produção na faixa das 22h. Escrita por Dias Gomes, a série acompanhava a vida dos caminhoneiros Pedro (Antônio Fagundes)… [+2532 chars]",
+      "data": "2025-05-22",
+      "link": "https://www.terra.com.br/diversao/tv/novelas/globo-gravou-episodio-de-serie-em-meio-a-enchente-ha-46-anos,1eccbb026fff239d0fb97ace50e9a7cdripjhnyd.html"
+    },
+    {
+      "id": 1749428309284,
+      "categoria": "alagamento",
+      "titulo": "Quem são as vítimas de choque elétrico em trailer após chuva no Recife",
+      "resumo": "Janeide Félix da Silva Cruz, de 57 anos, Winicius Wendel Presta da Silva, 23, sofreram choque elétrico em área de alagamento em Pernambuco",
+      "conteudo": "Duas pessoas morreram em decorrência de choque elétrico em um trailer que estava em área alagada, na Avenida Engenheiro Alves de Souza, na Imbiribeira, zona sul do Recife, por volta das 20h de quarta… [+329 chars]",
+      "data": "2025-05-16",
+      "link": "https://www.metropoles.com/brasil/quem-sao-as-vitimas-de-choque-eletrico-em-trailer-apos-chuva-no-recife"
     }
   ]
 }
