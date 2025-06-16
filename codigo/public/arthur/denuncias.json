@@ -1,0 +1,35 @@
+[
+  {
+    "id": "_exemplo1",
+    "titulo": "Vazamento de Água na Rua das Flores",
+    "descricao": "Há um vazamento de água limpa constante na calçada da Rua das Flores, altura do número 250. O desperdício é grande e já forma poças, dificultando a passagem de pedestres. Problema persiste há 3 dias.",
+    "imagem": null,
+    "video": null,
+    "timeline": [
+      {
+        "status": "Denúncia Criada",
+        "timestamp": "2025-06-05T19:00:00.000Z",
+        "notas": "Denúncia registrada automaticamente no sistema."
+      },
+      {
+        "status": "Em Análise",
+        "timestamp": "2025-06-06T10:00:00.000Z",
+        "notas": "Equipe ciente, aguardando técnico."
+      }
+    ]
+  },
+  {
+    "id": "_exemplo2",
+    "titulo": "Semáforo com Defeito no Cruzamento Principal",
+    "descricao": "O semáforo do cruzamento da Av. Brasil com a Rua México está intermitente (piscando amarelo) há várias horas, causando confusão e risco de acidentes, especialmente em horários de pico.",
+    "imagem": null,
+    "video": null,
+    "timeline": [
+      {
+        "status": "Denúncia Criada",
+        "timestamp": "2025-06-07T14:30:00.000Z",
+        "notas": "Denúncia registrada automaticamente no sistema."
+      }
+    ]
+  }
+]

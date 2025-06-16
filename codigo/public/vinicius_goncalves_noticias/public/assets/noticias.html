@@ -17,11 +17,20 @@
 
   <main>
     <div class="cartao">
-      <p class="titulo-cartao">Notícias Relacionadas às Denúncias</p>
-      <div id="noticias-container" class="lista-denuncias-container">
-        <!-- Notícias serão carregadas aqui via JavaScript -->
-      </div>
+    <p class="titulo-cartao">Notícias</p>
+
+    <div class="filtro-categoria-card">
+      <label for="categoria-filtro" class="form-label">Filtrar por categoria:</label>
+      <select id="categoria-filtro" class="form-select">
+        <option class="texto-categorias" value="todas">Todas as categorias</option>
+
+      </select>
     </div>
+
+    <div id="noticias-container" class="lista-denuncias-container">
+
+    </div>
+  </div>
   </main>
 
   <footer>

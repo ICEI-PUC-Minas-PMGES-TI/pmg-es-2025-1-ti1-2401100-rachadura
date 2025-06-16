@@ -17,13 +17,9 @@ Antes de iniciar, certifique-se de ter instalado:
 
 ## 📦 Etapas para rodar o projeto
 
-### 1. Clone ou extraia o projeto
+### 1. Extraia o projeto
 
-```bash
-git clone <repositório>
-```
-
-Ou baixe o `.zip` e extraia.
+Baixe o `.zip` e extraia.
 
 ---
 
@@ -39,7 +35,7 @@ Isso instalará o `json-server` e o `node-fetch`.
 
 ---
 
-### 3. Gere o banco de dados de notícias
+### 3. Gere o banco de dados de notícias (caso o banco de dados esteja vazio)
 
 Execute no terminal:
 
@@ -50,6 +46,9 @@ node noticias_fetcher.js
 Isso criará ou atualizará o arquivo `db/db.json` com as notícias reais.
 
 ---
+
+O banco de dados já está sendo enviado completo. Caso queira testar esta funcionalidade, basta executar o comando novamente para ver as novas notícias adicionadas.
+
 
 ### 4. Inicie o servidor de dados (JSON Server)
 

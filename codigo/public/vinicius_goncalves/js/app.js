@@ -14,24 +14,16 @@ createApp({
         ddd: "",
         gia: ""
       },
-      enderecoBloqueado: false
+      enderecoBloqueado: false,
     };
   },
+
   methods: {
     cepAlteradoEvento() {
       if (!this.endereco.cep) return;
-      const cepLimpo = this.endereco.cep.replace(/\D/g, "");
-      if (cepLimpo.length !== 8) {
-        alert("O CEP deve conter exatamente 8 números.");
-        return;
-      }
       axios.get(`https://viacep.com.br/ws/${this.endereco.cep}/json/`)
         .then(response => {
           const bean = response.data;
-          if (bean.erro) {
-            alert("CEP não encontrado.");
-            return;
-          }
           this.endereco.logradouro = bean.logradouro;
           this.endereco.bairro = bean.bairro;
           this.endereco.estado = bean.uf;
@@ -43,82 +35,141 @@ createApp({
           this.enderecoBloqueado = true;
         })
         .catch(() => {
-          alert("Erro ao buscar CEP.");
+          alert("Erro ao buscar o CEP. Verifique se está correto.");
         });
     },
-    mostrarPreview(event) {
-      const previewDiv = document.getElementById("previewContainer");
-      previewDiv.innerHTML = "";
 
-      const arquivos = event.target.files;
-      for (const file of arquivos) {
-        if (file.type.startsWith("image/")) {
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            const img = document.createElement("img");
-            img.src = e.target.result;
-            img.className = "preview";
-            previewDiv.appendChild(img);
-          };
-          reader.readAsDataURL(file);
-        }
-      }
-    },
     enviarFormulario(event) {
       event.preventDefault();
 
-      const formData = new FormData();
-      const midiaInput = document.getElementById("midia");
-      for (const file of midiaInput.files) {
-        formData.append("midia", file);
+      const usuarioId = localStorage.getItem("usuarioId") || "anonimo";
+      const titulo = document.getElementById("denuncia-titulo-input").value;
+      const categoria = document.querySelector("select[name='categoria']").value;
+      const descricao = document.getElementById("update-description").value;
+      const midias = Array.from(document.getElementById("midia").files).map(f => f.name);
+
+      const dados = {
+        usuarioId,
+        titulo,
+        categoria,
+        descricao,
+        midias,
+        endereco: this.endereco,
+        dataRegistro: new Date().toISOString()
+      };
+
+      axios.post("http://localhost:3000/denuncias", dados)
+        .then(response => {
+          alert("Denúncia enviada com sucesso!");
+          console.log(response.data);
+          this.mostrarTabela();
+        })
+        .catch(error => {
+          alert("Erro ao enviar denúncia");
+          console.error(error);
+        });
+    },
+
+    mostrarTabela() {
+      const usuarioId = localStorage.getItem("usuarioId");
+
+      if (!usuarioId) {
+        document.getElementById("tabela-denuncias").innerHTML =
+          "";
+        return;
       }
 
-      formData.append("titulo", document.getElementById("denuncia-titulo-input").value);
-      formData.append("categoria", document.getElementById("categoria").value);
-      formData.append("numero", document.getElementById("numero").value);
-      formData.append("descricao", document.getElementById("update-description").value);
-      formData.append("endereco", JSON.stringify(this.endereco));
-
-      axios.post("http://localhost:3000/denuncias", formData)
+      axios.get("http://localhost:3000/denuncias")
         .then(res => {
-          alert("Denúncia enviada com sucesso!");
-          console.log(res.data);
+          const denuncias = res.data
+            .filter(d => d.usuarioId === usuarioId)
+            .sort((a, b) => new Date(b.dataRegistro) - new Date(a.dataRegistro))
+            .slice(0, 5);
+
+          if (denuncias.length === 0) {
+            document.getElementById("tabela-denuncias").innerHTML ="";
+            return;
+          }
+
+          let html = `
+            <div class="tabela-container">
+              <h2 class="titulo-tabela" >Denúncias Enviadas</h2>
+              <table class="tabela-denuncias">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Categoria</th>
+                    <th>Descrição</th>
+                    <th>Local</th>
+                    <th>Data</th>
+                  </tr>
+                </thead>
+                <tbody>
+          `;
+
+          denuncias.forEach(d => {
+            const end = d.endereco || {};
+            html += `
+              <tr>
+                <td>${d.titulo || "-"}</td>
+                <td>${d.categoria || "-"}</td>
+                <td>${d.descricao || "-"}</td>
+                <td>${end.logradouro || "-"}, ${end.bairro || "-"}, ${end.cidade || "-"}</td>
+                <td>${d.dataRegistro ? new Date(d.dataRegistro).toLocaleString() : "-"}</td>
+              </tr>
+            `;
+          });
+
+          html += `
+                </tbody>
+              </table>
+            </div>
+          `;
+
+          document.getElementById("tabela-denuncias").innerHTML = html;
         })
         .catch(err => {
-          alert("Erro ao enviar a denúncia.");
-          console.error(err);
+          console.error("Erro ao carregar tabela:", err);
         });
     }
   },
+
   mounted() {
     const form = document.getElementById("formDenuncia");
+    const botaoCancelar = document.getElementById("btn-back");
+
     if (form) {
       form.addEventListener("submit", this.enviarFormulario);
     }
 
-    const midiaInput = document.getElementById("midia");
-    if (midiaInput) {
-      midiaInput.addEventListener("change", this.mostrarPreview);
-    }
+    if (botaoCancelar) {
+      botaoCancelar.addEventListener("click", (event) => {
+        event.preventDefault(); // Impede qualquer recarregamento
+        form.reset(); // Limpa os inputs do formulário
 
-    const cepInput = document.querySelector('input[v-model="endereco.cep"]');
-    if (cepInput) {
-      cepInput.addEventListener("input", function(e) {
-        let valor = e.target.value.replace(/\D/g, "");
-        valor = valor.slice(0, 8);
-        if (valor.length > 5) {
-          valor = valor.slice(0, 5) + "-" + valor.slice(5);
-        }
-        e.target.value = valor;
+        // Se quiser limpar também os campos Vue (endereço), faça:
+        this.endereco = {
+          cep: "",
+          logradouro: "",
+          estado: "",
+          cidade: "",
+          bairro: "",
+          siafi: "",
+          ibge: "",
+          ddd: "",
+          gia: ""
+        };
+
+        this.enderecoBloqueado = false;
       });
     }
 
-    const numeroInput = document.getElementById("numero");
-    if (numeroInput) {
-      numeroInput.addEventListener("input", function(e) {
-        let valor = e.target.value.replace(/\D/g, "");
-        e.target.value = valor;
-      });
-    }
+    this.mostrarTabela();
   }
+
 }).mount("#appCep");
+
+if (!localStorage.getItem("usuarioId")) {
+  const randomId = "user_" + Math.floor(Math.random() * 100000);
+  localStorage.setItem("usuarioId", randomId);
+}
