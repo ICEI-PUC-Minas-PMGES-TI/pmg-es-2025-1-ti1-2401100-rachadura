@@ -1,0 +1,81 @@
+const API_URL = 'http://localhost:3000/usuarios';
+
+const tabela = document.querySelector('tbody');
+
+const modal = new bootstrap.Modal(document.getElementById('editModal'));
+const editForm = document.getElementById('edit-form');
+
+const editId = document.getElementById('edit-id');
+const editNome = document.getElementById('edit-nome');
+const editEmail = document.getElementById('edit-email');
+const editTelefone = document.getElementById('edit-telefone');
+
+async function carregarUsuarios() {
+  const res = await fetch(API_URL);
+  const usuarios = await res.json();
+
+  tabela.innerHTML = '';
+
+  usuarios.forEach(usuario => {
+    const tr = document.createElement('tr');
+
+    tr.innerHTML = `
+      <td>${usuario.nome}</td>
+      <td>${usuario.email}</td>
+      <td>${usuario.telefone}</td>
+      <td>
+        <button class="btn btn-warning btn-sm me-2" onclick="abrirModal(${usuario.id})">Editar</button>
+        <button class="btn btn-danger btn-sm" onclick="excluirUsuario(${usuario.id})">Excluir</button>
+      </td>
+    `;
+
+    tabela.appendChild(tr);
+  });
+}
+
+async function excluirUsuario(id) {
+  const confirmacao = confirm('Tem certeza que deseja excluir este usuário?');
+
+  if (confirmacao) {
+    await fetch(`${API_URL}/${id}`, {
+      method: 'DELETE'
+    });
+
+    carregarUsuarios();
+  }
+}
+
+async function abrirModal(id) {
+  const res = await fetch(`${API_URL}/${id}`);
+  const usuario = await res.json();
+
+  editId.value = usuario.id;
+  editNome.value = usuario.nome;
+  editEmail.value = usuario.email;
+  editTelefone.value = usuario.telefone;
+
+  modal.show();
+}
+
+editForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const id = editId.value;
+
+  const dadosAtualizados = {
+    nome: editNome.value,
+    email: editEmail.value,
+    telefone: editTelefone.value
+  };
+
+  await fetch(`${API_URL}/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(dadosAtualizados)
+  });
+
+  modal.hide();
+  carregarUsuarios();
+});
+
+carregarUsuarios();
