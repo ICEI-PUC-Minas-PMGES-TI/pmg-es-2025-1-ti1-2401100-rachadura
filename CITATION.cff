@@ -14,10 +14,10 @@ authors:
     given-names: Pedro
   - family-names: Guadanini Diniz
     given-names: Stêvão
-- family-names: Roberto Chagas Alves
-    given-names: Victor
-- family-names: dos Santos Gonçalves
-    given-names: Vinícius
+  - family-names: Roberto Chagas Alves
+      given-names: Victor
+  - family-names: dos Santos Gonçalves
+      given-names: Vinícius
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Augusto de Faria Barros
@@ -27,10 +27,10 @@ authors:
     family-names: Hanne Soares de Andrade
     given-names: Michelle
 keywords:
-  -Denúncia.
-  -Infraestrutura.
-  -Segurança.
-  -Urbano.
+  -Denúncia
+  -Infraestrutura
+  -Segurança
+  -Urbano
 repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2401100-rachadura.git
 license: CC-BY-4.0
 version: 1.0.0
