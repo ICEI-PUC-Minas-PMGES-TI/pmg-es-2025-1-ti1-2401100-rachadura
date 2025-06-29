@@ -548,47 +548,71 @@
     }
   ],
   "faq": [
-    {
-      "id": 1,
-      "pergunta": "Como faço para criar uma conta?",
-      "resposta": "Para criar uma conta, clique no botão 'Cadastre-se' no canto superior direito da página e preencha o formulário com suas informações.\n",
-      "dataCriacao": "2024-01-10"
-    },
-    {
-      "id": 2,
-      "pergunta": "Quais são as formas de pagamento aceitas?",
-      "resposta": "Aceitamos pagamentos via cartão de crédito (Visa, Mastercard, Elo), boleto bancário e Pix.\n",
-      "dataCriacao": "2024-03-15"
-    },
-    {
-      "id": 3,
-      "pergunta": "Posso alterar meus dados cadastrais?",
-      "resposta": "\nSim, você pode alterar seus dados cadastrais acessando a seção 'Meu Perfil' após fazer login em sua conta.\n",
-      "dataCriacao": "2024-02-20"
-    },
-    {
-      "id": 4,
-      "pergunta": "Como entro em contato com o suporte técnico?",
-      "resposta": "\nVocê pode entrar em contato com o suporte técnico através do nosso formulário de contato, e-mail (sup-radar-urbano@gmail.com) ou telefone (31) 9 9999-0000.\n",
-      "dataCriacao": "2024-05-01"
-    },
-    {
-      "id": 5,
-      "pergunta": "Qual a política de reembolso?",
-      "resposta": "\nNossa política de reembolso permite solicitar o estorno em até 7 dias após a compra, desde que os termos e condições sejam atendidos. Consulte a seção 'Termos de Uso' para mais detalhes.\n",
-      "dataCriacao": "2024-04-25"
-    },
-    {
-      "id": 6,
-      "pergunta": "Como redefinir minha senha?",
-      "resposta": "\nPara redefinir sua senha, clique em 'Esqueci minha senha' na tela de login e siga as instruções enviadas para seu e-mail cadastrado.\n",
-      "dataCriacao": "2024-05-23"
-    },
-    {
-      "id": 7,
-      "pergunta": "Onde encontro o extrato de minhas transações?",
-      "resposta": "\nO extrato de transações está disponível na seção 'Histórico' do seu painel de usuário.\n",
-      "dataCriacao": "2024-05-24"
-    }
-  ]
-}
+      {
+        "id": 1,
+        "pergunta": "Como posso registrar uma denúncia de problema urbano?",
+        "resposta": "Para registrar uma denúncia, clique em 'Nova Denúncia', preencha o formulário com os detalhes do problema, adicione fotos se possível e envie.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 2,
+        "pergunta": "Quais tipos de problemas posso denunciar?",
+        "resposta": "Você pode denunciar buracos nas ruas, iluminação pública queimada, vazamentos de água, entulho em locais inadequados, falta de sinalização, problemas em calçadas, entre outros.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 3,
+        "pergunta": "Preciso me cadastrar para denunciar?",
+        "resposta": "Sim, é necessário criar uma conta gratuita para acompanhar o andamento da sua denúncia e permitir contato caso necessário.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 4,
+        "pergunta": "Como acompanho o status da minha denúncia?",
+        "resposta": "Após o envio, você pode acompanhar o status acessando sua área de usuário. As etapas incluem: recebida, em análise, encaminhada e resolvida.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 5,
+        "pergunta": "Posso enviar denúncias de forma anônima?",
+        "resposta": "Em alguns casos, permitimos denúncias anônimas, mas é recomendado criar uma conta para receber atualizações sobre o andamento do caso.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 6,
+        "pergunta": "Minhas fotos ficam públicas?",
+        "resposta": "As fotos enviadas são utilizadas apenas para ilustrar o problema denunciado e ficam visíveis junto à denúncia para auxiliar na solução.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 7,
+        "pergunta": "Receberei alguma resposta sobre a minha denúncia?",
+        "resposta": "Sim, notificamos por e-mail ou pelo próprio site sempre que houver uma atualização no status da sua denúncia.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 8,
+        "pergunta": "O que acontece após enviar uma denúncia?",
+        "resposta": "Nossa equipe avalia o problema e encaminha para o setor responsável da prefeitura ou órgão competente. Você poderá acompanhar o andamento.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 9,
+        "pergunta": "Posso editar ou remover uma denúncia depois de enviada?",
+        "resposta": "Sim, é possível editar informações ou remover a denúncia enquanto ela ainda estiver em análise.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 10,
+        "pergunta": "Como posso ajudar a resolver problemas da minha cidade?",
+        "resposta": "Compartilhe o site, incentive vizinhos a também denunciarem e acompanhe o andamento das soluções para fiscalizar a atuação do poder público.",
+        "dataCriacao": "2024-05-01"
+      },
+      {
+        "id": 11,
+        "pergunta": "Como entro em contato com o suporte técnico?",
+        "resposta": "Você pode entrar em contato com o suporte técnico através do nosso formulário de contato, e-mail (sup-radar-urbano@gmail.com) ou telefone (31) 9 9999-0000.",
+        "dataCriacao": "2024-05-01"
+      }
+    ]
+  }
