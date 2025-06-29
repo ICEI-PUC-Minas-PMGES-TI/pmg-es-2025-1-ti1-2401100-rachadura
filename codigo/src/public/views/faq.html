@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - FAQ</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/faq.css">
+</head>
+<body>
+  <header>
+    <a href="/views/home_page.html"><img src="../assets/imgs/home-icon.png" alt="home" class="icone"></a>
+    <h1 class="titulo-header" id="header-title">Radar Urbano</h1>
+    <a href="/views/perfil.html"><img src="../assets/imgs/perfil-icon.png" alt="perfil" class="icone"></a>
+  </header>
+
+    <main class="main-container">
+        <section class="faq-section card-style">
+            <div class="search-bar">
+                <label for="faq-search-input" class="sr-only">Pesquise por uma pergunta:</label>
+                <input type="text" id="faq-search-input" class="input-field" placeholder="Busque por palavras-chave...">
+                <button id="faq-search-button" class="action-button" aria-label="Realizar busca por perguntas">Buscar</button>
+            </div>
+            
+            <h2 class="section-title" id="faq-display-title">Perguntas Frequentes</h2>
+
+            <div id="faq-loader" class="loader-wrapper hidden">
+                <div class="spinner"></div>
+                <p class="loader-message">Carregando conteúdo...</p>
+            </div>
+
+            <div id="faq-list-container" class="faq-accordion" aria-live="polite">
+                </div>
+
+            </section>
+    </main>
+
+  <footer class="footer">
+    <a href="/views/faq.html" class="footer-button">Perguntas Frequentes</a>
+  </footer>
+
+    <script src="../assets/js/faq.js"></script>
+</body>
+</html>

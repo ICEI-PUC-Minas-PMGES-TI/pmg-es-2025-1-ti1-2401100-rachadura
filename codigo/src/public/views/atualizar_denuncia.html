@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Denúncia</title>
+    <link rel="stylesheet" href="../assets/css/atualizar_denuncias.css">
+</head>
+<body>
+    <header>
+        <a href="/views/home_page.html"><img src="../assets/imgs/home-icon.png" alt="home" class="icone"></a>
+        <h1 class="titulo-header" id="header-title">Radar Urbano</h1>
+        <a href="/views/perfil.html"><img src="../assets/imgs/perfil-icon.png" alt="perfil" class="icone"></a>
+    </header>
+
+    <main>
+        <div class="cartao">
+            <div id="display-info-container">
+                <h2 id="denuncia-titulo-display" class="titulo-principal-denuncia">Carregando...</h2>
+                <p id="denuncia-descricao-display" class="info-secundaria"></p>
+                <p id="denuncia-categoria-display" class="info-secundaria"></p>
+                <p id="denuncia-endereco-display" class="info-secundaria"></p>
+            </div>
+            
+            <div id="midias-existentes-container" class="midias-container"></div>
+
+            <form id="form-atualizacao">
+                
+                <div class="form-group" id="add-media-section" style="display: none;">
+                    <label class="label-input">Adicionar Novas Mídias a esta Atualização:</label>
+                    <div class="media-controls">
+                        <input type="file" id="midia-input" accept="image/*,video/*" multiple style="display: none;">
+                        <button type="button" id="btn-add-midia" class="botao-icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>
+                            Adicionar Imagem/Vídeo
+                        </button>
+                    </div>
+                    <div id="novas-midias-preview" class="midias-container"></div>
+                </div>
+
+                <div class="timeline-section form-group" id="timeline-section" style="display: none;">
+                    <label class="label-input">Histórico da Denúncia:</label>
+                    <div id="denuncia-timeline-container" class="denuncia-timeline-container"><p>Carregando histórico...</p></div>
+                    
+                    <div class="add-timeline-event-controls">
+                        <label class="label-input-small">Adicionar Nova Atualização ao Histórico:</label>
+                        <select id="timeline-new-status-select" class="input">
+                            <option value="">-- Selecione um novo status --</option>
+                            <option value="Em Análise">Em Análise</option>
+                            <option value="Encaminhada ao Setor Responsável">Encaminhada ao Setor Responsável</option>
+                            <option value="Ação em Andamento">Ação em Andamento</option>
+                            <option value="Resolvida">Resolvida</option>
+                        </select>
+                        <textarea id="timeline-new-notes" class="input" placeholder="Adicione notas sobre esta atualização..."></textarea>
+                    </div>
+                </div>
+
+                <div class="bottom-controls">
+                    <button type="button" id="btn-back" class="botao btn-secondary">Voltar</button>
+                    <button type="submit" id="btn-save" class="botao btn-primary" style="display: none;">Salvar Alterações</button>
+                    <button type="button" id="btn-delete" class="botao btn-danger" style="display: none;">Excluir Denúncia</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="/views/faq.html" class="footer-button">Perguntas Frequentes</a>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/atualizar_denuncias.js"></script>
+</body>
+</html>

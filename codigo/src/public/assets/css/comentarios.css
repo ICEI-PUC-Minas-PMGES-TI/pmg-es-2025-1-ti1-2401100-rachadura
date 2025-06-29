@@ -1,0 +1,196 @@
+@import url('style.css');
+
+.comentario-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin: 28px 0 40px 0;
+}
+
+#denunciaDetalhe {
+  max-width: 600px;
+  width: 95vw;
+}
+
+#timelineContainer {
+  max-width: 600px;
+  width: 95vw;
+  background: #f5f4fa;
+}
+
+#comentariosContainer {
+  max-width: 600px;
+  width: 95vw;
+}
+
+.timeline {
+  margin: 18px 0;
+  padding-left: 14px;
+  border-left: 3px solid var(--cor-destaque, #7A64C8);
+}
+.timeline-item {
+  margin-bottom: 12px;
+}
+.timeline-status {
+  font-weight: bold;
+  color: var(--cor-destaque, #7A64C8);
+}
+.timeline-date {
+  font-size: 0.96em;
+  color: #888;
+}
+
+.comentario-bloco {
+  background: #f8f6ff;
+  border-radius: 8px;
+  padding: 10px 15px 10px 60px;
+  margin-bottom: 14px;
+  position: relative;
+}
+.comentario-bloco .foto-comentario {
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.comentario-bloco .usuario-comentario {
+  font-weight: 600;
+  color: var(--cor-destaque, #7A64C8);
+}
+.comentario-bloco .data-comentario {
+  font-size: 0.92em;
+  color: #888;
+  margin-left: 12px;
+}
+.comentario-bloco .texto-comentario {
+  margin-top: 4px;
+}
+
+#formComentario {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  align-items: flex-end;
+}
+#formComentario textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #d4d2e7;
+  resize: vertical;
+}
+#formComentario button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: var(--cor-destaque, #7A64C8);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+#formComentario button:hover {
+  background: #4f3b8e;
+}
+
+.botao-curtir, .botao-descurtir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  color: var(--cor-destaque, #7A64C8);
+  font-size: 1.2em;
+  transition: color 0.15s;
+}
+.botao-curtir.ativo, .botao-descurtir.ativo {
+  color: #e14d4d;
+}
+.botao-editar, .botao-excluir {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-size: 0.97em;
+  cursor: pointer;
+}
+.botao-editar:hover { background: #e9e7fa; }
+.botao-excluir:hover { background: #ffe6e6; }
+
+.like-dislike-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.like-btn,
+.dislike-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border: none;
+  background: #f5f4fa;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #7A64C8;
+  font-size: 1.13em;
+  transition: background 0.18s, color 0.18s;
+  cursor: pointer;
+}
+
+.like-btn i, .dislike-btn i {
+  font-size: 1.26em;
+  transition: color 0.2s;
+}
+
+.like-btn.ativo, .like-btn:hover {
+  background: #e5ffe9;
+  color: #68C157;
+}
+.like-btn.ativo i, .like-btn:hover i {
+  color: #68C157;
+}
+
+.dislike-btn.ativo, .dislike-btn:hover {
+  background: #fff1f1;
+  color: #E14D4D;
+}
+.dislike-btn.ativo i, .dislike-btn:hover i {
+  color: #E14D4D;
+}
+
+.like-btn span, .dislike-btn span {
+  font-weight: 500;
+  margin-left: 2px;
+  min-width: 18px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Adicione este trecho ao final de comentarios.css */
+
+.midias-timeline {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.midias-timeline img {
+    max-width: 120px; /* Tamanho menor para não poluir a timeline */
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.midias-timeline img:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}

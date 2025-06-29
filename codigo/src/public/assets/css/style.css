@@ -1,0 +1,588 @@
+:root {
+    --cor-fundo: #D3CFE3;
+    --cor-botao-base: #B3A5D8;
+    --cor-destaque: #7A64C8;
+    --cor-texto: #000000;
+    --cor-texto-secundario: #4B4B4B;
+    --cor-cartao: #FFFFFF;
+    --cor-botao-texto-primario: #FFFFFF;
+    --cor-danger: #DC3545; /* Vermelho para exclusão */
+    --cor-danger-hover1: #C82333; /* Vermelho mais escuro para hover */
+    --cor-danger-hover2: #ff67738f; /* Vermelho mais claro para o fundo do cartao do hover */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    padding: 16px;
+    padding-bottom: 90px; /* Espaço para o footer fixo + margem */
+    color: var(--cor-texto);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--cor-cartao);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.titulo-header {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+    text-align: center; /* Centralizar caso o menu desapareça */
+    flex-grow: 1; /* Para ocupar espaço e ajudar na centralização */
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: var(--cor-cartao);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #e0e0e0; /* Linha divisória sutil */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.botao {
+    background-color: var(--cor-botao-base);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    font-size: 15px;
+}
+
+.botao:hover {
+    opacity: 0.85;
+}
+
+.input,
+textarea.input {
+    background-color: #F7F7F7;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+    font-size: 15px;
+    color: var(--cor-texto);
+}
+
+textarea.input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.cartao {
+    background-color: var(--cor-cartao);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo-cartao {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--cor-destaque);
+    text-align: center;
+}
+
+.icone {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+/* Estilos para formulário e inputs */
+.form-group {
+    margin-bottom: 16px;
+}
+
+select, option {
+    background-color: #F7F7F7;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+    font-size: 15px;
+    color: var(--cor-texto);
+}
+
+
+.label-input {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+.media-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px; /* Reduzido para dar espaço ao selected-files-info */
+    flex-wrap: wrap;
+}
+
+.botao-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #EFEFEF;
+    border: 1px solid #DCDCDC;
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+    border-radius: 8px;
+    width: auto;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.botao-icone:hover {
+    background-color: #E0E0E0;
+}
+
+.botao-icone svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.selected-files-info {
+    font-size: 0.85em;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    min-height: 20px; /* Para evitar colapso quando vazio */
+}
+.selected-files-info p {
+    margin: 4px 0;
+}
+
+
+.bottom-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px; /* Aumentado para mais espaço */
+    flex-wrap: wrap;
+}
+
+.bottom-controls .botao {
+    flex: 1 1 auto; /* Permite que os botões cresçam e encolham, dividindo espaço */
+    min-width: 120px; /* Largura mínima para cada botão */
+}
+
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: var(--cor-botao-texto-primario);
+}
+
+.btn-primary:hover {
+    background-color: #6853b3;
+    opacity: 1;
+}
+
+.btn-secondary {
+    background-color: var(--cor-cartao);
+    color: var(--cor-danger);
+    border: 1px solid var(--cor-danger);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-danger-hover2);
+    color: var(--cor-danger-hover1);
+    border: 1px solid var(--cor-danger-hover1);
+    opacity: 1;
+}
+
+/* Botão de Excluir */
+.btn-danger {
+    background-color: var(--cor-danger);
+    color: var(--cor-botao-texto-primario);
+    border: 1px solid var(--cor-danger); /* Adicionando borda para consistência */
+}
+
+.btn-danger:hover {
+    background-color: var(--cor-danger-hover);
+    border-color: var(--cor-danger-hover);
+    opacity: 1;
+}
+
+
+#image-input, #video-input {
+    display: none;
+}
+
+/* Estilos para a página de listagem de denúncias (denuncias.html) */
+.lista-denuncias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os cards de denúncia */
+}
+
+.denuncia-card {
+    background-color: #fdfdfd; /* Um pouco mais claro que f9f9f9 */
+    border: 1px solid #eaeaea;
+    border-left: 5px solid var(--cor-destaque);
+    border-radius: 8px;
+    padding: 15px 20px; /* Mais padding horizontal */
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.denuncia-card:hover {
+    background-color: #f5f0ff; 
+    box-shadow: 0 3px 7px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.denuncia-card-titulo {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--cor-destaque);
+    margin-bottom: 8px;
+}
+
+.denuncia-card-descricao {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+}
+
+.tabela-container {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.tabela-container table {
+  min-width: 600px;
+}
+
+.titulo-tabela {
+  font-size: 1.6rem;
+  color: var(--cor-destaque);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.tabela-denuncias {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabela-denuncias thead tr:first-child th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.tabela-denuncias thead tr:first-child th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.tabela-denuncias tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.tabela-denuncias tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.tabela-denuncias th,
+.tabela-denuncias td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.tabela-denuncias thead {
+  background-color: var(--cor-destaque);
+  font-weight: bold;
+  color: white;
+}
+
+.aviso {
+  text-align: center;
+  margin-top: 2rem;
+  color: #888;
+}
+
+/* Preview das Imagesn*/
+.imagens-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+
+.imagens-preview img.preview {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imagens-preview img.preview:hover {
+  transform: scale(1.05);
+}
+
+
+/*Formatação dos textos das notícias*/
+
+.noticia-card {
+  background-color: var(--cor-cartao);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 18px 22px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.noticia-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background-color: #f5f0ff;
+}
+
+.noticia-card h2 {
+  font-size: 18px;
+  color: var(--cor-destaque);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.noticia-card .categoria {
+  font-size: 13px;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 8px;
+}
+
+.noticia-card .resumo {
+  font-size: 14px;
+  color: var(--cor-texto);
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Formatação do Filtro */
+
+.filtro-categoria-card {
+  background: #b4abdb;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1rem 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  max-width: 430px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: static;   /* REMOVE top e position absolute/relative */
+  z-index: auto;      /* Normaliza sobreposição */
+  transition: box-shadow 0.2s;
+}
+
+.filtro-categoria-card label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+}
+
+.filtro-categoria-card .form-select {
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#texto-categorias {
+    color: #f5f0ff;
+
+}
+
+.navbar .botao,
+.navbar .botao:link,
+.navbar .botao:visited,
+.navbar .botao:active,
+.navbar .botao:hover,
+.footer, .footer-button {
+  text-decoration: none !important;
+}
+
+.footer-button {
+  background-color: var(--cor-cartao);
+  border-radius: 12px;
+  padding: 18px 22px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  text-decoration-color: #B3A5D8;
+}
+
+.footer-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background-color: #f5f0ff;
+}
+
+
+.player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+#player {
+
+  width: 80%; 
+  max-width: 854px; 
+  
+  
+  aspect-ratio: 16 / 9; 
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+#player iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px; 
+}
+
+.comentarios img {
+   max-width: 100%; 
+   height: auto;    
+   display: block;   
+   margin-bottom: 10px; 
+   border-radius: 8px; 
+}
+
+
+.comentario-conteudo img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin-bottom: 10px;
+   border-radius: 8px;
+}
+
+
+.cartao-comentario img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin-bottom: 10px;
+   border-radius: 8px;
+}
+
+.imagem-principal-denuncia {
+    width: 100%; 
+    max-width: 100%;
+    height: auto; 
+    margin: 10px 0; 
+    border-radius: 10px; 
+    display: block; 
+}
+
+@media (max-width: 600px) {
+  .filtro-categoria-card {
+    max-width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.8rem;
+    
+  }
+  nav.navbar{
+ background-color: transparent;
+ box-shadow: none;
+}
+}
+
+@media (max-width: 768px) {
+    .titulo-header {
+        font-size: 18px; /* Diminui o tamanho do título em telas menores */
+    }
+
+    header {
+        padding: 12px; /* Reduz o preenchimento interno do header */
+    }
+
+    .icone {
+        width: 24px; /* Garante que os ícones tenham um tamanho consistente */
+        height: 24px;
+    }
+}
+
+/* Responsividade simples para os botões de ação */
+@media (max-width: 480px) {
+    .bottom-controls {
+        flex-direction: column; /* Empilha os botões em telas pequenas */
+    }
+    .titulo-header {
+        font-size: 20px;
+    }
+    .botao-icone {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    .imagens-preview img.preview {
+    max-width: 100%;
+    }
+}   

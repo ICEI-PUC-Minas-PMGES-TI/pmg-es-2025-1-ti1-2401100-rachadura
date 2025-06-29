@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapa de Denúncias</title>
+  <link rel="stylesheet" href="../assets/css/home_page.css" />
+
+</head>
+<body>
+ <header>
+        <h1 class="titulo-header" id="header-title">Radar Urbano</h1> 
+        <a href="/views/perfil.html"><img src="../assets/imgs/perfil-icon.png" alt="perfil" class="icone"></a>
+  </header>
+  <nav class="navbar">
+    <a href="/views/feed.html" class="botao btn-primary">Feed</a>
+    <a href="/views/cadastro_denuncias.html" class="botao btn-primary">Cadastrar Denúncia</a>
+    <a href="/views/noticias.html" class="botao btn-primary">Notícias</a>
+    <a href="/views/noticias_videos.html" class="botao btn-primary">Vídeos</a>
+  </nav>
+  <main>
+    <div class="cartao">
+      <p class="titulo">Mapa de Denúncias</p>
+      <select id="filtroCategoria" class="input">
+          <option value="">Selecione</option>
+          <option value="buraco">Buraco</option>
+          <option value="enchente">Enchente</option>
+          <option value="sinalizacao">Sinalização</option>
+          <option value="iluminacao">Iluminação</option>
+          <option value="esgoto">Esgoto</option>
+          <option value="outros">Outros</option>
+      </select>
+      <p class="descricao">Visualize locais marcados</p>
+      <div class="map-container" id="miniMap"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="/views/faq.html" class="footer-button">Perguntas Frequentes</a>
+  </footer>
+
+  <div id="mapModal" class="modal">
+    <span class="close">&times;</span>
+    <div id="fullMap"></div>
+  </div>
+
+  <script src="../assets/js/home_page.js"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiGL7OYCoDXQxc2BGUK6e_tjGPdmh-gBs&callback=initMaps"></script>
+</body>
+</html>
