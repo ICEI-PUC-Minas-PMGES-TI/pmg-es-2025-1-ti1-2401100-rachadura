@@ -364,8 +364,7 @@ Descrição das estruturas de dados utilizadas na solução com exemplos no form
 
 ![image](https://github.com/user-attachments/assets/b33f4147-3e18-4634-be35-6424ad13a74a)
 
-```
-![image](https://github.com/user-attachments/assets/530308fb-51e3-452a-9512-7095201856dc)
+![image](https://github.com/user-attachments/assets/0e98e5e9-6c31-4ca7-ad52-962e0118a943)
 
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
