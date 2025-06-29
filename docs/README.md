@@ -409,13 +409,9 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
-**Images**:
-
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
-
 **Fonts:**
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* Google Fonts - [https://fonts.google.com/](https://fonts.google.com/) 
 
 **Scripts:**
 
