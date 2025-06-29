@@ -416,7 +416,10 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 **Scripts:**
 
 * GoogleMapsAPI - [https://developers.google.com/maps](https://developers.google.com/maps) 
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) 
+* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/)
+* Fetch API - [https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)
+* JSON Server - [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
+* Geolocation API - [https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
