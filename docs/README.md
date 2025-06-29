@@ -335,10 +335,6 @@ Link do vídeo na internet: https://youtu.be/DkaPfengYVo
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
-
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
-
 * **Estrutura de dados:** [denuncias](#ti_ed_denuncias)
 * **Instruções de acesso:**
   * Abra o site e efetue o login
