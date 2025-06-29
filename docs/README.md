@@ -325,7 +325,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 ## Vídeo do Projeto
 
-O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
+O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. 
 
 [![Vídeo do projeto](../docs/Video%20TIAW.mp4)](https://youtu.be/DkaPfengYVo)
 
@@ -333,46 +333,300 @@ Link do vídeo na internet: https://youtu.be/DkaPfengYVo
 
 ## Funcionalidades
 
-Esta seção apresenta as funcionalidades da solução.Info
+## Funcionalidade 1 - Cadastro e Autenticação de Usuários
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+Permite que novos usuários criem uma conta segura na plataforma e que usuários existentes acessem o sistema através de login. O cadastro inclui a coleta de dados pessoais para verificação e para evitar o uso indevido da plataforma, garantindo a seriedade das denúncias.
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+**Estrutura de dados associada:** `usuarios`
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
-* **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
-* **Tela da funcionalidade**:
+### Instruções de acesso e uso
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+- Abra o site na página inicial (`login.html`).
+- Para se cadastrar:
+  - Clique em **"Novo usuário"** para abrir o formulário de registro.
+  - Preencha todos os campos, incluindo **nome, usuário, email, CPF, data de nascimento e endereço** (o **CEP** preenche automaticamente parte do endereço).
+  - Uma foto de perfil pode ser enviada opcionalmente.
+  - Clique em **"Salvar Cadastro"**.
+- Para fazer login:
+  - Insira seu **nome de usuário** e **senha** na tela principal.
+  - Clique em **"Login"**.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+![alt text](image.png)
+
+![alt text](image-1.png)
+---
+
+## Funcionalidade 2 - Registro de Novas Denúncias
+
+Permite que um usuário logado registre um novo problema urbano. Inclui seleção de categoria, descrição detalhada, upload de mídias (fotos/vídeos) e um sistema de localização inteligente que utiliza o **CEP** para preencher o endereço e o número para obter as coordenadas geográficas (latitude e longitude).
+
+**Estrutura de dados associada:** `denuncias`
+
+### Instruções de acesso e uso
+
+- Após efetuar o login, acesse a página principal (`home_page.html` ou `feed.html`).
+- Navegue até a opção **"Cadastrar Denúncia"**.
+- Preencha:
+  - Título
+  - Categoria
+  - CEP (o endereço será preenchido automaticamente)
+  - Número do local (para gerar as coordenadas geográficas)
+  - Adicione mídias (fotos/vídeos)
+  - Descrição detalhada
+- Clique em **"Salvar Denúncia"** para publicar.
+
+![alt text](image-2.png)
+---
+
+## Funcionalidade 3 - Visualização de Denúncias (Feed e Mapa)
+
+Oferece duas formas principais de visualização das denúncias: **mapa interativo** e **feed de notícias em cartões**. Ambas permitem filtrar por categoria.
+
+**Estrutura de dados associada:** `denuncias`
+
+### Instruções de acesso e uso
+
+- Ao fazer login, o usuário é direcionado para `home_page.html`, que exibe o **mapa com marcadores** de denúncias.
+  - Clicar em um marcador exibe informações rápidas.
+- Na página **"Feed"**, as denúncias aparecem em cartões de lista.
+- Em ambas as páginas:
+  - Use o **menu suspenso de "Filtro"** para visualizar apenas uma categoria.
+  - Clique em uma denúncia para abrir sua **página de detalhes**.
+
+Mapa: 
+![alt text](image-3.png)
+
+Feed: 
+![alt text](image-4.png)
+---
+
+## Funcionalidade 4 - Detalhes, Histórico e Interação com a Denúncia
+
+Centraliza todas as informações de uma denúncia em uma página dedicada. Permite ver detalhes originais, acompanhar o progresso com uma linha do tempo, ver mídias, ler e adicionar comentários, e interagir com botões de **like/dislike**.
+
+**Estruturas de dados associadas:** `denuncias`, `comentarios`, `usuarios`
+
+### Instruções de acesso e uso
+
+- Acesse via Feed ou Mapa clicando em uma denúncia.
+- A página de detalhes (`comentarios.html`) será carregada.
+- Role para visualizar:
+  - Histórico completo na **Linha do Tempo (Timeline)**
+  - Mídias associadas
+- Na seção de comentários:
+  - Leia comentários de outros usuários
+  - Se estiver logado, escreva e envie o seu
+  - Use os botões **like/dislike**.
+
+![alt text](image-5.png)
+
+---
+
+## Funcionalidade 5 - Atualização do Histórico da Denúncia
+
+Restrita ao autor da denúncia. Permite adicionar atualizações com novos status, notas e mídias, sem editar a denúncia original.
+
+**Estrutura de dados associada:** `denuncias` (atualização de registro existente)
+
+### Instruções de acesso e uso
+
+- Efetue login com a conta que criou a denúncia.
+- Navegue até a página de detalhes da denúncia.
+- Clique em **"Adicionar Atualização / Editar"**.
+- Na página de atualização (`atualizar_denuncia.html`):
+  - Informações originais são exibidas apenas para visualização.
+  - Selecione um **novo status** (ex.: "Em Análise", "Resolvida").
+  - Adicione notas descritivas.
+  - Envie novas mídias (fotos/vídeos).
+- Clique em **"Salvar Alterações"** para incluir o evento na timeline.
+
+Adicionar atualização:
+![alt text](image-6.png)
+
+Atualização da Denúncia:
+![alt text](image-7.png)
+
+Atualização da Timeline:
+![alt text](image-8.png)
+
+---
+
+## Funcionalidade 6 - Perfil Pessoal e Estatísticas
+
+Oferece ao usuário logado um painel com suas informações e um resumo de sua atividade na plataforma.
+
+**Estruturas de dados associadas:** `usuarios`, `denuncias`
+
+### Instruções de acesso e uso
+
+- Após login, clique no ícone de **perfil** no cabeçalho.
+- A página de perfil (`perfil.html`) exibirá:
+  - Informações pessoais (nome, usuário, email, CPF, etc.)
+  - Painel de estatísticas com resumo das denúncias
+  - Lista de todas as denúncias do usuário, com links para detalhes.
+
+![alt text](image-9.png)
+---
+
+## Funcionalidade 7 - Visualização de Mídia Externa (Vídeos)
+
+Uma página dedicada que exibe vídeos recentes do YouTube sobre problemas urbanos (ex.: buracos, alagamentos) em **Belo Horizonte**.
+
+**Estrutura de dados associada:** Nenhuma (utiliza a **API externa** do YouTube Data v3).
+
+### Instruções de acesso e uso
+
+- No **menu principal** da aplicação (navbar inferior), clique em **"Mídia"** ou **"Vídeos"**.
+- A página (`noticias_videos.html`) carregará:
+  - Um **player** com playlist de vídeos relevantes.
+  - Controles para som e tela cheia.
+
+![alt text](image-10.png)
+
+---
+
+## Funcionalidade 8 - Portal de Notícias
+
+Apresenta aos usuários uma seleção de notícias de **fontes externas** relacionadas a **urbanismo**, **infraestrutura** e **problemas urbanos** como os reportados na plataforma. O objetivo é manter a comunidade informada sobre o **contexto mais amplo** dos problemas que enfrentam e as soluções que estão sendo implementadas.
+
+**Estrutura de dados associada:** `noticias`
+
+### Instruções de acesso e uso
+
+- Acesse o **menu principal** e clique na seção **"Notícias"** ou **"Mídia"**.
+- A página exibirá uma **lista de artigos** em formato de **cartões**, com:
+  - Título
+  - Categoria
+  - Breve resumo da notícia
+- O usuário pode ler o **resumo** para entender o tópico.
+- Para ler a matéria completa:
+  - Clique no **cartão** para ser redirecionado ao **link da fonte original**.
+
+
+Feed de notícias:
+![alt text](image-11.png)
+
+Detalhe das notícias: 
+![alt text](image-12.png)
+---
+
+## Funcionalidade 9 - FAQ (Perguntas Frequentes)
+
+Oferece uma seção de **autoatendimento** onde os usuários podem encontrar respostas para as **dúvidas mais comuns** sobre o uso da plataforma **Radar Urbano**. O objetivo é fornecer **suporte rápido** e reduzir a necessidade de contato direto para questões recorrentes.
+
+**Estrutura de dados associada:** `faq`
+
+### Instruções de acesso e uso
+
+- Clique no link **"Perguntas Frequentes"** localizado no **rodapé** de qualquer página principal da aplicação.
+- A página `faq.html` será carregada, exibindo:
+  - Uma **lista de perguntas**.
+- Para visualizar a resposta:
+  - Clique em qualquer **pergunta** para **expandir** e ver o conteúdo correspondente.
+
+![alt text](image-13.png)
+
+---
+
 
 ## Estruturas de Dados
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-![image](https://github.com/user-attachments/assets/b33f4147-3e18-4634-be35-6424ad13a74a)
+O banco de dados da aplicação é composto por cinco coleções principais de objetos: **usuarios**, **denuncias**, **comentarios**, **noticias** e **faq**.
 
-![image](https://github.com/user-attachments/assets/0e98e5e9-6c31-4ca7-ad52-962e0118a943)
+---
 
+## 1. usuarios
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+Armazena todas as informações sobre os usuários cadastrados na plataforma.
+
+- **id** (string): Identificador único para cada usuário (ex: `"user_12345"`).
+- **nome** (string): Nome completo do usuário.
+- **usuario** (string): Nome de login único escolhido pelo usuário.
+- **senha** (string): Senha de acesso do usuário.  
+  **Nota:** Em produção, deve ser armazenado um "hash" da senha, não o texto puro.
+- **email** (string): Endereço de e-mail do usuário.
+- **cpf** (string): CPF do usuário, utilizado para verificação.
+- **data_nascimento** (string): Data de nascimento no formato `AAAA-MM-DD`.
+- **foto_perfil** (string): URL ou string em Base64 da imagem de perfil.
+- **endereco_residencial** (objeto):
+  - **cep** (string)
+  - **logradouro** (string)
+  - **numero** (string)
+  - **complemento** (string)
+  - **bairro** (string)
+  - **cidade** (string)
+  - **estado** (string)
+- **data_criacao** (string): Data/hora da criação da conta (ISO 8601).
+- **nivel** (string): Nível de permissão (ex: `"usuario"`, `"admin"`).
+- **status** (string): Status da conta (ex: `"ativo"`, `"inativo"`).
+
+---
+
+## 2. denuncias
+
+Armazena todas as denúncias feitas pelos usuários.
+
+- **id** (string/number): Identificador único da denúncia.
+- **usuarioId** (string): ID do usuário que criou a denúncia.
+- **titulo** (string): Título curto e objetivo da denúncia.
+- **descricao** (string): Texto detalhado descrevendo o problema.
+- **categoria** (string): Categoria da denúncia (ex: `"Buracos"`, `"Iluminação"`, `"Esgoto"`).
+- **midias** (array de strings): URLs ou Base64 das mídias enviadas na criação.
+- **endereco** (objeto):
+  - **cep** (string)
+  - **logradouro** (string)
+  - *(outros campos de endereço)*
+  - **lat** (number): Latitude do local.
+  - **lng** (number): Longitude do local.
+- **dataRegistro** (string): Data/hora da criação (ISO 8601).
+- **timeline** (array de objetos): Histórico de todas as atualizações da denúncia, onde cada objeto inclui:
+  - **status** (string): Estado atual da denúncia nesse evento (ex: `"Denúncia Criada"`, `"Em Análise"`, `"Resolvida"`).
+  - **timestamp** (string): Data/hora da atualização (ISO 8601).
+  - **notas** (string): Anotações ou comentários da atualização.
+  - **midias** (array de strings): Mídias dessa atualização.
+- **likes** (array de strings): IDs dos usuários que curtiram a denúncia.
+- **dislikes** (array de strings): IDs dos usuários que não curtiram a denúncia.
+
+---
+
+## 3. comentarios
+
+Armazena todos os comentários feitos pelos usuários nas páginas de detalhes das denúncias.
+
+- **id** (string): Identificador único do comentário.
+- **denunciaId** (string/number): ID da denúncia comentada.
+- **usuarioId** (string): ID do usuário que fez o comentário.
+- **texto** (string): Conteúdo do comentário.
+- **data** (string): Data/hora do comentário (ISO 8601).
+
+---
+
+## 4. noticias
+
+Coleção de artigos e notícias externas exibidas no portal.
+
+- **id** (number/string): Identificador único da notícia.
+- **categoria** (string): Categoria da notícia.
+- **titulo** (string): Título do artigo.
+- **resumo** (string): Breve resumo do conteúdo.
+- **conteudo** (string): Corpo principal da notícia.
+- **data** (string): Data de publicação (`AAAA-MM-DD`).
+- **link** (string): URL da fonte original.
+
+---
+
+## 5. faq
+
+Armazena as perguntas e respostas da seção de "Perguntas Frequentes".
+
+- **id** (number): Identificador único da pergunta.
+- **pergunta** (string): Texto da pergunta.
+- **resposta** (string): Texto da resposta.
+- **dataCriacao** (string): Data de criação (`AAAA-MM-DD`).
+
+---
+
 
 ## Módulos e APIs
 
@@ -384,12 +638,22 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 **Scripts:**
 
-* GoogleMapsAPI - [https://developers.google.com/maps](https://developers.google.com/maps) 
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/)
-* Fetch API - [https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)
-* JSON Server - [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
-* Geolocation API - [https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API)
+**APIs e Bibliotecas Utilizadas na Aplicação:**
 
+* **Vue.js** – [https://vuejs.org/](https://vuejs.org/)
+* **jQuery** – [https://jquery.com/](https://jquery.com/)
+* **jQuery Mask Plugin** – [https://igorescobar.github.io/jQuery-Mask-Plugin/](https://igorescobar.github.io/jQuery-Mask-Plugin/)
+* **Axios** – [https://axios-http.com/](https://axios-http.com/)
+* **Bootstrap 5** – [https://getbootstrap.com/](https://getbootstrap.com/)
+* **Bootstrap Icons** – [https://icons.getbootstrap.com/](https://icons.getbootstrap.com/)
+* **Google Maps Platform** – [https://developers.google.com/maps](https://developers.google.com/maps)
+* **Google Maps JavaScript API** – [https://developers.google.com/maps/documentation/javascript](https://developers.google.com/maps/documentation/javascript)
+* **Google Maps Geocoding API** – [https://developers.google.com/maps/documentation/geocoding](https://developers.google.com/maps/documentation/geocoding)
+* **YouTube Data API v3** – [https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)
+* **Fetch API** – [https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)
+* **Geolocation API** – [https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Geolocation_API)
+* **ViaCEP** – [https://viacep.com.br/](https://viacep.com.br/)
+* **JSON Server** – [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
 
 # Referências
 
