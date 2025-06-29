@@ -357,17 +357,11 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
-
+Inforçaões:
 ![image](https://github.com/user-attachments/assets/b33f4147-3e18-4634-be35-6424ad13a74a)
-
+Cadastro: 
 ![image](https://github.com/user-attachments/assets/0e98e5e9-6c31-4ca7-ad52-962e0118a943)
 
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
 >
 > **Orientações:**
 >
