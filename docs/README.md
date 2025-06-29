@@ -326,20 +326,8 @@ Divisão de papéis no grupo e apresentação da estrutura da ferramenta de cont
 
 ![Exemplo de Kanban]![image](https://github.com/user-attachments/assets/3abdd581-0184-402f-bcdc-4f05d58fbead)
 
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
-> **Orientações**:
->
-> - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-> - [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-> - [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+> Para a execução do projeto Rachadura de T.I., seguimos uma abordagem baseada em metodologias ágeis, especialmente o Scrum e o processo de Design Thinking. As etapas foram estruturadas visando a colaboração eficiente entre os membros do grupo, a divisão clara de tarefas e o uso de ferramentas modernas para organização, versionamento e acompanhamento do desenvolvimento.
 
 # Solução Implementada
 
