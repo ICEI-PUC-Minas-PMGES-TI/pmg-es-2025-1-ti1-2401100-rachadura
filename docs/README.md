@@ -339,14 +339,35 @@ Esta seção apresenta as funcionalidades da solução.Info
 
 Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:** [denuncias](#ti_ed_denuncias)
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
-* **Tela da funcionalidade**:
+  * Acesse o mapa
+  * Em seguida, Veja as denuncias perto de voce
+* **Tela Principal**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela Principal]![image](https://github.com/user-attachments/assets/d903d43e-50ca-43b3-bb84-6a23c5a2db6c)
+
+* **Estrutura de dados:** [denuncias](#ti_ed_denuncias)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o feed
+  * Em seguida, Veja as denuncias populares
+* **Feed**:
+
+![Feed]![image](https://github.com/user-attachments/assets/b8b3e4a7-5b59-4de3-888f-9fc9f85d2ba6)
+
+
+
+* **Estrutura de dados:** [cadastro](#cadastro)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o cadastrar denuncia
+  * Em seguida, poste sua denuncia com as informacoes necessarias
+    
+* **Cadastro de Denuncia**:
+
+![Cadastro de Denuncia]![image](https://github.com/user-attachments/assets/c0a1a767-b183-4d06-9922-efe9bc4758cb)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
