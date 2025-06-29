@@ -451,13 +451,21 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 As referências utilizadas no trabalho foram:
 
-* SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
+Referências Bibliográficas (ABNT)
+Documentação da API Google Maps:
+GOOGLE. Google Maps Platform. 2023. Disponível em: https://developers.google.com/maps. Acesso em: 11/04/2025.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
-> **Orientações**:
->
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+Desenvolvimento de Sistemas Web:
+FLANAGAN, David. JavaScript: O Guia Definitivo. 7. ed. Porto Alegre: Bookman, 2020. 1080 p.
+
+Integração de APIs REST:
+RICHARDSON, Leonard; RUBY, Sam. RESTful Web APIs. 1. ed. Sebastopol: O’Reilly Media, 2013. 408 p.
+
+Design de UX para Sistemas de Chamados:
+NIELSEN, Jakob. Usabilidade na Web. 1. ed. Rio de Janeiro: Campus, 2000. 420 p.
+
+Boas Práticas em Infraestrutura de TI:
+TANENBAUM, Andrew S.; VAN STEEN, Maarten. Distributed Systems: Principles and Paradigms. 3. ed. Boston: Pearson, 2017. 800 p.
+
+
+
