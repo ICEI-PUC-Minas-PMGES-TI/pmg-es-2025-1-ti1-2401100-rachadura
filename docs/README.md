@@ -365,11 +365,6 @@ Esta seção apresenta as funcionalidades da solução.Info
 
 ![image](https://github.com/user-attachments/assets/c0a1a767-b183-4d06-9922-efe9bc4758cb)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
 
 ## Estruturas de Dados
 
