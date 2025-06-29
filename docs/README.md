@@ -284,16 +284,6 @@ Elas foram desenvolvidas com o objetivo de ilustrar visualmente as funcionalidad
 ![fluxodetelas](images/fluxodetelas.png)
 
 
-### Protótipo Interativo
-
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
-
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
-
 # Metodologia
 Organização
 O grupo se reunia aos finais de semana, visto que muitos trabalhavam em tempo integral durante a semana, via Discord para uma chamada de voz onde eram estipuladas, em conjunto e de acordo com a agenda de cada integrante, as tarefas que cada um executaria, estipulando um prazo para que tudo fosse entregue e integrado de maneira organizada.
@@ -324,7 +314,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
 
-![Exemplo de Kanban]![image](https://github.com/user-attachments/assets/3abdd581-0184-402f-bcdc-4f05d58fbead)
+![image](https://github.com/user-attachments/assets/3abdd581-0184-402f-bcdc-4f05d58fbead)
 
 >
 > Para a execução do projeto Rachadura de T.I., seguimos uma abordagem baseada em metodologias ágeis, especialmente o Scrum e o processo de Design Thinking. As etapas foram estruturadas visando a colaboração eficiente entre os membros do grupo, a divisão clara de tarefas e o uso de ferramentas modernas para organização, versionamento e acompanhamento do desenvolvimento.
