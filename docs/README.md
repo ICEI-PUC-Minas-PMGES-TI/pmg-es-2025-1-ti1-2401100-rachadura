@@ -365,21 +365,8 @@ Descrição das estruturas de dados utilizadas na solução com exemplos no form
 ![image](https://github.com/user-attachments/assets/b33f4147-3e18-4634-be35-6424ad13a74a)
 
 ```
+![image](https://github.com/user-attachments/assets/530308fb-51e3-452a-9512-7095201856dc)
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
-
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
-
-```json
-  {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
-```
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
