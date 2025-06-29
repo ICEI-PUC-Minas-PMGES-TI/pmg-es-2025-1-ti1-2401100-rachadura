@@ -415,8 +415,8 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 **Scripts:**
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* GoogleMapsAPI - [https://developers.google.com/maps](https://developers.google.com/maps) 
+* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) 
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
